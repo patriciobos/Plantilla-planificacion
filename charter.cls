@@ -41,7 +41,7 @@
 \newcommand*{\fechaINICIO}[1]{\def\fechaINICIOname{#1}}
 \newcommand*{\fechaFINAL}[1]{\def\fechaFINALname{#1}}
 
-\def\@title{Plan de proyecto}
+\def\@title{Plan de proyecto de \authorname}
 
 %---------- LOAD PACKAGES ----------
 \usepackage{amsmath,amsthm,amssymb}
@@ -122,7 +122,7 @@
 	\centering \includegraphics[width=.7\textwidth]{./Figuras/logoFIUBA.png}
 	
 	\vspace{3cm}
-	{\Huge \textbf{Título del proyecto}} \\
+	{\Huge \textbf{\ttitle}} \\
 	\vspace{3cm}
 	
 	\flushleft
