@@ -20,17 +20,14 @@
 \cliente{Nombre del cliente}
 
 % Nombre y pertenencia de los jurados, se pueden usar el cualquier lugar del documento con el comando \jur1name, \jur2name y \jur3name
-\juradoUNO{Nombre del jurado 1 (pertenencia)} 
-\juradoDOS{Nombre del jurado 2 (pertenencia)}
-\juradoTRES{Nombre del jurado 3 (pertenencia)}
+\juradoUNO{Nombre y Apellido (1) (pertenencia)} 
+\juradoDOS{Nombre y Apellido (2) (pertenencia)}
+\juradoTRES{Nombre y Apellido (3) (pertenencia)}
  
 \fechaINICIO{22 de junio de 2020}				%Fecha de inicio de la cursada de GdP
 \fechaFINALPlanificacion{22 de Agosto de 2020} 	%Fecha de final de cursada de GdP
 \fechaFINALTrabajo{22 de diciembre de 2020}		%Fecha de defensa pública del trabajo final
 
-
-%\usepackage{geometry}
-%
 
 
 \begin{document}
@@ -41,7 +38,9 @@
 
 
 \thispagestyle{empty}
+{\setlength{\parskip}{0pt}
 \tableofcontents{}
+}
 \pagebreak
 
 
@@ -62,8 +61,8 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 1.2      & Otro ejemplo \newline
 		   Con texto partido \newline
 		   En varias líneas \newline
-		   A propósito                                                                     & dd/mm/aaaa       \\ \hline
-\end{tabularx}%
+		   A propósito                                                                     & dd/mm/aaaa \\ \hline
+\end{tabularx}
 \end{table}
 
 \pagebreak
@@ -85,13 +84,6 @@ Se adjunta a esta acta la planificación inicial.
 
 \vfill
 
-%\begin{tabularx}{\linewidth}{@{}XXX@{}}
-%
-%\centering\rule[-1ex]{0pt}{3cm} Ariel Lutenberg\newline Director posgrado FIUBA &  & Nombre del cliente \newline Empresa del cliente \\ 
-%\centering\rule[-1ex]{0pt}{3cm}      											& \supname \newline Director del Trabajo Final 		& 	 \\ 
-%\centering\rule[-1ex]{0pt}{3cm}\jurunoname \newline Jurado del Trabajo Final&  & \jurdosname \newline Jurado del Trabajo Final\\
-%\centering\rule[-1ex]{0pt}{3cm}      											& \jurtresname \newline Jurado del Trabajo Final	& 	 \\ 
-%\end{tabularx}%
 
 \begin{table}[ht]
 \centering
@@ -101,17 +93,205 @@ Se adjunta a esta acta la planificación inicial.
 \begin{tabular}[c]{@{}c@{}}\jurunoname \\ Jurado del Trabajo Final\end{tabular}     &  & \begin{tabular}[c]{@{}c@{}}\jurdosname\\ Jurado del Trabajo Final\end{tabular}  \vspace{2.5cm}  \\
 \multicolumn{3}{c}{\begin{tabular}[c]{@{}c@{}} \jurtresname\\ Jurado del Trabajo Final\end{tabular}} \vspace{.5cm}                                                                     
 \end{tabular}
-
 \end{table}
 
 \section{Descripción técnica-conceptual del Proyecto a realizar}
+\label{sec:descripcion}
+
+El objetivo es que el lector en una o dos páginas entienda de qué se trata el proyecto y cuáles son sus desafíos, su motivación y su importancia.
+Se debe destacar claramente cuál es el valor que agrega el proyecto a realizar. ``El presente proyecto se destaca especialmente por incorporar tal cosa... Esto lo diferencia de otros sistemas similares en que ...''
+
+Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
+
+\begin{itemize}
+\item ¿Cómo se vincula este proyecto con la misión de la organización?
+\item ¿Cómo se inserta este proyecto en el modelo de negocio de la organización?
+\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
+\item ¿En qué estado del ciclo de vida está el producto que se desea reemplazar o mejorar?
+\item ¿Cuales son las necesidades que debe satisfacer?
+\item ¿Por dónde pasa la innovación?
+\end{itemize}
+
+La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema }y una frase como la siguiente: “En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...”. Luego recién más abajo de haber puesto esta frase se pone la figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=.7\textwidth]{./Figuras/diagBloques.png}
+\caption{Diagrama en bloques del sistema}
+\label{fig:diagBloques}
+\end{figure}
+
+El tamaño de la tipografía en la figura debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama.
+
 \section{Identificación y análisis de los interesados}
+\label{sec:interesados}
+
+Nota: (borrar esto y todas las consignas antes de entregar este documento) 
+Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos. 
+Si se considera que una persona cumple dos o más roles, entonces sólo dejarla en el rol más importante. Por ejemplo:
+
+\begin{itemize}
+\item Si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente.
+\item Si una persona es el Responsable, no debe ser colocado también como Miembro del equipo.
+\end{itemize}
+
+Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por ejemplo.
+
+
+
+
+
+\begin{table}[ht]
+%\caption{Identificación de los interesados}
+%\label{tab:interesados}
+\begin{tabularx}{\linewidth}{@{}|l|X|X|l|@{}}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+Rol           & Nombre y Apellido & Organización & Puesto 	\\ \hline
+Auspiciante   &                   &              &        	\\ \hline
+Cliente       & \clientename      &              &        	\\ \hline
+Impulsor      &                   &              &        	\\ \hline
+Responsable   & \authorname       & FIUBA        & Alumno 	\\ \hline
+Colaboradores &                   &              &        	\\ \hline
+Orientador    & \supname	      & 			 & Director	Trabajo final \\ \hline
+Equipo        & miembro1 \newline 
+				miembro2          &              &        	\\ \hline
+Opositores    &                   &              &        	\\ \hline
+Usuario final &                   &              &        	\\ \hline
+\end{tabularx}
+\end{table}
+
+El Director suele ser uno de los Orientadores.
+
+No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
+
+No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
+
+Sería deseable listar a continuación de la tabla las principales características de cada interesado.
+ 
+Por ejemplo:
+\begin{itemize}
+\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
+\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
+\item Orientador: María Gómez, nos va a poder ayudar mucho con la gestión de impuestos.
+\end{itemize}
+
+
+
+
 \section{1. Propósito del proyecto}
+\label{sec:proposito}
+
+¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
+
+Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
+
+
 \section{2. Alcance del proyecto}
+\label{sec:alcance}
+
+¿Qué se incluye y que no se incluye en este proyecto?
+
+Se refiere al trabajo a hacer para entregar el producto o resultado especificado. 
+
+Explicitar todo lo quede comprendido dentro del alcance del proyecto.
+
+Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
+
+
+
+
 \section{3. Supuestos del proyecto}
+\label{sec:supuestos}
+
+``Para el desarrollo del presente proyecto se supone que: ...''
+
+\begin{itemize}
+\item Supuesto 1
+\item Supuesto 2...
+\end{itemize}
+
+
 \section{4. Requerimientos}
+\label{sec:requerimientos}
+
+Los requerimientos deben numerarse y de ser posible agruparlos por afinidad:
+
+\begin{enumerate}
+\item Grupo de requerimientos asociados con...
+	\begin{enumerate}
+	\item Requerimiento 1
+	\item Requerimiento 2
+	\item Requerimiento 3 (prioridad menor)
+	\end{enumerate}
+\item Grupo de requerimientos asociados con...
+	\begin{enumerate}
+	\item Requerimiento 1
+	\item Requerimiento 2 (prioridad menor)
+	\end{enumerate}
+\end{enumerate}
+
+Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
+
+De ser posible indicar cómo se obtuvieron cada uno de los requerimientos 
+
+Indicar claramente cuál es la prioridad entre los distintos requerimientos. 
+
+No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!
+
+Y al escribirlos seguir las siguientes reglas:
+\begin{itemize}
+\item Ser breve y conciso (nadie lee cosas largas). 
+\item Ser específico: no dejar lugar a confusiones.
+\item Expresar los requerimientos en términos que sean cuantificables y medibles.
+\end{itemize}
+
 \section{5. Entregables principales del proyecto}
+\label{sec:entregables}
+
+Cosas como: 
+\begin{itemize}
+\item Manual de uso
+\item Diagrama esquemático
+\item Código fuente
+\item Diagrama de instalación
+\item Informe final
+
+\end{itemize}
+
 \section{6. Desglose del trabajo en tareas}
+\label{sec:wbs}
+
+Se recomienda que mostrar el WBS mediante una lista indexada:
+
+\begin{enumerate}
+\item Grupo de tareas 1
+	\begin{enumerate}
+	\item Tarea 1 (tantas hs)
+	\item Tarea 2 (tantas hs)
+	\item Tarea 3 (tantas hs)
+	\end{enumerate}
+\item Grupo de tareas 2
+	\begin{enumerate}
+	\item Tarea 1 (tantas hs)
+	\item Tarea 2 (tantas hs)
+	\item Tarea 3 (tantas hs)
+	\end{enumerate}
+	\item Grupo de tareas 3
+	\begin{enumerate}
+	\item Tarea 1 (tantas hs)
+	\item Tarea 2 (tantas hs)
+	\item Tarea 3 (tantas hs)
+	\item Tarea 4 (tantas hs)
+	\item Tarea 5 (tantas hs)
+	\end{enumerate}
+\end{enumerate}
+
+Cantidad total de horas: (tantas hs)
+
+Se recomienda que no haya ninguna tarea que lleve más de 40 hs. 
+
+
 \section{7. Diagrama de Activity On Node}
 \section{8. Diagrama de Gantt}
 \section{9. Matriz de uso de recursos de materiales}

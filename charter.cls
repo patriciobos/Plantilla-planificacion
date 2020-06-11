@@ -60,7 +60,7 @@
 \usepackage{lastpage}
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{tabularx}
-\usepackage{booktabs}
+%\usepackage{booktabs}
 
 % Adds space between caption and table
 \usepackage[tableposition=top]{caption}
@@ -86,7 +86,12 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
 
+%enumerate style
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
 
 \hypersetup{
   bookmarksnumbered = true, 
