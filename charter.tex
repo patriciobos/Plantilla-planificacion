@@ -1,4 +1,4 @@
-\documentclass[12pt]{charter}
+\documentclass[11pt]{charter}
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
 \titulo{Título del proyecto} 
@@ -16,13 +16,17 @@
 \director{Nombre del Director (pertenencia)} 
 \codirector{} % si queda vacio no se incluye
 
+% Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename
+\cliente{Nombre del cliente}
+
 % Nombre y pertenencia de los jurados, se pueden usar el cualquier lugar del documento con el comando \jur1name, \jur2name y \jur3name
 \juradoUNO{Nombre del jurado 1 (pertenencia)} 
 \juradoDOS{Nombre del jurado 2 (pertenencia)}
 \juradoTRES{Nombre del jurado 3 (pertenencia)}
  
-\fechaINICIO{marzo}
-\fechaFINAL{diciembre de 2020}
+\fechaINICIO{22 de junio de 2020}				%Fecha de inicio de la cursada de GdP
+\fechaFINALPlanificacion{22 de Agosto de 2020} 	%Fecha de final de cursada de GdP
+\fechaFINALTrabajo{22 de diciembre de 2020}		%Fecha de defensa pública del trabajo final
 
 
 %\usepackage{geometry}
@@ -42,7 +46,64 @@
 
 
 \section{Registros de cambios}
+\label{sec:registro}
+
+
+\begin{table}[ht]
+\label{tab:registro}
+\centering
+
+\begin{tabularx}{\linewidth}{@{}|c|X|c|@{}}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
+1.0      & Creación del documento                                                          & 22/06/2020 \\ \hline
+1.1      & Ejemplo de un texto muy largo que debiera ocupar más de una línea para que tengan de ejemplo                                                                                																						   & dd/mm/aaaa \\ \hline
+1.2      & Otro ejemplo \newline
+		   Con texto partido \newline
+		   En varias líneas \newline
+		   A propósito                                                                     & dd/mm/aaaa       \\ \hline
+\end{tabularx}%
+\end{table}
+
+\pagebreak
+
+
+
 \section{Acta de Constitución del Proyecto}
+\label{sec:acta}
+
+\begin{flushright}
+Buenos Aires, \fechaINICIOname
+\end{flushright}
+
+\vspace{2cm}
+
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un ........ , y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \$XXX, con fecha de inicio \fechaINICIOname\hspace{1px} y fecha de presentación pública \fechaFINALname.
+
+Se adjunta a esta acta la planificación inicial.
+
+\vfill
+
+%\begin{tabularx}{\linewidth}{@{}XXX@{}}
+%
+%\centering\rule[-1ex]{0pt}{3cm} Ariel Lutenberg\newline Director posgrado FIUBA &  & Nombre del cliente \newline Empresa del cliente \\ 
+%\centering\rule[-1ex]{0pt}{3cm}      											& \supname \newline Director del Trabajo Final 		& 	 \\ 
+%\centering\rule[-1ex]{0pt}{3cm}\jurunoname \newline Jurado del Trabajo Final&  & \jurdosname \newline Jurado del Trabajo Final\\
+%\centering\rule[-1ex]{0pt}{3cm}      											& \jurtresname \newline Jurado del Trabajo Final	& 	 \\ 
+%\end{tabularx}%
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{ccc}
+\begin{tabular}[c]{@{}c@{}}Ariel Lutenberg \\ Director posgrado FIUBA\end{tabular} &  & \begin{tabular}[c]{@{}c@{}}\clientename \\ Empresa del cliente\end{tabular} \vspace{2.5cm} \\ 
+\multicolumn{3}{c}{\begin{tabular}[c]{@{}c@{}} \supname \\ Director del Trabajo Final\end{tabular}} \vspace{2.5cm} \\
+\begin{tabular}[c]{@{}c@{}}\jurunoname \\ Jurado del Trabajo Final\end{tabular}     &  & \begin{tabular}[c]{@{}c@{}}\jurdosname\\ Jurado del Trabajo Final\end{tabular}  \vspace{2.5cm}  \\
+\multicolumn{3}{c}{\begin{tabular}[c]{@{}c@{}} \jurtresname\\ Jurado del Trabajo Final\end{tabular}} \vspace{.5cm}                                                                     
+\end{tabular}
+
+\end{table}
+
 \section{Descripción técnica-conceptual del Proyecto a realizar}
 \section{Identificación y análisis de los interesados}
 \section{1. Propósito del proyecto}

@@ -24,6 +24,7 @@
 \def\ttitle{}
 \newcommand*{\director}[1]{\def\supname{#1}}
 \newcommand*{\codirector}[1]{\def\cosupname{#1}}
+\newcommand*{\cliente}[1]{\def\clientename{#1}}
 \newcommand*{\titulo}[1]{\def\@title{#1}\def\ttitle{#1}}
 \newcommand*{\examiner}[1]{\def\examname{#1}}
 \newcommand*{\posgrado}[1]{\def\degreename{#1}}
@@ -39,7 +40,8 @@
 \newcommand*{\juradoDOS}[1]{\def\jurdosname{#1}}
 \newcommand*{\juradoTRES}[1]{\def\jurtresname{#1}}
 \newcommand*{\fechaINICIO}[1]{\def\fechaINICIOname{#1}}
-\newcommand*{\fechaFINAL}[1]{\def\fechaFINALname{#1}}
+\newcommand*{\fechaFINALPlanificacion}[1]{\def\fechaFINALPlanificacionname{#1}}
+\newcommand*{\fechaFINALTrabajo}[1]{\def\fechaFINALname{#1}}
 
 \def\@title{Plan de proyecto de \authorname}
 
@@ -56,6 +58,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[]{graphicx}
 \usepackage{lastpage}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{tabularx}
+\usepackage{booktabs}
 
 % Adds space between caption and table
 \usepackage[tableposition=top]{caption}
@@ -143,7 +148,7 @@
     
     \vfill
     \centering
-    \textit{Este trabajo fue realizado en el curso de Gestión de proyectos\\ entre \fechaINICIOname \hspace{1px} y \fechaFINALname.}
+    \textit{Este trabajo fue realizado en el curso de Gestión de proyectos\\ entre el \fechaINICIOname \hspace{1px} y el  \fechaFINALPlanificacionname.}
 		
 	
 	\pagebreak
