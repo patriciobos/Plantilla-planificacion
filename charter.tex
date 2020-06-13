@@ -12,17 +12,23 @@
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
 \autor{Nombre del Autor} 
 
-% El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname
-\director{Nombre del Director (pertenencia)} 
-\codirector{} % si queda vacio no se incluye
+% El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
+\director{Nombre del Director}
+\pertenenciaDirector{pertenencia} 
+\codirector{} % si queda vacio no se deberíá incluir NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
+\pertenenciaCoDirector{}
 
-% Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename
+% Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
 \cliente{Nombre del cliente}
+\empresaCliente{Empresa del cliente}
 
-% Nombre y pertenencia de los jurados, se pueden usar el cualquier lugar del documento con el comando \jur1name, \jur2name y \jur3name
-\juradoUNO{Nombre y Apellido (1) (pertenencia)} 
-\juradoDOS{Nombre y Apellido (2) (pertenencia)}
-\juradoTRES{Nombre y Apellido (3) (pertenencia)}
+% Nombre y pertenencia de los jurados, se pueden usar el cualquier lugar del documento con el comando \jurunoname, \jurdosname y \jurtresname y \perteunoname, \pertedosname y \pertetresname.
+\juradoUno{Nombre y Apellido (1)}
+\pertenenciaJurUno{pertenencia (1)} 
+\juradoDos{Nombre y Apellido (2)}
+\pertenenciaJurDos{pertenencia (2)}
+\juradoTres{Nombre y Apellido (3)}
+\pertenenciaJurTres{pertenencia (3)}
  
 \fechaINICIO{22 de junio de 2020}				%Fecha de inicio de la cursada de GdP
 \fechaFINALPlanificacion{22 de Agosto de 2020} 	%Fecha de final de cursada de GdP
@@ -88,7 +94,7 @@ Se adjunta a esta acta la planificación inicial.
 \begin{table}[ht]
 \centering
 \begin{tabular}{ccc}
-\begin{tabular}[c]{@{}c@{}}Ariel Lutenberg \\ Director posgrado FIUBA\end{tabular} &  & \begin{tabular}[c]{@{}c@{}}\clientename \\ Empresa del cliente\end{tabular} \vspace{2.5cm} \\ 
+\begin{tabular}[c]{@{}c@{}}Ariel Lutenberg \\ Director posgrado FIUBA\end{tabular} &  & \begin{tabular}[c]{@{}c@{}}\clientename \\ \empclientename \end{tabular} \vspace{2.5cm} \\ 
 \multicolumn{3}{c}{\begin{tabular}[c]{@{}c@{}} \supname \\ Director del Trabajo Final\end{tabular}} \vspace{2.5cm} \\
 \begin{tabular}[c]{@{}c@{}}\jurunoname \\ Jurado del Trabajo Final\end{tabular}     &  & \begin{tabular}[c]{@{}c@{}}\jurdosname\\ Jurado del Trabajo Final\end{tabular}  \vspace{2.5cm}  \\
 \multicolumn{3}{c}{\begin{tabular}[c]{@{}c@{}} \jurtresname\\ Jurado del Trabajo Final\end{tabular}} \vspace{.5cm}                                                                     
@@ -149,17 +155,17 @@ Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por e
 \begin{tabularx}{\linewidth}{@{}|l|X|X|l|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0} 
-Rol           & Nombre y Apellido & Organización & Puesto 	\\ \hline
-Auspiciante   &                   &              &        	\\ \hline
-Cliente       & \clientename      &              &        	\\ \hline
-Impulsor      &                   &              &        	\\ \hline
-Responsable   & \authorname       & FIUBA        & Alumno 	\\ \hline
-Colaboradores &                   &              &        	\\ \hline
-Orientador    & \supname	      & 			 & Director	Trabajo final \\ \hline
+Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
+Auspiciante   &                   &              	&        	\\ \hline
+Cliente       & \clientename      &\empclientename	&        	\\ \hline
+Impulsor      &                   &              	&        	\\ \hline
+Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
+Colaboradores &                   &              	&        	\\ \hline
+Orientador    & \supname	      & \pertesupname 	& Director	Trabajo final \\ \hline
 Equipo        & miembro1 \newline 
-				miembro2          &              &        	\\ \hline
-Opositores    &                   &              &        	\\ \hline
-Usuario final &                   &              &        	\\ \hline
+				miembro2          &              	&        	\\ \hline
+Opositores    &                   &              	&        	\\ \hline
+Usuario final &                   &              	&        	\\ \hline
 \end{tabularx}
 \end{table}
 

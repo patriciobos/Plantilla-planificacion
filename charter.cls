@@ -19,12 +19,14 @@
 %----------------------------------------------------------------------------------------
 %	DEFINE CUSTOM PLAN INFORMATION COMMANDS
 %----------------------------------------------------------------------------------------
-
 \def\authorname{}
 \def\ttitle{}
 \newcommand*{\director}[1]{\def\supname{#1}}
+\newcommand*{\pertenenciaDirector}[1]{\def\pertesupname{#1}}
 \newcommand*{\codirector}[1]{\def\cosupname{#1}}
+\newcommand*{\pertenenciaCoDirector}[1]{\def\pertecosupname{#1}}
 \newcommand*{\cliente}[1]{\def\clientename{#1}}
+\newcommand*{\empresaCliente}[1]{\def\empclientename{#1}}
 \newcommand*{\titulo}[1]{\def\@title{#1}\def\ttitle{#1}}
 \newcommand*{\examiner}[1]{\def\examname{#1}}
 \newcommand*{\posgrado}[1]{\def\degreename{#1}}
@@ -36,9 +38,12 @@
 \newcommand*{\faculty}[1]{\def\facname{#1}}
 \newcommand*{\subject}[1]{\def\subjectname{#1}}
 \newcommand*{\keywords}[1]{\def\keywordnames{#1}}
-\newcommand*{\juradoUNO}[1]{\def\jurunoname{#1}}
-\newcommand*{\juradoDOS}[1]{\def\jurdosname{#1}}
-\newcommand*{\juradoTRES}[1]{\def\jurtresname{#1}}
+\newcommand*{\juradoUno}[1]{\def\jurunoname{#1}}
+\newcommand*{\pertenenciaJurUno}[1]{\def\perteunoame{#1}}
+\newcommand*{\juradoDos}[1]{\def\jurdosname{#1}}
+\newcommand*{\pertenenciaJurDos}[1]{\def\pertedosame{#1}}
+\newcommand*{\juradoTres}[1]{\def\jurtresname{#1}}
+\newcommand*{\pertenenciaJurTres}[1]{\def\pertetresame{#1}}
 \newcommand*{\fechaINICIO}[1]{\def\fechaINICIOname{#1}}
 \newcommand*{\fechaFINALPlanificacion}[1]{\def\fechaFINALPlanificacionname{#1}}
 \newcommand*{\fechaFINALTrabajo}[1]{\def\fechaFINALname{#1}}
@@ -141,13 +146,13 @@
 	\vspace{1cm}
 	
 	{\normalsize Director:\\}
-	{\Large \supname \\}
+	{\Large \supname \hspace{1px} (\pertesupname) \\}
 	\vspace{2cm}
 		
 	{\normalsize Jurados:\\}	
-	{\Large \jurunoname \\
-			\jurdosname \\
-			\jurtresname \par}
+	{\Large \jurunoname \hspace{1px} (\perteunoame) \\
+			\jurdosname \hspace{1px} (\pertedosame) \\
+			\jurtresname \hspace{1px} (\pertetresame) \par}
 	             
 	
     
