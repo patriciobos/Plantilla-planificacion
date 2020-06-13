@@ -126,8 +126,10 @@ El tamaño de la tipografía en la figura debe ser adecuado para que NO pase lo 
 \section{Identificación y análisis de los interesados}
 \label{sec:interesados}
 
-Nota: (borrar esto y todas las consignas antes de entregar este documento) 
-Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos. 
+Nota: (borrar esto y todas las consignas antes de entregar este documento)
+ 
+Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos.
+ 
 Si se considera que una persona cumple dos o más roles, entonces sólo dejarla en el rol más importante. Por ejemplo:
 
 \begin{itemize}
@@ -293,8 +295,58 @@ Se recomienda que no haya ninguna tarea que lleve más de 40 hs.
 
 
 \section{7. Diagrama de Activity On Node}
+\label{sec:AoN}
+
+Armar el AoN a partir del WBS definido en la etapa anterior.
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=\textwidth]{./Figuras/AoN.png}
+\caption{Diagrama en \textit{Activity on Node}}
+\label{fig:AoN}
+\end{figure}
+
+Indicar claramente en qué unidades están expresados los tiempos.
+De ser necesario indicar los caminos semicríticos y analizar sus tiempos mediante un cuadro.
+Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color, como se muestra en el siguiente ejemplo:
+
+
 \section{8. Diagrama de Gantt}
+\label{sec:gantt}
+
+\textcolor{red}{Utilizar el software Gantter for Google Drive o alguno similar para dibujar el diagrama de Gantt.}
+
+\textcolor{red}{Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. Pegar primero la “tabla” del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.}
+
+\textcolor{red}{Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
+Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
+Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.}
+
+\textcolor{red}{Se puede usar paquete de latex pgfgantt para hacer el diagrama.}
+
+\url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
+
+\begin{figure}[tbp]
+\begin{center}
+\begin{ganttchart}{1}{12}
+  \gantttitle{2011}{12} \\
+  \gantttitlelist{1,...,12}{1} \\
+  \ganttgroup{Group 1}{1}{7} \\
+  \ganttbar{Task 1}{1}{2} \\
+  \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
+  \ganttmilestone{Milestone}{7} \ganttnewline
+  \ganttbar{Final Task}{8}{12}
+  \ganttlink{elem2}{elem3}
+  \ganttlink{elem3}{elem4}
+\end{ganttchart}
+\end{center}
+\caption{Gantt Chart}
+\end{figure}
+
+
 \section{9. Matriz de uso de recursos de materiales}
+
+
 \section{10. Presupuesto detallado del proyecto}
 \section{11. Matriz de asignación de responsabilidades}
 \section{12. Gestión de riesgos}

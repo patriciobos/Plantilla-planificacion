@@ -60,7 +60,7 @@
 \usepackage{lastpage}
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{tabularx}
-%\usepackage{booktabs}
+\usepackage{pgfgantt} 
 
 % Adds space between caption and table
 \usepackage[tableposition=top]{caption}
