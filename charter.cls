@@ -5,7 +5,7 @@
 
 \typeout{\filename}
 \typeout{\fileversion}
-\typeout{Creado por Patricio Bos}
+\typeout{Creado por Patricio Bos para el Laboratorio de Sistemas Embebidos de FIUBA}
 \typeout{\filedate}
 \typeout{Una clase para armar planificaciones de Trabajos finales en el curso de Gestión de Proyectos.}
 
@@ -14,7 +14,7 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}%
 \ExecuteOptions{12pt}% execute default options
 \ProcessOptions%
-\LoadClass{article}
+\LoadClass[a4paper]{article}
 
 %----------------------------------------------------------------------------------------
 %	DEFINE CUSTOM PLAN INFORMATION COMMANDS
@@ -48,7 +48,7 @@
 \newcommand*{\fechaFINALPlanificacion}[1]{\def\fechaFINALPlanificacionname{#1}}
 \newcommand*{\fechaFINALTrabajo}[1]{\def\fechaFINALname{#1}}
 
-\def\@title{Plan de proyecto de \authorname}
+\def\@title{Plan de proyecto de \authorname} %FIXME
 
 %---------- LOAD PACKAGES ----------
 \usepackage{amsmath,amsthm,amssymb}
@@ -128,7 +128,7 @@
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \raggedbottom
 
-
+% PORTADA
 \def\@maketitle{%
 \newpage
 \thispagestyle{empty}
@@ -178,3 +178,8 @@
     
 %\renewcommand{\thesection}{}% Remove section references...
 %\renewcommand{\thesubsection}{\arabic{subsection}}%... from subsections
+
+\newenvironment{consigna}[1]{%
+    \leavevmode\color{#1}\ignorespaces%
+}{%
+}%

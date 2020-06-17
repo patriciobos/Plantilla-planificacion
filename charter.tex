@@ -84,13 +84,13 @@ Buenos Aires, \fechaINICIOname
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un ........ , y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \$XXX, con fecha de inicio \fechaINICIOname\hspace{1px} y fecha de presentación pública \fechaFINALname.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un\textcolor{red}{... completar con una descripción de una o dos líneas}, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaINICIOname\hspace{1px} y fecha de presentación pública \fechaFINALname.
 
 Se adjunta a esta acta la planificación inicial.
 
 \vfill
 
-
+% Esta parte se construye sola con la información que hayan cargado en el preámbulo del documento y no debe modificarla
 \begin{table}[ht]
 \centering
 \begin{tabular}{ccc}
@@ -101,9 +101,13 @@ Se adjunta a esta acta la planificación inicial.
 \end{tabular}
 \end{table}
 
+
+
+
 \section{Descripción técnica-conceptual del Proyecto a realizar}
 \label{sec:descripcion}
 
+\begin{consigna}{red}
 El objetivo es que el lector en una o dos páginas entienda de qué se trata el proyecto y cuáles son sus desafíos, su motivación y su importancia.
 Se debe destacar claramente cuál es el valor que agrega el proyecto a realizar. ``El presente proyecto se destaca especialmente por incorporar tal cosa... Esto lo diferencia de otros sistemas similares en que ...''
 
@@ -120,6 +124,8 @@ Puede ser útil incluir en esta sección la respuesta a alguna de estas pregunta
 
 La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema }y una frase como la siguiente: “En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...”. Luego recién más abajo de haber puesto esta frase se pone la figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
 
+\vspace{25px}
+
 \begin{figure}[htpb]
 \centering 
 \includegraphics[width=.7\textwidth]{./Figuras/diagBloques.png}
@@ -127,12 +133,17 @@ La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en
 \label{fig:diagBloques}
 \end{figure}
 
+\vspace{25px}
+
 El tamaño de la tipografía en la figura debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama.
+\end{consigna}
+
 
 \section{Identificación y análisis de los interesados}
 \label{sec:interesados}
 
-Nota: (borrar esto y todas las consignas antes de entregar este documento)
+\begin{consigna}{red} 
+Nota: (borrar esto y todas las consignas en color rojo antes de entregar este documento).
  
 Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos.
  
@@ -144,10 +155,6 @@ Si se considera que una persona cumple dos o más roles, entonces sólo dejarla 
 \end{itemize}
 
 Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por ejemplo.
-
-
-
-
 
 \begin{table}[ht]
 %\caption{Identificación de los interesados}
@@ -184,20 +191,23 @@ Por ejemplo:
 \item Orientador: María Gómez, nos va a poder ayudar mucho con la gestión de impuestos.
 \end{itemize}
 
+\end{consigna}
 
 
 
 \section{1. Propósito del proyecto}
 \label{sec:proposito}
 
+\begin{consigna}{red}
 ¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
 
 Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
-
+\end{consigna}
 
 \section{2. Alcance del proyecto}
 \label{sec:alcance}
 
+\begin{consigna}{red}
 ¿Qué se incluye y que no se incluye en este proyecto?
 
 Se refiere al trabajo a hacer para entregar el producto o resultado especificado. 
@@ -206,12 +216,13 @@ Explicitar todo lo quede comprendido dentro del alcance del proyecto.
 
 Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
 
-
+\end{consigna}
 
 
 \section{3. Supuestos del proyecto}
 \label{sec:supuestos}
 
+\begin{consigna}{red}
 ``Para el desarrollo del presente proyecto se supone que: ...''
 
 \begin{itemize}
@@ -219,10 +230,12 @@ Explicitar además todo lo que no quede incluido (``El presente proyecto no incl
 \item Supuesto 2...
 \end{itemize}
 
+\end{consigna}
 
 \section{4. Requerimientos}
 \label{sec:requerimientos}
 
+\begin{consigna}{red}
 Los requerimientos deben numerarse y de ser posible agruparlos por afinidad:
 
 \begin{enumerate}
@@ -254,9 +267,12 @@ Y al escribirlos seguir las siguientes reglas:
 \item Expresar los requerimientos en términos que sean cuantificables y medibles.
 \end{itemize}
 
+\end{consigna}
+
 \section{5. Entregables principales del proyecto}
 \label{sec:entregables}
 
+\begin{consigna}{red}
 Cosas como: 
 \begin{itemize}
 \item Manual de uso
@@ -267,9 +283,12 @@ Cosas como:
 
 \end{itemize}
 
+\end{consigna}
+
 \section{6. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
+\begin{consigna}{red}
 Se recomienda que mostrar el WBS mediante una lista indexada:
 
 \begin{enumerate}
@@ -299,10 +318,12 @@ Cantidad total de horas: (tantas hs)
 
 Se recomienda que no haya ninguna tarea que lleve más de 40 hs. 
 
+\end{consigna}
 
 \section{7. Diagrama de Activity On Node}
 \label{sec:AoN}
 
+\begin{consigna}{red}
 Armar el AoN a partir del WBS definido en la etapa anterior.
 
 \begin{figure}[htpb]
@@ -316,39 +337,52 @@ Indicar claramente en qué unidades están expresados los tiempos.
 De ser necesario indicar los caminos semicríticos y analizar sus tiempos mediante un cuadro.
 Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color, como se muestra en el siguiente ejemplo:
 
+\end{consigna}
 
 \section{8. Diagrama de Gantt}
 \label{sec:gantt}
 
-\textcolor{red}{Utilizar el software Gantter for Google Drive o alguno similar para dibujar el diagrama de Gantt.}
+\begin{consigna}{red}
+Utilizar el software Gantter for Google Drive o alguno similar para dibujar el diagrama de Gantt.
 
-\textcolor{red}{Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. Pegar primero la “tabla” del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.}
+Existen muchos programas y recursos \textit{online} para hacer diagramas de gantt, entre las cuales destacamos:
 
-\textcolor{red}{Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
+\begin{itemize}
+\item Planner
+\item GanttProject
+\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
+\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
+\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
+\end{itemize}
+
+Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
+Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
+
+Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
 Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.}
+Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
 
-\textcolor{red}{Se puede usar paquete de latex pgfgantt para hacer el diagrama.}
+En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
 
-\url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-
-\begin{figure}[tbp]
+\begin{figure}[htbp]
 \begin{center}
 \begin{ganttchart}{1}{12}
-  \gantttitle{2011}{12} \\
+  \gantttitle{2020}{12} \\
   \gantttitlelist{1,...,12}{1} \\
   \ganttgroup{Group 1}{1}{7} \\
   \ganttbar{Task 1}{1}{2} \\
   \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-  \ganttmilestone{Milestone}{7} \ganttnewline
+  \ganttmilestone{Milestone o hito}{7} \ganttnewline
   \ganttbar{Final Task}{8}{12}
   \ganttlink{elem2}{elem3}
   \ganttlink{elem3}{elem4}
 \end{ganttchart}
 \end{center}
-\caption{Gantt Chart}
+\caption{Diagrama de gantt de ejemplo}
+\label{fig:gantt}
 \end{figure}
 
+\end{consigna}
 
 \section{9. Matriz de uso de recursos de materiales}
 
