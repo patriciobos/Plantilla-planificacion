@@ -122,7 +122,7 @@ Puede ser útil incluir en esta sección la respuesta a alguna de estas pregunta
 \item ¿Por dónde pasa la innovación?
 \end{itemize}
 
-La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema }y una frase como la siguiente: “En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...”. Luego recién más abajo de haber puesto esta frase se pone la figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
+La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema }y una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''. Luego recién más abajo de haber puesto esta frase se pone la figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
 
 \vspace{25px}
 
@@ -385,34 +385,141 @@ En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realiza
 \end{consigna}
 
 \section{9. Matriz de uso de recursos de materiales}
-
+\label{sec:recursos}
 
 \section{10. Presupuesto detallado del proyecto}
+\label{sec:presupuesto}
+
+\begin{consigna}{red}
+Si el proyecto es complejo entonces separarlo en partes:
+\begin{itemize}
+\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
+\item El desglose detallado del subtotal de cada una de las áreas.
+\end{itemize}
+
+IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
+\end{consigna}
+
 \section{11. Matriz de asignación de responsabilidades}
+\label{sec:responsabilidades}
+\begin{consigna}{red}
+Establecer la matriz de asignación de responsabilidades y el manejo de la autoridad completando la siguiente tabla:
+
+Referencias:
+
+P = Responsabilidad Primaria \\
+S = Responsabilidad Secundaria \\
+A = Aprobación\\
+I = Informado\\
+C = Consultado\\
+
+Una de las columnas debe ser para el Director, ya que se supone que participará en el proyecto.
+A su vez se debe cuidar que no queden muchas tareas seguidas sin ``A'' o ``I''.
+Importante: es redundante poner ``I/A'' o ``I/C'', porque para aprobarlo o responder consultas primero la persona debe ser informada.
+
+\end{consigna}
+
 \section{12. Gestión de riesgos}
+\label{sec:riesgos}
+
+\begin{consigna}{red}
+a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
+ 
+- Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos)
+  - Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).
+          Justificar el motivo por el cual se asigna determinado número de severidad (S).
+  - Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).
+          Justificar el motivo por el cual se asigna determinado número de (O).
+- Riesgo 2:
+- Riesgo 3:
+
+b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
+
+Criterio adoptado: 
+- Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a ....
+
+Nota: 
+- Los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
+
+ c) Plan de mitigación de los riesgos que originalmente excedían el PRN máximo establecido:
+ 
+- Riesgo 1: Plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
+  Nueva asignación de S y O, con su respectiva justificación:
+  - Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).
+          Justificar el motivo por el cual se asigna determinado número de severidad (S).
+  - Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).
+          Justificar el motivo por el cual se asigna determinado número de (O).
+
+- Riesgo 2: Plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
+ 
+- Riesgo 3: Plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación)
+
+\end{consigna}
+
+
 \section{13. Gestión de la calidad}
+\label{sec:calidad}
+
+\begin{consigna}{red}
+Para cada uno de los requerimientos del proyecto indique:
+\begin{itemize} 
+\item Req \#1: Copiar acá el requerimiento.
+
+Verificación y validación:
+
+\begin{itemize}
+\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente:\\
+Detallar 
+\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido:\\
+Detallar  
+\end{itemize}
+
+\end{itemize}
+
+Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, etc.
+
+\end{consigna}
+
 \section{14. Comunicación del proyecto}
+\label{sec:comunicaciones}
+
+\begin{consigna}{red}
+El plan de comunicación del proyecto es el siguiente:
+\end{consigna}
+
 \section{15. Gestión de Compras}
+\label{sec:compras}
+
+\begin{consigna}{red}
+En caso de tener que comprar elementos o contratar servicios:
+a) Explique con qué criterios elegiría a un proveedor.
+b) Redacte el Statement of Work correspondiente.
+\end{consigna}
+
 \section{16. Seguimiento y control}
+\label{sec:seguimiento}
+
+\begin{consigna}{red}
+Para cada tarea del proyecto establecer la frecuencia y los indicadores con los se seguirá su avance y quién será el responsable de hacer dicho seguimiento y a quién debe comunicarse la situación (en concordancia con el Plan de Comunicación del proyecto).
+
+\end{consigna}
+
 \section{17. Procesos de cierre}    
+\label{sec:cierre}
 
-%
-%\section*{Project Roles}
-%\label{sec:roles}
-%\begin{table}[h]
-%  \label{tbl:roles}
-%  \begin{center}
-%    \begin{tabular}{c|c}
-%      Name & Role\\\hline
-%      YOUR NAME HERE & Project Manager\\\hline
-%      & Sponsor\\\hline
-%      & Customer / User Contact\\\hline
-%      & Team Members\\\hline
-%      & Stakeholders\\\hline
-%    \end{tabular}
-%  \end{center}
-%\end{table}
+\begin{consigna}{red}
+Establecer las pautas de trabajo para realizar una reunión final de evaluación del proyecto, tal que contemple las siguientes actividades:
 
+\begin{itemize}
+\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:
+ - Indicar quién se ocupará de hacer esto y cuál será el procedimiento a aplicar. 
+\item Identificación de las técnicas y procedimientos útiles e inútiles que se utilizaron, y los problemas que surgieron y cómo se solucionaron:
+ - Indicar quién se ocupará de hacer esto y cuál será el procedimiento para dejar registro.
+\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:
+  - Indicar esto y quién financiará los gastos correspondientes.
+\end{itemize}
+
+\end{consigna}
 
 
 \end{document}
