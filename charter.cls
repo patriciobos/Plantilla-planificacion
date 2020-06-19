@@ -66,6 +66,14 @@
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{tabularx}
 \usepackage{pgfgantt} 
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\tikzstyle{task} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, text width=3cm, draw=black, fill=blue!30]
+\tikzstyle{milestone} = [ellipse, minimum width=1cm, text width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+
 
 % Adds space between caption and table
 \usepackage[tableposition=top]{caption}
