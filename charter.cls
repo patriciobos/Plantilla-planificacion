@@ -64,6 +64,7 @@
 \usepackage[]{graphicx}
 \usepackage{lastpage}
 \usepackage[table,xcdraw]{xcolor}
+ \usepackage{multirow}
 \usepackage{tabularx}
 \usepackage{pgfgantt} 
 
