@@ -230,6 +230,7 @@ Explicitar además todo lo que no quede incluido (``El presente proyecto no incl
 \item Supuesto 2...
 \end{itemize}
 
+Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
 \end{consigna}
 
 \section{4. Requerimientos}
@@ -326,12 +327,26 @@ Se recomienda que no haya ninguna tarea que lleve más de 40 hs.
 \begin{consigna}{red}
 Armar el AoN a partir del WBS definido en la etapa anterior.
 
-\begin{figure}[htpb]
-\centering 
-\includegraphics[width=\textwidth]{./Figuras/AoN.png}
-\caption{Diagrama en \textit{Activity on Node}}
-\label{fig:AoN}
-\end{figure}
+\begin{tikzpicture}[node distance=2cm]
+\node (inicio) [milestone] {Inicio\\ \fechaINICIOname};
+\node (tarea1) [task, below of=inicio, xshift=2cm] {Tarea 1};
+\node (tarea2) [task, right of=tarea1, xshift=2cm] {Tarea 2};
+\node (tarea3) [task, right of=tarea2, xshift=2cm] {Tarea 3};
+%\node (fin) [milestone, right of=tarea3] {Fin};
+
+\draw [arrow] (inicio) |- (tarea1);
+\draw [arrow] (tarea1) -- (tarea2);
+\draw [arrow] (tarea2) -- (tarea3);
+%\draw [arrow] (dec1) -- (pro2a);
+\end{tikzpicture}
+
+
+%\begin{figure}[htpb]
+%\centering 
+%\includegraphics[width=\textwidth]{./Figuras/AoN.png}
+%\caption{Diagrama en \textit{Activity on Node}}
+%\label{fig:AoN}
+%\end{figure}
 
 Indicar claramente en qué unidades están expresados los tiempos.
 De ser necesario indicar los caminos semicríticos y analizar sus tiempos mediante un cuadro.
@@ -441,15 +456,17 @@ IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
 Establecer la matriz de asignación de responsabilidades y el manejo de la autoridad completando la siguiente tabla:
 
 Referencias:
-
-P = Responsabilidad Primaria \\
-S = Responsabilidad Secundaria \\
-A = Aprobación\\
-I = Informado\\
-C = Consultado\\
+\begin{itemize}
+\item P = Responsabilidad Primaria
+\item S = Responsabilidad Secundaria
+\item A = Aprobación
+\item I = Informado
+\item C = Consultado
+\end{itemize}
 
 Una de las columnas debe ser para el Director, ya que se supone que participará en el proyecto.
 A su vez se debe cuidar que no queden muchas tareas seguidas sin ``A'' o ``I''.
+
 Importante: es redundante poner ``I/A'' o ``I/C'', porque para aprobarlo o responder consultas primero la persona debe ser informada.
 
 \end{consigna}
