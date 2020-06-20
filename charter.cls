@@ -70,9 +70,10 @@
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows}
 
-\tikzstyle{task} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, text width=3cm, draw=black, fill=blue!30]
-\tikzstyle{milestone} = [ellipse, minimum width=1cm, text width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{task} = [rectangle, rounded corners, minimum width=2cm, minimum height=2cm,text centered, text width=2.5cm, draw=black, fill=blue!30]
+\tikzstyle{milestone} = [circle, minimum width=.5cm, text width=3cm, minimum height=.5cm, text centered, draw=black, fill=green!30]
 \tikzstyle{arrow} = [thick,->,>=stealth]
+
 
 
 
