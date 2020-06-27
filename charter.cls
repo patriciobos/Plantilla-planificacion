@@ -17,8 +17,9 @@
 \LoadClass[a4paper]{article}
 
 %----------------------------------------------------------------------------------------
-%	DEFINE CUSTOM PLAN INFORMATION COMMANDS
+%	DEFINE CUSTOM PLAN INFORMATION COMMANDS 
 %----------------------------------------------------------------------------------------
+%TODO Uniformizar el nombre de los comandos a camelCase
 \def\authorname{}
 \def\ttitle{}
 \newcommand*{\director}[1]{\def\supname{#1}}
@@ -44,11 +45,13 @@
 \newcommand*{\pertenenciaJurDos}[1]{\def\pertedosame{#1}}
 \newcommand*{\juradoTres}[1]{\def\jurtresname{#1}}
 \newcommand*{\pertenenciaJurTres}[1]{\def\pertetresame{#1}}
-\newcommand*{\fechaINICIO}[1]{\def\fechaINICIOname{#1}}
-\newcommand*{\fechaFINALPlanificacion}[1]{\def\fechaFINALPlanificacionname{#1}}
-\newcommand*{\fechaFINALTrabajo}[1]{\def\fechaFINALname{#1}}
+\newcommand*{\fechaINICIO}[1]{\def\fechaInicioName{#1}}
+\newcommand*{\fechaFINALPlanificacion}[1]{\def\fechaFinalPlanName{#1}}
+\newcommand*{\fechaFINALTrabajo}[1]{\def\fechaFinalName{#1}} 
 
-\def\@title{Plan de proyecto de \authorname} %FIXME
+
+
+\def\@title{Plan de proyecto de Trabajo Final} %TODO ver si se puede agregar el campo con el nombre del autor acá
 
 %---------- LOAD PACKAGES ----------
 \usepackage{amsmath,amsthm,amssymb}
@@ -59,22 +62,19 @@
 \usepackage{url}
 \usepackage[plainpages=false,breaklinks=true,pdfpagelabels=true,pagebackref]{hyperref}
 \usepackage[english, spanish]{babel}
-%\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[]{graphicx}
 \usepackage{lastpage}
 \usepackage[table,xcdraw]{xcolor}
- \usepackage{multirow}
+\usepackage{multirow}
 \usepackage{tabularx}
 \usepackage{pgfgantt} 
-\usepackage{tikz}
-\usetikzlibrary{shapes.geometric, arrows}
-
-\tikzstyle{task} = [rectangle, rounded corners, minimum width=2cm, minimum height=2cm,text centered, text width=2.5cm, draw=black, fill=blue!30]
-\tikzstyle{milestone} = [circle, minimum width=.5cm, text width=3cm, minimum height=.5cm, text centered, draw=black, fill=green!30]
-\tikzstyle{arrow} = [thick,->,>=stealth]
+\usepackage{graphicx}
 
 
+%\usepackage{tikz}
+%\usetikzlibrary{arrows, arrows.meta, calc, positioning, quotes, shapes}
+%\usepackage{array}
 
 
 % Adds space between caption and table
@@ -168,7 +168,7 @@
     
     \vfill
     \centering
-    \textit{Este trabajo fue realizado en el curso de Gestión de proyectos\\ entre el \fechaINICIOname \hspace{1px} y el  \fechaFINALPlanificacionname.}
+    \textit{Este trabajo fue realizado en el curso de Gestión de proyectos\\ entre el \fechaInicioName \hspace{1px} y el  \fechaFinalPlanName.}
 		
 	
 	\pagebreak

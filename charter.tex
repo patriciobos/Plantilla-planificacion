@@ -6,6 +6,7 @@
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 \posgrado{Carrera de Especialización en Sistemas Embebidos} 
 %\posgrado{Carrera de Especialización en Internet de las Cosas} 
+%\posgrado{Carrera de Especialización en Intelegencia Artificial}
 %\posgrado{Maestría en Sistemas Embebidos} 
 %\posgrado{Maestría en Internet de las cosas}
 
@@ -15,7 +16,8 @@
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
 \director{Nombre del Director}
 \pertenenciaDirector{pertenencia} 
-\codirector{} % si queda vacio no se deberíá incluir NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
+% FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
+\codirector{} % si queda vacio no se deberíá incluir 
 \pertenenciaCoDirector{}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
@@ -30,10 +32,9 @@
 \juradoTres{Nombre y Apellido (3)}
 \pertenenciaJurTres{pertenencia (3)}
  
-\fechaINICIO{22 de junio de 2020}				%Fecha de inicio de la cursada de GdP
+\fechaINICIO{22 de junio de 2020}		%Fecha de inicio de la cursada de GdP \fechaInicioName
 \fechaFINALPlanificacion{22 de Agosto de 2020} 	%Fecha de final de cursada de GdP
 \fechaFINALTrabajo{22 de diciembre de 2020}		%Fecha de defensa pública del trabajo final
-
 
 
 \begin{document}
@@ -79,12 +80,12 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 \label{sec:acta}
 
 \begin{flushright}
-Buenos Aires, \fechaINICIOname
+Buenos Aires, \fechaInicioName
 \end{flushright}
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un\textcolor{red}{... completar con una descripción de una o dos líneas}, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaINICIOname\hspace{1px} y fecha de presentación pública \fechaFINALname.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un\textcolor{red}{... completar con una descripción de una o dos líneas}, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -290,7 +291,7 @@ Cosas como:
 \label{sec:wbs}
 
 \begin{consigna}{red}
-Se recomienda que mostrar el WBS mediante una lista indexada:
+Se recomienda mostrar el WBS mediante una lista indexada:
 
 \begin{enumerate}
 \item Grupo de tareas 1
@@ -325,45 +326,26 @@ Se recomienda que no haya ninguna tarea que lleve más de 40 hs.
 \label{sec:AoN}
 
 \begin{consigna}{red}
-Armar el AoN a partir del WBS definido en la etapa anterior.
+Armar el AoN a partir del WBS definido en la etapa anterior. 
 
-\begin{figure}
+%La figura \ref{fig:AoN} fue elaborada con el paquete latex tikz y pueden consultar la siguiente referencia \textit{online}:
 
-\begin{tikzpicture}[node distance=2cm]
+%\url{https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ:_A_Tutorial_for_Beginners_(Part_3)\%E2\%80\%94Creating_Flowcharts}
 
-\node (inicio) [milestone] {Inicio\\ \fechaINICIOname};
-\node (tarea1) [task, below right of=inicio,yshift=-1.5cm] {1.1 Planificación de proyecto};
-\node (tarea2) [task,  right of=tarea1, xshift=2cm] {1.2 Investigación de bibliografía };
-\node (tarea3) [task, right of=tarea2, xshift=2cm] {1.3 Documentación de investigación};
-\node (tarea4) [task, below right of=tarea3, yshift=-1.5cm] {2.1 Diseño de algo};
-\node (tarea5) [task, below left of=tarea3, yshift=-1.5cm ] {2.2 Diseño de otra cosa};
-\node (tarea6) [task, left of=tarea5, xshift=-2cm] {2.3 Implementación de todo};
-\node (fin) [milestone, right of=tarea3] {Fin\\ \fechaFINALname};
+\end{consigna}
 
-\draw [arrow] (inicio) -- (tarea1);
-\draw [arrow] (tarea1) -- (tarea2);
-\draw [arrow] (tarea2) -- (tarea3);
-\draw [arrow] (tarea3) |- (tarea4);
-\draw [arrow] (tarea3) |- (tarea5);
-\draw [arrow] (tarea4) -- (tarea6);
-\draw [arrow] (tarea5) -- (tarea6);
-
-%\draw [arrow] (dec1) -- (pro2a);
-\end{tikzpicture}
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
+\caption{Diagrama en \textit{Activity on Node}}
+\label{fig:AoN}
 \end{figure}
-
-%\begin{figure}[htpb]
-%\centering 
-%\includegraphics[width=\textwidth]{./Figuras/AoN.png}
-%\caption{Diagrama en \textit{Activity on Node}}
-%\label{fig:AoN}
-%\end{figure}
 
 Indicar claramente en qué unidades están expresados los tiempos.
 De ser necesario indicar los caminos semicríticos y analizar sus tiempos mediante un cuadro.
 Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color, como se muestra en el siguiente ejemplo:
 
-\end{consigna}
+
 
 \section{8. Diagrama de Gantt}
 \label{sec:gantt}
@@ -413,40 +395,21 @@ En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realiza
 \section{9. Matriz de uso de recursos de materiales}
 \label{sec:recursos}
 
-%\begin{table}[ht]
-%\label{tab:registro}
-%\centering
 
-%\begin{tabularx}{\linewidth}{@{}|c|X|X|X|c|@{}}
-%\hline
-%\rowcolor[HTML]{C0C0C0} 
-%Código WBS & Nombre de la tarea 										   & Fecha  & algo & aca   \\ \hline
-%1.0      & Creación del documento                                                          & 22/06/2020 \\ \hline
-%1.1      & Ejemplo de un texto muy largo que debiera ocupar más de una línea para que tengan de ejemplo                                                                                																						   & dd/mm/aaaa \\ \hline
-%1.2      & Otro ejemplo \newline
-%		   Con texto partido \newline
-%		   En varias líneas \newline
-%		   A propósito                                                                     & dd/mm/aaaa \\ \hline
-%\end{tabularx}
-%\end{table}
+\begin{table}[htpb]
+\label{tab:recursos}
+\centering
+\begin{tabularx}{\linewidth}{@{}|c|X|X|X|X|X|@{}}
+\hline
+\cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-6} 
+\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & Material 1 & Material 2 & Material 3 & Material 4 \\ \hline
+ &  &  &  &  &  \\ \hline
+ &  &  &  &  &  \\ \hline
+ &  &  &  &  &  \\ \hline
+ &  &  &  &  &  \\ \hline
+\end{tabularx}%
+\end{table}
 
-%\begin{table}[]
-%\centering
-%\begin{tabularx}{\linewidth}{@{}|c|X|X|X|c|@{}}
-%\hline
-%\cellcolor[HTML]{C0C0C0} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-6} 
-%\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código \\ \\ WBS\end{tabular}} &
-%  \multicolumn{1}{c|}{\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}Nombre de la tarea}} &
-%  {\color[HTML]{FE0000} Material 1} &
-%  \multicolumn{1}{c|}{{\color[HTML]{FE0000} Material 2}} &
-%  \multicolumn{1}{c|}{{\color[HTML]{FE0000} Material 3}} &
-%  \multicolumn{1}{c|}{{\color[HTML]{FE0000} Material 4}} \\ \hline
-%	&		&		&       &		&            \\ \hline
-%	&		&		&		&		&            \\ \hline
-%	&		&		&       &		&            \\ \hline
-%	&		&		&       &		&            \\ \hline
-%\end{tabularx}
-%\end{table}
 
 \section{10. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
@@ -459,6 +422,9 @@ Si el proyecto es complejo entonces separarlo en partes:
 \end{itemize}
 
 IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
+
+Pueden usar la herramienta \textit{online}:
+\url{https://www.tablesgenerator.com/}
 \end{consigna}
 
 \section{11. Matriz de asignación de responsabilidades}
@@ -466,14 +432,46 @@ IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
 \begin{consigna}{red}
 Establecer la matriz de asignación de responsabilidades y el manejo de la autoridad completando la siguiente tabla:
 
+\begin{table}[htpb]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\cellcolor[HTML]{C0C0C0} &
+  \cellcolor[HTML]{C0C0C0} &
+  \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Listar todos los nombres y roles del proyecto} \\ \cline{3-6} 
+\rowcolor[HTML]{C0C0C0} 
+\cellcolor[HTML]{C0C0C0} &
+  \cellcolor[HTML]{C0C0C0} &
+  Responsable &
+  Orientador &
+  Equipo &
+  Cliente \\ \cline{3-6} 
+\rowcolor[HTML]{C0C0C0} 
+\multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} &
+  \multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}Nombre de la tarea} &
+  \authorname &
+  \supname &
+  Nombre de alguien &
+  \clientename \\ \hline
+ &  &  &  &  &  \\ \hline
+ &  &  &  &  &  \\ \hline
+ &  &  &  &  &  \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+{\footnotesize
 Referencias:
 \begin{itemize}
-\item P = Responsabilidad Primaria
-\item S = Responsabilidad Secundaria
-\item A = Aprobación
-\item I = Informado
-\item C = Consultado
+	\item P = Responsabilidad Primaria
+	\item S = Responsabilidad Secundaria
+	\item A = Aprobación
+	\item I = Informado
+	\item C = Consultado
 \end{itemize}
+} %footnotesize
 
 Una de las columnas debe ser para el Director, ya que se supone que participará en el proyecto.
 A su vez se debe cuidar que no queden muchas tareas seguidas sin ``A'' o ``I''.
@@ -488,34 +486,60 @@ Importante: es redundante poner ``I/A'' o ``I/C'', porque para aprobarlo o respo
 \begin{consigna}{red}
 a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
  
-- Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos)
-  - Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-  - Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
-- Riesgo 2:
-- Riesgo 3:
+Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos)
+\begin{itemize}
+\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
+Justificar el motivo por el cual se asigna determinado número de severidad (S).
+\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
+Justificar el motivo por el cual se asigna determinado número de (O). 
+\end{itemize}   
+
+Riesgo 2:
+\begin{itemize}
+\item Severidad (S): 
+\item Ocurrencia (O):
+\end{itemize}
+
+Riesgo 3:
+\begin{itemize}
+\item Severidad (S): 
+\item Ocurrencia (O):
+\end{itemize}
+
 
 b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 
+\begin{table}[htpb]
+\centering
+\begin{tabularx}{\linewidth}{@{}|X|c|c|c|c|c|c|@{}}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
+       &   &   &     &    &    &      \\ \hline
+       &   &   &     &    &    &      \\ \hline
+       &   &   &     &    &    &      \\ \hline
+       &   &   &     &    &    &      \\ \hline
+       &   &   &     &    &    &      \\ \hline
+\end{tabularx}%
+\end{table}
+
 Criterio adoptado: 
-- Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a ....
+Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a ....
 
-Nota: 
-- Los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
+Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
 
- c) Plan de mitigación de los riesgos que originalmente excedían el PRN máximo establecido:
+c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
  
-- Riesgo 1: Plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
+Riesgo 1: Plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
   Nueva asignación de S y O, con su respectiva justificación:
   - Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).
           Justificar el motivo por el cual se asigna determinado número de severidad (S).
   - Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).
           Justificar el motivo por el cual se asigna determinado número de (O).
 
-- Riesgo 2: Plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
+Riesgo 2: Plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
  
-- Riesgo 3: Plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación)
+Riesgo 3: Plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación)
 
 \end{consigna}
 
@@ -550,6 +574,28 @@ Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos
 El plan de comunicación del proyecto es el siguiente:
 \end{consigna}
 
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[htpb]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\multicolumn{6}{|c|}{\cellcolor[HTML]{C0C0C0}PLAN DE COMUNICACIÓN DEL PROYECTO}           \\ \hline
+\rowcolor[HTML]{C0C0C0} 
+¿Qué comunicar? & Audiencia & Propósito & Frecuencia & Método de comunicac. & Responsable \\ \hline
+                &           &           &            &                      &             \\ \hline
+                &           &           &            &                      &             \\ \hline
+                &           &           &            &                      &             \\ \hline
+                &           &           &            &                      &             \\ \hline
+                &           &           &            &                      &             \\ \hline
+\end{tabular}%
+}
+\end{table}
+
 \section{15. Gestión de Compras}
 \label{sec:compras}
 
@@ -565,7 +611,26 @@ b) Redacte el Statement of Work correspondiente.
 \begin{consigna}{red}
 Para cada tarea del proyecto establecer la frecuencia y los indicadores con los se seguirá su avance y quién será el responsable de hacer dicho seguimiento y a quién debe comunicarse la situación (en concordancia con el Plan de Comunicación del proyecto).
 
+El indicador de avance tiene que ser algo medible, mejor incluso si se puede medir en \% de avance. Por ejemplo,se pueden indicar en esta columna cosas como ``cantidad de conexiones ruteadeas'' o ``cantidad de funciones implementadas'', pero no algo genérico y ambiguo como ``\%'', porque el lector no sabe porcentaje de qué cosa.
+
 \end{consigna}
+
+\begin{table}[!htpb]
+\centering
+\begin{tabularx}{\linewidth}{@{}|X|X|X|X|X|X|@{}}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\multicolumn{6}{|c|}{\cellcolor[HTML]{C0C0C0}SEGUIMIENTO DE AVANCE}                                                                       \\ \hline
+\rowcolor[HTML]{C0C0C0} 
+Tarea del WBS & Indicador de avance & Frecuencia de reporte & Resp. de seguimiento & Persona a ser informada & Método de comunic. \\ \hline
+ &  &  &  &  &  \\ \hline
+ &  &  &  &  &  \\ \hline
+ &  &  &  &  &  \\ \hline
+ &  &  &  &  &  \\ \hline
+ &  &  &  &  &  \\ \hline
+\end{tabularx}%
+%}
+\end{table}
 
 \section{17. Procesos de cierre}    
 \label{sec:cierre}
