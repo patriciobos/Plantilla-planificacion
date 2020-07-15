@@ -70,6 +70,7 @@
 \usepackage{tabularx}
 \usepackage{pgfgantt} 
 \usepackage{graphicx}
+\usepackage[section]{placeins} % evita que los floats se pueden ubicar más allá de un \section{•}
 
 
 %\usepackage{tikz}
