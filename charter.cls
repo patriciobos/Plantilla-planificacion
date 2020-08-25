@@ -53,6 +53,24 @@
 
 \def\@title{Plan de proyecto de Trabajo Final} %TODO ver si se puede agregar el campo con el nombre del autor acá
 
+\AtBeginDocument{
+  \hypersetup{
+    pdftitle = {\@title},
+    pdfauthor = {\authorname},
+    %pdfkeywords={\keywordnames},
+    %pdfsubject={\subjectname}%,
+%    colorlinks,
+%    linkcolor={red!50!black},
+%    citecolor={blue!50!black},
+%    urlcolor={blue!80!black}
+  }
+  	\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+	\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+	\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+}
+
+
+
 %---------- LOAD PACKAGES ----------
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{color}
@@ -71,7 +89,8 @@
 \usepackage{pgfgantt} 
 \usepackage{graphicx}
 \usepackage[section]{placeins} % evita que los floats se pueden ubicar más allá de un \section{•}
-
+\usepackage[labelsep=period]{caption}
+\usepackage{longtable}
 
 %\usepackage{tikz}
 %\usetikzlibrary{arrows, arrows.meta, calc, positioning, quotes, shapes}
@@ -149,7 +168,7 @@
 	
 	\vspace{3cm}
 	{\Huge \textbf{\ttitle}} \\
-	\vspace{3cm}
+	\vspace{4cm}
 	
 	\flushleft
 	{\normalsize Autor:\\}
@@ -160,18 +179,16 @@
 	{\Large \supname \hspace{1px} (\pertesupname) \\}
 	\vspace{2cm}
 		
-	{\normalsize Jurados:\\}	
-	{\Large \jurunoname \hspace{1px} (\perteunoame) \\
-			\jurdosname \hspace{1px} (\pertedosame) \\
-			\jurtresname \hspace{1px} (\pertetresame) \par}
-	             
+%	{\normalsize Jurados:\\}	
+%	{\Large \jurunoname \hspace{1px} (\perteunoame) \\
+%			\jurdosname \hspace{1px} (\pertedosame) \\
+%			\jurtresname \hspace{1px} (\pertetresame) \par}
+%	             
 	
-    
     \vfill
     \centering
-    \textit{Este trabajo fue realizado en el curso de Gestión de proyectos\\ entre el \fechaInicioName \hspace{1px} y el  \fechaFinalPlanName.}
+    \textit{Esta planificación fue realizada en el curso de Gestión de proyectos\\ entre el \fechaInicioName \hspace{1px} y el  \fechaFinalPlanName.}
 		
-	
 	\pagebreak
   }
 
