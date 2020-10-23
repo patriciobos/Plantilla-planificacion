@@ -78,7 +78,7 @@
 \usepackage{float}
 \usepackage{relsize} 
 \usepackage{url}
-\usepackage[plainpages=false,breaklinks=true,pdfpagelabels=true,pagebackref]{hyperref}
+%\usepackage[plainpages=false,breaklinks=true,pdfpagelabels=true,pagebackref]{hyperref}
 \usepackage[english, spanish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[]{graphicx}
@@ -101,8 +101,19 @@
 \usepackage[tableposition=top]{caption}
 
 % Adds hyperlinks to references and ToC
-\usepackage{hyperref}
-\hypersetup{hidelinks,linkcolor = black} % Changes the link color to black and hides the hideous red border that usually is created
+%\usepackage{hyperref}
+%\hypersetup{hidelinks,linkcolor = black} % Changes the link color to black and hides the hideous red border that usually is created
+\RequirePackage[
+	bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+	colorlinks = true,
+    linkcolor=black,%{red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}]{hyperref}
 
 %% All page numbers positioned at the bottom of the page
 \usepackage{fancyhdr}
@@ -138,11 +149,11 @@
   pdffitwindow=true,      % window fit to page when opened
   pdfcreator={\@author},  % creator of the document
   pdfnewwindow=true,      % links in new window
-  colorlinks=true,        % false: boxed links; true: colored links
-  linkcolor=blue,         % color of internal links
-  citecolor=blue,         % color of links to bibliography
-  filecolor=magenta,      % color of file links
-  urlcolor=magenta,       % color of external links
+%  colorlinks=true,        % false: boxed links; true: colored links
+%  linkcolor=blue,         % color of internal links
+%  citecolor=blue,         % color of links to bibliography
+%  filecolor=magenta,      % color of file links
+%  urlcolor=magenta,       % color of external links
   unicode = true
 }
 
