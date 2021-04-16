@@ -10,6 +10,7 @@
 \typeout{Una clase para armar planificaciones de Trabajos finales en el curso de Gestión de Proyectos.}
 
 \ProvidesClass{charter}
+\DeclareOption{codirector}{\booltrue{codirector}}
 \DeclareOption*{\PassOptionsToPackage{\CurrentOption}{color}}%
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}%
 \ExecuteOptions{12pt}% execute default options
@@ -189,6 +190,12 @@
 	{\normalsize Director:\\}
 	{\Large \supname \hspace{1px} (\pertesupname) \\}
 	\vspace{2cm}
+	\ifbool{codirector}{% If the codirector class option has been specified
+	\vspace{10px}
+	{\normalsize Codirector:\\} \\
+	{\Large \codirname \\} % Supervisor name
+	}{\vspace{2pc}%nothing
+	}
 		
 %	{\normalsize Jurados:\\}	
 %	{\Large \jurunoname \hspace{1px} (\perteunoame) \\
