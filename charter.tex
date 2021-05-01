@@ -379,22 +379,47 @@ Revisar que la fecha de finalización coincida con lo indicado en el Acta Consti
 
 En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
 
-\begin{figure}[htbp]
-\begin{center}
-\begin{ganttchart}{1}{12}
-  \gantttitle{2020}{12} \\
-  \gantttitlelist{1,...,12}{1} \\
-  \ganttgroup{Group 1}{1}{7} \\
-  \ganttbar{Task 1}{1}{2} \\
-  \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-  \ganttmilestone{Milestone o hito}{7} \ganttnewline
-  \ganttbar{Final Task}{8}{12}
-  \ganttlink{elem2}{elem3}
-  \ganttlink{elem3}{elem4}
-\end{ganttchart}
-\end{center}
-\caption{Diagrama de gantt de ejemplo}
-\label{fig:gantt}
+\begin{figure}[htpb]
+  \begin{center}
+    \begin{ganttchart}[
+      time slot unit=day,
+      time slot format=isodate,
+      x unit=0.038cm,
+      y unit title=0.7cm,
+      y unit chart=0.6cm,
+      milestone/.append style={xscale=4}
+      ]{2021-03-5}{2021-12-17}
+      \gantttitlecalendar*{2021-03-5}{2021-12-17}{year} \\
+      \gantttitlecalendar*{2021-03-5}{2021-12-17}{month} \\
+      \ganttgroup{Duración Total}{2021-03-5}{2021-12-17} \\
+      %%%%%%%%%%%%%%%%%Organización
+      \ganttgroup{Organización}{2021-03-5}{2021-04-16} \\
+      \ganttbar{Planificación del proyecto}{2021-03-5}{2021-04-16} \\
+      %%%%%%%%%%%%%%%%%Ejecución
+      \ganttgroup{Ejecución}{2021-04-19}{2021-10-15} \\
+      \ganttbar{Tarea 1}{2021-04-19}{2021-04-30} \\
+      \ganttbar{Tarea 2}{2021-05-3}{2021-05-14} \\
+      \ganttbar{Tarea 3}{2021-05-17}{2021-05-28} \\
+      \ganttbar{Tarea 4}{2021-05-31}{2021-07-14} \\
+      \ganttbar{Tarea 5}{2021-05-31}{2021-07-14} \\
+      \ganttbar{Tarea 6}{2021-07-15}{2021-08-11} \\
+      \ganttbar{Tarea 7}{2021-08-12}{2021-09-24} \\
+      \ganttbar{Tarea 8}{2021-09-27}{2021-10-1} \\
+      \ganttbar{Tarea 9}{2021-10-4}{2021-10-15} \\
+      \ganttbar{Tarea 10}{2021-10-18}{2021-10-22} \\
+      % %%%%%%%%%%%%%%%%%Finalización
+      \ganttgroup{Finalización}{2021-10-25}{2021-12-17} \\
+      \ganttbar{Memoria v1}{2021-10-25}{2021-11-5} \\
+      \ganttbar{Memoria v2}{2021-11-8}{2021-11-19} \\
+      \ganttbar{Memoria final}{2021-11-22}{2021-12-3} \\
+      \ganttmilestone{Enviar memoria al director}{2021-12-3} \\
+      \ganttbar{Elaborar la presentación}{2021-12-6}{2021-12-17} \\
+      \ganttmilestone{Ensayo de la presentación}{2021-12-17} \\
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \end{ganttchart}
+  \end{center}
+  \caption{Diagrama de gantt de ejemplo}
+  \label{fig:gantt}
 \end{figure}
 
 \end{consigna}
