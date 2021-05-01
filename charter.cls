@@ -199,8 +199,8 @@
   % codirector exists
   {
     \vspace{10px}
-	  \normalsize Codirector:\\
-	  \Large \cosupname \hspace{1px} (\pertecosupname) \\
+    \normalsize Codirector:\\
+    \Large \cosupname \hspace{1px} (\pertecosupname) \\
   }
 		
 %	{\normalsize Jurados:\\}	
