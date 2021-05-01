@@ -9,12 +9,18 @@
 \typeout{\filedate}
 \typeout{Una clase para armar planificaciones de Trabajos finales en el curso de Gestión de Proyectos.}
 
+\RequirePackage{etoolbox}
+\RequirePackage{xparse}
+
+\newbool{codirector}
+
 \ProvidesClass{charter}
 \DeclareOption{codirector}{\booltrue{codirector}}
 \DeclareOption*{\PassOptionsToPackage{\CurrentOption}{color}}%
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}%
 \ExecuteOptions{12pt}% execute default options
 \ProcessOptions%
+
 \LoadClass[a4paper]{article}
 
 %----------------------------------------------------------------------------------------
@@ -47,7 +53,7 @@
 \newcommand*{\juradoTres}[1]{\def\jurtresname{#1}}
 \newcommand*{\pertenenciaJurTres}[1]{\def\pertetresame{#1}}
 \newcommand*{\fechaINICIO}[1]{\def\fechaInicioName{#1}}
-\newcommand*{\fechaFINALPlanificacion}[1]{\def\fechaFinalPlanName{#1}}
+\newcommand*{\fechaFINALPlan}[1]{\def\fechaFinalPlanName{#1}}
 \newcommand*{\fechaFINALTrabajo}[1]{\def\fechaFinalName{#1}} 
 
 
@@ -189,19 +195,14 @@
 	
 	{\normalsize Director:\\}
 	{\Large \supname \hspace{1px} (\pertesupname) \\}
-	\vspace{2cm}
+	%\vspace{2cm}
 	\ifbool{codirector}{% If the codirector class option has been specified
 	\vspace{10px}
-	{\normalsize Codirector:\\} \\
-	{\Large \codirname \\} % Supervisor name
+	{\normalsize Codirector:\\}
+	{\Large \cosupname  \hspace{1px} (\pertecosupname) \\}
 	}{\vspace{2pc}%nothing
 	}
 		
-%	{\normalsize Jurados:\\}	
-%	{\Large \jurunoname \hspace{1px} (\perteunoame) \\
-%			\jurdosname \hspace{1px} (\pertedosame) \\
-%			\jurtresname \hspace{1px} (\pertetresame) \par}
-%	             
 	
     \vfill
     \centering
