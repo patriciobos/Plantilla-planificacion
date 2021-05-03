@@ -195,7 +195,6 @@
 	
 	{\normalsize Director:\\}
 	{\Large \supname \hspace{1px} (\pertesupname) \\}
-	\vspace{2cm}
 
 \ifdefempty{\cosupname}
   % codirector doesn't exist
