@@ -1,4 +1,10 @@
-\documentclass[11pt]{charter}
+\documentclass[
+11pt, % The default document font size, options: 10pt, 11pt, 12pt
+codirector, % Uncomment to add a codirector to the title page
+]{charter} 
+
+
+
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
 \titulo{Título del proyecto} 
@@ -17,8 +23,8 @@
 \director{Nombre del Director}
 \pertenenciaDirector{pertenencia} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
-\codirector{algo} % si queda vacio no se debería incluir 
-\pertenenciaCoDirector{algo mas}
+\codirector{John Doe} % para que aparezca en la portada se debe descomentar la opción codirector en el documentclass
+\pertenenciaCoDirector{FIUBA}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
 \cliente{Nombre del cliente}
@@ -32,9 +38,9 @@
 \juradoTres{Nombre y Apellido (3)}
 \pertenenciaJurTres{pertenencia (3)}
  
-\fechaINICIO{25 de agosto de 2020}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlanificacion{13 de octubre de 2020} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{22 de agosto de 2021}		%Fecha de defensa pública del trabajo final
+\fechaINICIO{30 de abril de 2021}		%Fecha de inicio de la cursada de GdP \fechaInicioName
+\fechaFINALPlan{18 de junio de 2021} 	%Fecha de final de cursada de GdP
+\fechaFINALTrabajo{15 de mayo de 2022}	%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -62,12 +68,14 @@
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
-1.0      & Creación del documento                                          & 27/06/2020 \\ \hline
-%1.1      & Avances en alguna cosa                                          & dd/mm/aaaa \\ \hline
-%1.2      & Otro ejemplo \newline
-%		   Con texto partido \newline
-%		   En varias líneas \newline
-%		   A propósito                                                     & dd/mm/aaaa \\ \hline
+0      & Creación del documento                                 &\fechaInicioName \\ \hline
+%1      & Se completa hasta el punto 4 inclusive                 & dd/mm/aaaa \\ \hline
+%2      & Se completa hasta el punto 7 inclusive
+%		  Se puede agregar algo más \newline
+%		  En distintas líneas \newline
+%		  Así                                                    & dd/mm/aaaa \\ \hline
+%3      & Se completa hasta el punto 11 inclusive                & dd/mm/aaaa \\ \hline
+%4      & Se completa el plan	                                 & dd/mm/aaaa \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -84,7 +92,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un sistema de control de temperatura de un calefón, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en \textcolor{red}{la implementación de un prototipo de un sistema de control de temperatura de un calefón}, y tendrá un presupuesto preliminar estimado de \textcolor{red}{600} hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -108,36 +116,38 @@ Se adjunta a esta acta la planificación inicial.
 \label{sec:descripcion}
 
 
-%\begin{consigna}{red}
-%El objetivo es que el lector en una o dos páginas entienda de qué se trata el proyecto y cuáles son sus desafíos, su motivación y su importancia.
-%Se debe destacar claramente cuál es el valor que agrega el proyecto a realizar. ``El presente proyecto se destaca especialmente por incorporar tal cosa... Esto lo diferencia de otros sistemas similares en que ...''
-%
-%Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
-%
-%\begin{itemize}
-%\item ¿Cómo se vincula este proyecto con la misión de la organización?
-%\item ¿Cómo se inserta este proyecto en el modelo de negocio de la organización?
-%\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
-%\item ¿En qué estado del ciclo de vida está el producto que se desea reemplazar o mejorar?
-%\item ¿Cuales son las necesidades que debe satisfacer?
-%\item ¿Por dónde pasa la innovación?
-%\end{itemize}
-%
-%La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema }y una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''. Luego recién más abajo de haber puesto esta frase se pone la figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
+\begin{consigna}{red} % El bloque "consigna" se usa para poner texto en rojo y dar una pequeña ayuda sobre cómo completar la sección
+
+El objetivo es que el lector en una o dos páginas entienda de qué se trata el proyecto y cuáles son sus desafíos, su motivación y su importancia.
+
+Se debe destacar claramente cuál es el valor que agrega el proyecto a realizar. ``El presente proyecto se destaca especialmente por incorporar tal cosa... Esto lo diferencia de otros sistemas similares en que ...''
+
+Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
+
+\begin{itemize}
+	\item ¿Cómo se vincula este proyecto con la misión de la organización?
+	\item ¿Cómo se inserta este proyecto en el modelo de negocio de la organización?
+	\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
+	\item ¿En qué estado del ciclo de vida está el producto que se desea reemplazar o mejorar?
+	\item ¿Cuáles son las necesidades que debe satisfacer?
+	\item ¿Por dónde pasa la innovación?
+\end{itemize}
+
+La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema} y una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''. Luego recién más abajo de haber puesto esta frase, se pone la figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
 
 %\vspace{25px}
-%
-%\begin{figure}[htpb]
-%\centering 
-%\includegraphics[width=.7\textwidth]{./Figuras/diagBloques.png}
-%\caption{Diagrama en bloques del sistema}
-%\label{fig:diagBloques}
-%\end{figure}
-%
-%\vspace{25px}
-%
-%El tamaño de la tipografía en la figura debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama.
-%\end{consigna}
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=.5\textwidth]{./Figuras/diagBloques.png}
+\caption{Diagrama en bloques del sistema}
+\label{fig:diagBloques}
+\end{figure}
+
+\vspace{25px}
+
+El tamaño de la tipografía en TODAS las figuras debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama, preferentemente en la gama de colores pastel.
+\end{consigna}
 
 
 \section{Identificación y análisis de los interesados}
@@ -169,7 +179,7 @@ Cliente       & \clientename      &\empclientename	&        	\\ \hline
 Impulsor      &                   &              	&        	\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
 Colaboradores &                   &              	&        	\\ \hline
-Orientador    & \supname	      & \pertesupname 	& Director	Trabajo final \\ \hline
+Orientador    & \supname	      & \pertesupname 	& Director Trabajo final \\ \hline
 Equipo        & miembro1 \newline 
 				miembro2          &              	&        	\\ \hline
 Opositores    &                   &              	&        	\\ \hline
@@ -183,13 +193,13 @@ No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo 
 
 No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
 
-Sería deseable listar a continuación de la tabla las principales características de cada interesado.
+Es deseable listar a continuación las principales características de cada interesado.
  
 Por ejemplo:
 \begin{itemize}
-\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
-\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
-\item Orientador: María Gómez, nos va a poder ayudar mucho con la gestión de impuestos.
+	\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
+	\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
+	\item Orientador: María Gómez va a poder ayudar mucho con la definición de los requerimientos.
 \end{itemize}
 
 \end{consigna}
@@ -227,8 +237,8 @@ Explicitar además todo lo que no quede incluido (``El presente proyecto no incl
 ``Para el desarrollo del presente proyecto se supone que: ...''
 
 \begin{itemize}
-\item Supuesto 1
-\item Supuesto 2...
+	\item Supuesto 1
+	\item Supuesto 2...
 \end{itemize}
 
 Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
@@ -238,67 +248,73 @@ Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y
 \label{sec:requerimientos}
 
 \begin{consigna}{red}
-Los requerimientos deben numerarse y de ser posible agruparlos por afinidad:
+Los requerimientos deben numerarse y de ser posible estar agruparlos por afinidad, por ejemplo:
 
 \begin{enumerate}
-\item Grupo de requerimientos asociados con...
-	\begin{enumerate}
-	\item Requerimiento 1
-	\item Requerimiento 2
-	\item Requerimiento 3 (prioridad menor)
-	\end{enumerate}
-\item Grupo de requerimientos asociados con...
-	\begin{enumerate}
-	\item Requerimiento 1
-	\item Requerimiento 2 (prioridad menor)
-	\end{enumerate}
+	\item Requerimientos funcionales
+		\begin{enumerate}
+			\item El sistema debe...
+			\item Tal componente debe...
+			\item El usuario debe poder...
+		\end{enumerate}
+	\item Requerimientos de documentación
+		\begin{enumerate}
+			\item Requerimiento 1
+			\item Requerimiento 2 (prioridad menor)
+		\end{enumerate}
+	\item Requerimiento de testing...
+	\item Requerimientos de la interfaz...
+	\item Requerimientos interoperabilidad...
+	\item etc...
 \end{enumerate}
 
 Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
 
-De ser posible indicar cómo se obtuvieron cada uno de los requerimientos 
-
-Indicar claramente cuál es la prioridad entre los distintos requerimientos. 
+Indicar claramente cuál es la prioridad entre los distintos requerimientos y si hay requerimientos opcionales. 
 
 No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!
 
 Y al escribirlos seguir las siguientes reglas:
 \begin{itemize}
-\item Ser breve y conciso (nadie lee cosas largas). 
-\item Ser específico: no dejar lugar a confusiones.
-\item Expresar los requerimientos en términos que sean cuantificables y medibles.
+	\item Ser breve y conciso (nadie lee cosas largas). 
+	\item Ser específico: no dejar lugar a confusiones.
+	\item Expresar los requerimientos en términos que sean cuantificables y medibles.
 \end{itemize}
 
 \end{consigna}
 
-\section{Historias de usuarios (\textit{Product backlog})}
+\section{5. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
 \begin{consigna}{red}
 Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
+
+Se debe indicar explícitamente el criterio para calcular los \textit{story points} de cada historia
 \end{consigna}
 
-\section{5. Entregables principales del proyecto}
+\section{6. Entregables principales del proyecto}
 \label{sec:entregables}
 
 \begin{consigna}{red}
-Cosas como: 
-\begin{itemize}
-\item Manual de uso
-\item Diagrama esquemático
-\item Código fuente
-\item Diagrama de instalación
-\item Informe final
 
+Los entregables del proyecto son (ejemplo):
+
+\begin{itemize}
+	\item Manual de uso
+	\item Diagrama de circuitos esquemáticos
+	\item Código fuente del firmware
+	\item Diagrama de instalación
+	\item Informe final
+	\item etc...
 \end{itemize}
 
 \end{consigna}
 
-\section{6. Desglose del trabajo en tareas}
+\section{7. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
 \begin{consigna}{red}
-Se recomienda mostrar el WBS mediante una lista indexada:
+El WBS debe tener relación directa o indirecta con los requerimientos.  Son todas las actividades que se harán en el proyecto para dar cumplimiento a los requerimientos. Se recomienda mostrar el WBS mediante una lista indexada:
 
 \begin{enumerate}
 \item Grupo de tareas 1
@@ -313,7 +329,7 @@ Se recomienda mostrar el WBS mediante una lista indexada:
 	\item Tarea 2 (tantas hs)
 	\item Tarea 3 (tantas hs)
 	\end{enumerate}
-	\item Grupo de tareas 3
+\item Grupo de tareas 3
 	\begin{enumerate}
 	\item Tarea 1 (tantas hs)
 	\item Tarea 2 (tantas hs)
@@ -329,7 +345,7 @@ Se recomienda que no haya ninguna tarea que lleve más de 40 hs.
 
 \end{consigna}
 
-\section{7. Diagrama de Activity On Node}
+\section{8. Diagrama de Activity On Node}
 \label{sec:AoN}
 
 \begin{consigna}{red}
@@ -354,13 +370,12 @@ Es recomendable usar colores y un cuadro indicativo describiendo qué representa
 
 
 
-\section{8. Diagrama de Gantt}
+\section{9. Diagrama de Gantt}
 \label{sec:gantt}
 
 \begin{consigna}{red}
-Utilizar el software Gantter for Google Drive o alguno similar para dibujar el diagrama de Gantt.
 
-Existen muchos programas y recursos \textit{online} para hacer diagramas de gantt, entre las cuales destacamos:
+Existen muchos programas y recursos \textit{online} para hacer diagramas de gantt, entre los cuales destacamos:
 
 \begin{itemize}
 \item Planner
@@ -433,58 +448,15 @@ ajustar este valor y, quizás, acortar los nombres de las tareas.
 
 \end{consigna}
 
-\section{9. Matriz de uso de recursos de materiales}
-\label{sec:recursos}
 
-
-\begin{table}
-\label{tab:recursos}
-\centering
-\begin{tabularx}{\linewidth}{@{}|c|X|X|X|X|c|@{}}
-\hline
-\cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-6} 
-\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & Material 1 & Material 2 & Material 3 & Material 4 \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline 
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline 
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
-
-\end{tabularx}%
-\end{table}
-
-
-\section{10. Presupuesto detallado del proyecto}
+\section{9. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
 \begin{consigna}{red}
 Si el proyecto es complejo entonces separarlo en partes:
 \begin{itemize}
-\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-\item El desglose detallado del subtotal de cada una de las áreas.
+	\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
+	\item El desglose detallado del subtotal de cada una de las áreas.
 \end{itemize}
 
 IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
@@ -548,7 +520,7 @@ Descripción &
 \end{table}
 
 
-\section{11. Matriz de asignación de responsabilidades}
+\section{10. Matriz de asignación de responsabilidades}
 \label{sec:responsabilidades}
 \begin{consigna}{red}
 Establecer la matriz de asignación de responsabilidades y el manejo de la autoridad completando la siguiente tabla:
@@ -601,30 +573,30 @@ Importante: es redundante poner ``I/A'' o ``I/C'', porque para aprobarlo o respo
 
 \end{consigna}
 
-\section{12. Gestión de riesgos}
+\section{11. Gestión de riesgos}
 \label{sec:riesgos}
 
 \begin{consigna}{red}
 a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
  
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos)
+Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos de forma negativa)
 \begin{itemize}
-\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-Justificar el motivo por el cual se asigna determinado número de severidad (S).
-\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-Justificar el motivo por el cual se asigna determinado número de (O). 
+	\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
+	Justificar el motivo por el cual se asigna determinado número de severidad (S).
+	\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
+	Justificar el motivo por el cual se asigna determinado número de (O). 
 \end{itemize}   
 
 Riesgo 2:
 \begin{itemize}
-\item Severidad (S): 
-\item Ocurrencia (O):
+	\item Severidad (S): 
+	\item Ocurrencia (O):
 \end{itemize}
 
 Riesgo 3:
 \begin{itemize}
-\item Severidad (S): 
-\item Ocurrencia (O):
+	\item Severidad (S): 
+	\item Ocurrencia (O):
 \end{itemize}
 
 
@@ -665,7 +637,7 @@ Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de
 \end{consigna}
 
 
-\section{13. Gestión de la calidad}
+\section{12. Gestión de la calidad}
 \label{sec:calidad}
 
 \begin{consigna}{red}
@@ -673,20 +645,18 @@ Para cada uno de los requerimientos del proyecto indique:
 \begin{itemize} 
 \item Req \#1: copiar acá el requerimiento.
 
-Verificación y validación:
-
 \begin{itemize}
-\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar 
-\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar  
+	\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar 
+	\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar  
 \end{itemize}
 
 \end{itemize}
 
-Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.
+Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.  Las acciones de verificación suelen considerar al entregable como ``caja blanca'', es decir se conoce en profundidad su funcionamiento interno.  En cambio, las acciones de validación suelen considerar al entregable como ``caja negra'', es decir, que no se conocen los detalles de su funcionamiento interno.
 
 \end{consigna}
 
-\section{14. Comunicación del proyecto}
+\section{13. Comunicación del proyecto}
 \label{sec:comunicaciones}
 
 El plan de comunicación del proyecto es el siguiente:
@@ -707,81 +677,21 @@ El plan de comunicación del proyecto es el siguiente:
 \end{tabularx}
 \end{table}
 
-\section{15. Gestión de compras}
-\label{sec:compras}
 
-\begin{consigna}{red}
-En caso de tener que comprar elementos o contratar servicios:
-a) Explique con qué criterios elegiría a un proveedor.
-b) Redacte el Statement of Work correspondiente.
-\end{consigna}
 
-\section{16. Seguimiento y control}
-\label{sec:seguimiento}
-
-\begin{consigna}{red}
-Para cada tarea del proyecto establecer la frecuencia y los indicadores con los se seguirá su avance y quién será el responsable de hacer dicho seguimiento y a quién debe comunicarse la situación (en concordancia con el Plan de Comunicación del proyecto).
-
-El indicador de avance tiene que ser algo medible, mejor incluso si se puede medir en \% de avance. Por ejemplo,se pueden indicar en esta columna cosas como ``cantidad de conexiones ruteadeas'' o ``cantidad de funciones implementadas'', pero no algo genérico y ambiguo como ``\%'', porque el lector no sabe porcentaje de qué cosa.
-
-\end{consigna}
-
-\begin{longtable}{|m{1cm}|m{3.5cm}|m{2.2cm}|m{2cm}|m{3cm}|m{1.5cm}|}
-\hline
-\rowcolor[HTML]{C0C0C0} 
-\multicolumn{6}{|c|}{\cellcolor[HTML]{C0C0C0}SEGUIMIENTO DE AVANCE}                                                                       \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-Tarea del WBS 			& Indicador de avance & Frecuencia de reporte & Resp. de seguimiento & Persona a ser informada & Método de comunic. \\ \hline
-\endfirsthead
-
-\hline
-\rowcolor[HTML]{C0C0C0} 
-\multicolumn{6}{c}{\cellcolor[HTML]{C0C0C0}SEGUIMIENTO DE AVANCE}                                                                       \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-Tarea del WBS 			& Indicador de avance & Frecuencia de reporte & Resp. de seguimiento & Persona a ser informada & Método de comunic. \\ \hline
-\endhead
-
-\multicolumn{6}{c}{Continúa}
-\endfoot
-
-\endlastfoot
-
-1.1	& Fecha de inicio  & Única vez al comienzo & \authorname & \clientename, \supname & email \\ \hline
-2.1	& Avance de las subtareas  & Mensual mientras dure la tarea & \authorname & \clientename, \supname & email \\ \hline
-
-\end{longtable}
-
-\begin{table}[!htpb]
-\centering
-%\begin{tabularx}{\linewidth}{@{}|X|X|X|X|X|X|@{}}
-\begin{tabularx}{\linewidth}{@{}|X|C{2.5cm}|C{3cm}|C{2cm}|C{2cm}|C{2.5cm}|@{}}
-\hline
-\rowcolor[HTML]{C0C0C0} 
-\multicolumn{6}{|c|}{\cellcolor[HTML]{C0C0C0}SEGUIMIENTO DE AVANCE}                                                                       \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-Tarea del WBS & Indicador de avance & Frecuencia de reporte & Resp. de seguimiento & Persona a ser informada & Método de comunic. \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
-\end{tabularx}%
-%}
-\end{table}
-
-\section{17. Procesos de cierre}    
+\section{14. Procesos de cierre}    
 \label{sec:cierre}
 
 \begin{consigna}{red}
 Establecer las pautas de trabajo para realizar una reunión final de evaluación del proyecto, tal que contemple las siguientes actividades:
 
 \begin{itemize}
-\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:
- - Indicar quién se ocupará de hacer esto y cuál será el procedimiento a aplicar. 
-\item Identificación de las técnicas y procedimientos útiles e inútiles que se utilizaron, y los problemas que surgieron y cómo se solucionaron:
- - Indicar quién se ocupará de hacer esto y cuál será el procedimiento para dejar registro.
-\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:
-  - Indicar esto y quién financiará los gastos correspondientes.
+	\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:
+	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento a aplicar. 
+	\item Identificación de las técnicas y procedimientos útiles e inútiles que se emplearon, y los problemas que surgieron y cómo se solucionaron:
+	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento para dejar registro.
+	\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:
+	  - Indicar esto y quién financiará los gastos correspondientes.
 \end{itemize}
 
 \end{consigna}
