@@ -89,6 +89,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[]{graphicx}
 \usepackage{lastpage}
+\usepackage{pdflscape}
+\usepackage{pdflscape}
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{multirow}
 \usepackage{tabularx}

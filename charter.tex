@@ -57,7 +57,7 @@ codirector, % Uncomment to add a codirector to the title page
 \pagebreak
 
 
-\section{Registros de cambios}
+\section*{Registros de cambios}
 \label{sec:registro}
 
 
@@ -83,7 +83,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 
 
 
-\section{Acta de constitución del proyecto}
+\section*{Acta de constitución del proyecto}
 \label{sec:acta}
 
 \begin{flushright}
@@ -112,7 +112,7 @@ Se adjunta a esta acta la planificación inicial.
 
 
 
-\section{Descripción técnica-conceptual del proyecto a realizar}
+\section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
 
@@ -150,7 +150,7 @@ El tamaño de la tipografía en TODAS las figuras debe ser adecuado para que NO 
 \end{consigna}
 
 
-\section{Identificación y análisis de los interesados}
+\section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
 
 \begin{consigna}{red} 
@@ -206,7 +206,7 @@ Por ejemplo:
 
 
 
-\section{1. Propósito del proyecto}
+\section{3. Propósito del proyecto}
 \label{sec:proposito}
 
 \begin{consigna}{red}
@@ -215,7 +215,7 @@ Por ejemplo:
 Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
 \end{consigna}
 
-\section{2. Alcance del proyecto}
+\section{4. Alcance del proyecto}
 \label{sec:alcance}
 
 \begin{consigna}{red}
@@ -230,7 +230,7 @@ Explicitar además todo lo que no quede incluido (``El presente proyecto no incl
 \end{consigna}
 
 
-\section{3. Supuestos del proyecto}
+\section{5. Supuestos del proyecto}
 \label{sec:supuestos}
 
 \begin{consigna}{red}
@@ -244,7 +244,7 @@ Explicitar además todo lo que no quede incluido (``El presente proyecto no incl
 Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
 \end{consigna}
 
-\section{4. Requerimientos}
+\section{6. Requerimientos}
 \label{sec:requerimientos}
 
 \begin{consigna}{red}
@@ -283,16 +283,18 @@ Y al escribirlos seguir las siguientes reglas:
 
 \end{consigna}
 
-\section{5. Historias de usuarios (\textit{Product backlog})}
+\section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
 \begin{consigna}{red}
 Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
 
+El formato propuesto es: "como [rol] quiero [tal cosa] para [tal otra cosa]."
+
 Se debe indicar explícitamente el criterio para calcular los \textit{story points} de cada historia
 \end{consigna}
 
-\section{6. Entregables principales del proyecto}
+\section{8. Entregables principales del proyecto}
 \label{sec:entregables}
 
 \begin{consigna}{red}
@@ -310,7 +312,7 @@ Los entregables del proyecto son (ejemplo):
 
 \end{consigna}
 
-\section{7. Desglose del trabajo en tareas}
+\section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
 \begin{consigna}{red}
@@ -345,7 +347,7 @@ Se recomienda que no haya ninguna tarea que lleve más de 40 hs.
 
 \end{consigna}
 
-\section{8. Diagrama de Activity On Node}
+\section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
 
 \begin{consigna}{red}
@@ -370,7 +372,7 @@ Es recomendable usar colores y un cuadro indicativo describiendo qué representa
 
 
 
-\section{9. Diagrama de Gantt}
+\section{11. Diagrama de Gantt}
 \label{sec:gantt}
 
 \begin{consigna}{red}
@@ -446,10 +448,21 @@ ajustar este valor y, quizás, acortar los nombres de las tareas.
   \label{fig:gantt}
 \end{figure}
 
+
+\begin{landscape}
+\begin{figure}[htpb]
+\centering 
+\includegraphics[height=.85\textheight]{./Figuras/Gantt-2.png}
+\caption{Ejemplo de diagrama de Gantt rotado}
+\label{fig:diagGantt}
+\end{figure}
+
+\end{landscape}
+
 \end{consigna}
 
 
-\section{9. Presupuesto detallado del proyecto}
+\section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
 \begin{consigna}{red}
@@ -520,60 +533,7 @@ Descripción &
 \end{table}
 
 
-\section{10. Matriz de asignación de responsabilidades}
-\label{sec:responsabilidades}
-\begin{consigna}{red}
-Establecer la matriz de asignación de responsabilidades y el manejo de la autoridad completando la siguiente tabla:
-
-\begin{table}[htpb]
-\centering
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|c|c|c|c|c|c|}
-\hline
-\rowcolor[HTML]{C0C0C0} 
-\cellcolor[HTML]{C0C0C0} &
-  \cellcolor[HTML]{C0C0C0} &
-  \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Listar todos los nombres y roles del proyecto} \\ \cline{3-6} 
-\rowcolor[HTML]{C0C0C0} 
-\cellcolor[HTML]{C0C0C0} &
-  \cellcolor[HTML]{C0C0C0} &
-  Responsable &
-  Orientador &
-  Equipo &
-  Cliente \\ \cline{3-6} 
-\rowcolor[HTML]{C0C0C0} 
-\multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} &
-  \multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}Nombre de la tarea} &
-  \authorname &
-  \supname &
-  Nombre de alguien &
-  \clientename \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
-\end{tabular}%
-}
-\end{table}
-
-{\footnotesize
-Referencias:
-\begin{itemize}
-	\item P = Responsabilidad Primaria
-	\item S = Responsabilidad Secundaria
-	\item A = Aprobación
-	\item I = Informado
-	\item C = Consultado
-\end{itemize}
-} %footnotesize
-
-Una de las columnas debe ser para el Director, ya que se supone que participará en el proyecto.
-A su vez se debe cuidar que no queden muchas tareas seguidas sin ``A'' o ``I''.
-
-Importante: es redundante poner ``I/A'' o ``I/C'', porque para aprobarlo o responder consultas primero la persona debe ser informada.
-
-\end{consigna}
-
-\section{11. Gestión de riesgos}
+\section{13. Gestión de riesgos}
 \label{sec:riesgos}
 
 \begin{consigna}{red}
@@ -637,7 +597,7 @@ Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de
 \end{consigna}
 
 
-\section{12. Gestión de la calidad}
+\section{14. Gestión de la calidad}
 \label{sec:calidad}
 
 \begin{consigna}{red}
@@ -656,30 +616,7 @@ Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos
 
 \end{consigna}
 
-\section{13. Comunicación del proyecto}
-\label{sec:comunicaciones}
-
-El plan de comunicación del proyecto es el siguiente:
-
-\begin{table}[htpb]
-\centering
-\begin{tabularx}{\linewidth}{@{}|X|C{2.4cm}|C{3cm}|C{1.8cm}|C{2cm}|C{2.1cm}|@{}}
-\hline
-\rowcolor[HTML]{C0C0C0} 
-\multicolumn{6}{|c|}{\cellcolor[HTML]{C0C0C0}PLAN DE COMUNICACIÓN DEL PROYECTO}           \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-¿Qué comunicar? & Audiencia & Propósito & Frecuencia & Método de comunicac. & Responsable \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
-\end{tabularx}
-\end{table}
-
-
-
-\section{14. Procesos de cierre}    
+\section{15. Procesos de cierre}    
 \label{sec:cierre}
 
 \begin{consigna}{red}
