@@ -6,8 +6,10 @@
 \typeout{\filename}
 \typeout{\fileversion}
 \typeout{Creado por Patricio Bos para el Laboratorio de Sistemas Embebidos de FIUBA}
+\typeout{Modificado por Fabián Banderas para la carrera de especialización de Internet de las Cosas}
+
 \typeout{\filedate}
-\typeout{Una clase para armar planificaciones de Trabajos finales en el curso de Gestión de Proyectos.}
+%\typeout{Una clase para armar planificaciones de Trabajos finales en el curso de Gestión de Proyectos.}
 
 \RequirePackage{etoolbox}
 \RequirePackage{xparse}
