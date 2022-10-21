@@ -1,2 +1,2 @@
 # Plantilla-planificacion
-Plan de proyecto para trabajos finales de posgrado en Sistemas Embebidos
+Plan de proyecto para trabajos finales de posgrado en Internet de las Cosas
