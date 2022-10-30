@@ -7,40 +7,40 @@ codirector, % Uncomment to add a codirector to the title page
 
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Título del proyecto} 
+\titulo{Sistema de riego y control de huertas} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
-\posgrado{Carrera de Especialización en Sistemas Embebidos} 
-%\posgrado{Carrera de Especialización en Internet de las Cosas} 
+%\posgrado{Carrera de Especialización en Sistemas Embebidos} 
+\posgrado{Carrera de Especialización en Internet de las Cosas} 
 %\posgrado{Carrera de Especialización en Intelegencia Artificial}
 %\posgrado{Maestría en Sistemas Embebidos} 
 %\posgrado{Maestría en Internet de las cosas}
 
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
-\autor{Nombre del Autor} 
+\autor{Siciliano Gustavo Hernan} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Nombre del Director}
-\pertenenciaDirector{pertenencia} 
+\director{Director a definir}
+\pertenenciaDirector{FIUBA} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
-\codirector{John Doe} % para que aparezca en la portada se debe descomentar la opción codirector en el documentclass
+\codirector{Codirector a definir} % para que aparezca en la portada se debe descomentar la opción codirector en el documentclass
 \pertenenciaCoDirector{FIUBA}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
-\cliente{Nombre del cliente}
-\empresaCliente{Empresa del cliente}
+\cliente{Alejandra Vranic}
+\empresaCliente{Universidad Nacional de Lanús}
 
 % Nombre y pertenencia de los jurados, se pueden usar el cualquier lugar del documento con el comando \jurunoname, \jurdosname y \jurtresname y \perteunoname, \pertedosname y \pertetresname.
-\juradoUno{Nombre y Apellido (1)}
-\pertenenciaJurUno{pertenencia (1)} 
-\juradoDos{Nombre y Apellido (2)}
-\pertenenciaJurDos{pertenencia (2)}
-\juradoTres{Nombre y Apellido (3)}
-\pertenenciaJurTres{pertenencia (3)}
+\juradoUno{Jurado a definir}
+\pertenenciaJurUno{FIUBA} 
+\juradoDos{Jurado a definir}
+\pertenenciaJurDos{FIUBA}
+\juradoTres{Jurado a definir}
+\pertenenciaJurTres{FIUBA}
  
-\fechaINICIO{30 de abril de 2021}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlan{18 de junio de 2021} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{15 de mayo de 2022}	%Fecha de defensa pública del trabajo final
+\fechaINICIO{20 de Octubre de 2022}		%Fecha de inicio de la cursada de GdP \fechaInicioName
+\fechaFINALPlan{8 de Diciembre de 2022} 	%Fecha de final de cursada de GdP
+\fechaFINALTrabajo{a definir}	%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -92,7 +92,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en \textcolor{red}{la implementación de un prototipo de un sistema de control de temperatura de un calefón}, y tendrá un presupuesto preliminar estimado de \textcolor{red}{600} hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Lic. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación de un sistema de control de humedad y riego automático de huertas, y tendrá un presupuesto preliminar estimado de {600} hs de trabajo y {\$100.000 pesos argentinos} para la compra de materiales, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -116,56 +116,32 @@ Se adjunta a esta acta la planificación inicial.
 \label{sec:descripcion}
 
 
-\begin{consigna}{red} % El bloque "consigna" se usa para poner texto en rojo y dar una pequeña ayuda sobre cómo completar la sección
+\begin{consigna}{black} % El bloque "consigna" se usa para poner texto en rojo y dar una pequeña ayuda sobre cómo completar la sección
 
-El objetivo es que el lector en una o dos páginas entienda de qué se trata el proyecto y cuáles son sus desafíos, su motivación y su importancia.
+El presente trabajo nace a partir de un proyecto de investigación originado en la UNLa (Universidad Nacional de Lanús). El cual consiste en el desarrollo de un prototipo tecnológico que pueda medir el porcentaje de humedad de un conjunto de plantas en una huerta. Además, se implementará un software de monitoreo y control de las mediciones.
 
-Se debe destacar claramente cuál es el valor que agrega el proyecto a realizar. ``El presente proyecto se destaca especialmente por incorporar tal cosa... Esto lo diferencia de otros sistemas similares en que ...''
+La finalidad del proyecto es que, en caso de ser necesario, se active una manguera de agua de forma automática para regar los cultivos.
+En base a esto se proyecta que una huerta va a estar compuesta por varios sectores. En cada uno se van a agrupar plantas con características de cuidado similares. Cada sector contará con un prototipo con una placa ESP32 y dos sensores para medir el porcentaje de humedad del suelo y del ambiente. Las placas tendrán que tener conexión Wi-Fi para enviar las métricas al Backend del servidor vía protocolo HTTP. Ese sistema va a nutrir una plataforma Web. En el Frontend habrá un panel de administración por sector, para que en cada uno se puedan fijar valores mínimos de porcentaje de humedad. En caso de que las mediciones sean inferiores a estos valores de control, el Backend generará un mensaje para los dispositivos. De esta manera se accionará la manguera de riego y se podrá tener un cuidado simple y automático de las plantas.
 
-Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
-
-\begin{itemize}
-	\item ¿Cómo se vincula este proyecto con la misión de la organización?
-	\item ¿Cómo se inserta este proyecto en el modelo de negocio de la organización?
-	\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
-	\item ¿En qué estado del ciclo de vida está el producto que se desea reemplazar o mejorar?
-	\item ¿Cuáles son las necesidades que debe satisfacer?
-	\item ¿Por dónde pasa la innovación?
-\end{itemize}
-
-La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema} y una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''. Luego recién más abajo de haber puesto esta frase, se pone la figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
 
 %\vspace{25px}
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.5\textwidth]{./Figuras/diagBloques.png}
-\caption{Diagrama en bloques del sistema}
+\includegraphics[width=.9\textwidth]{./Figuras/diagBloques.png}
+\caption{Diagrama del sistema}
 \label{fig:diagBloques}
 \end{figure}
 
 \vspace{25px}
 
-El tamaño de la tipografía en TODAS las figuras debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama, preferentemente en la gama de colores pastel.
 \end{consigna}
 
 
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
 
-\begin{consigna}{red} 
-Nota: (borrar esto y todas las consignas en color rojo antes de entregar este documento).
- 
-Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos.
- 
-Si se considera que una persona cumple dos o más roles, entonces sólo dejarla en el rol más importante. Por ejemplo:
-
-\begin{itemize}
-\item Si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente.
-\item Si una persona es el Responsable, no debe ser colocado también como Miembro del equipo.
-\end{itemize}
-
-Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por ejemplo.
+\begin{consigna}{black} 
 
 \begin{table}[ht]
 %\caption{Identificación de los interesados}
@@ -173,33 +149,62 @@ Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por e
 \begin{tabularx}{\linewidth}{@{}|l|X|X|l|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0} 
-Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   &                   &              	&        	\\ \hline
-Cliente       & \clientename      &\empclientename	&        	\\ \hline
-Impulsor      &                   &              	&        	\\ \hline
-Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores &                   &              	&        	\\ \hline
-Orientador    & \supname	      & \pertesupname 	& Director Trabajo final \\ \hline
-Equipo        & miembro1 \newline 
-				miembro2          &              	&        	\\ \hline
-Opositores    &                   &              	&        	\\ \hline
-Usuario final &                   &              	&        	\\ \hline
+Rol&
+Nombre y Apellido&
+Organización&
+Puesto\\ \hline
+
+Auspiciante&
+\clientename &
+\empclientename &
+Directora de la Licenciatura en Sistemas\\ \hline
+
+Cliente&
+\clientename &
+\empclientename & 
+Directora de la Licenciatura en Sistemas\\ \hline
+
+Impulsor&
+Laura Loidi&
+\empclientename &
+Coordinadora de proyectos de investigación\\ \hline
+
+Responsable&
+\authorname &
+FIUBA&
+Alumno\\ \hline
+
+Colaboradores&
+Leandro Rios&
+\empclientename &
+Docente investigador\\ \hline
+
+Orientador&
+\supname &
+\pertesupname &
+Director de trabajo final\\ \hline
+
+Equipo&
+-Reboredo Damian\newline 
+-Contento Guido\newline
+-Otegui Luciano&
+\empclientename &
+Estudiantes investigadores\\ \hline
+
+Usuario final&
+Estudiantes UNLa y Vallese&
+\empclientename &
+Estudiantes\\ \hline
 \end{tabularx}
 \end{table}
 
-El Director suele ser uno de los Orientadores.
 
-No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
-
-No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
-
-Es deseable listar a continuación las principales características de cada interesado.
- 
-Por ejemplo:
-\begin{itemize}
-	\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
-	\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
-	\item Orientador: María Gómez va a poder ayudar mucho con la definición de los requerimientos.
+\begin{itemize} 
+	\item Cliente: Alenadra Vranic (que también oficia como Auspicianta) necesita tener un plan de trabajo para Diciembre 2022 y avances trimestrales duramente 2023.
+	\item Impulsor: Laura Loidi en su rol de coordinadora de proyectos dará soporte y seguimiento metodológico para el proyecto.	
+	\item Colaborador: Leandro Rios va a dar soporte para la compra, armado e instalación de los dispositivos en la huerta.
+	\item Equipo: El equipo de estudiantes finaliza sus tareas de investigación a mediados de Diciembre del 2022. Se tiene que delimitar el scope y las futuras líneas de desarrollo para este trabajo antes de dicho mes.
+	\item Orientador: Aún se definió el director del trabajo. Esto tiene que resolverse pronto.
 \end{itemize}
 
 \end{consigna}
@@ -209,23 +214,62 @@ Por ejemplo:
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-\begin{consigna}{red}
-¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
+\begin{consigna}{black}
 
-Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
+El propósito de este proyecto es generar un rédito intelectual, económico y cultural dentro de la UNLa. Para cumplir esto se tienen 4 verticales principales de trabajo:
+
+1- Generar un prototipo de dispositivos que puedan tomar mediciones de las plantas en una huerta. Con esos valores se deberá abrir y cerrar una manguera de rocío de agua, así como dar métricas del estado de salud de las plantas.
+
+2- Desarrollar un software web que pueda tomar las métricas del prototipo para tener un panel de control de las huertas.
+
+3- Implementar en Felipe Vallese y la UNLa huertas que sirvan para dar empleo y nutrir de alimentos a la UNLa y a escuelas de la comunidad.
+
+4- Consolidar un curso que conste de capacitaciones a darse en la escuela de oficios de Felipe Vallese (http://oficios.unla.edu.ar). La idea es extender el conocimiento de cómo montar el kit para personas de la comunidad.
+Como un punto extra, el conocimiento generado en el proyecto también se podría incluir como una materia optativa en la carrera de Sistemas en UNLa.
+
+
 \end{consigna}
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
 
-\begin{consigna}{red}
-¿Qué se incluye y que no se incluye en este proyecto?
+\begin{consigna}{black}
 
-Se refiere al trabajo a hacer para entregar el producto o resultado especificado. 
+El proyecto tiene como alcance trabajar en las verticales 1, 2 y 3 de la sección anterior.
 
-Explicitar todo lo quede comprendido dentro del alcance del proyecto.
+En relación al punto 1, se completará el prototipo inicial de la placa ESP32 con sus dos sensores. Este trabajo se está llevando adelante con el estudiante Damian Reboredo. Actualmente ya se cuenta con una versión funcional que no contempla a la manguera con una conexión de agua. Se deberá finalizar esa tarea, más integración con el sistema de control y monitoreo.
 
-Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
+%\vspace{25px}
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=.7\textwidth]{./Figuras/diagDipos.png}
+\caption{Diagrama del prototipo}
+\label{fig:diagDipos}
+\end{figure}
+
+\vspace{25px}
+
+\end{consigna}
+
+\begin{consigna}{black}
+
+Con respecto al punto 2, se espera que se tenga el primer entregable del sistema de control y monitoreo. Este desarrollo se está llevando adelante con los estudiantes Guido Contento y Luciano Otegui. Dicho equipo tiene como foco finalizar la estructura base del Backend y Frontend con las altas, bajas y modificaciones de las secciones iniciales del sistema. También se trabajará en la primer propuesta de integración con los dispositivos. El resto de las funcionalidades quedará en el scope del presente trabajo.
+
+Finalmente, en relación al punto 3, se quiere montar una huerta en la escuela de oficios Felipe Vallese. La expectativa es que cuente con tres sectores que tengas los dispositivos de medición. Para lograr esto se debe completar un plano de la huerta. En él, se verá la división de los sectores y la ubicación de los dispositivos. Esto último, más la adquisición de los materiales, forma parte del alcance de la presente documentación.
+
+%\vspace{25px}
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=.7\textwidth]{./Figuras/diagHuerta.png}
+\caption{Plano alto nivel la huerta}
+\label{fig:diagHuerta}
+\end{figure}
+
+\vspace{25px}
+
+No forma parte del alcance el armado en si de la huerta, ni de su cableado eléctrico y tuberías de agua. Este parte del trabajo la realizarán los empleados de Felipe Vallese.
 
 \end{consigna}
 
@@ -233,15 +277,15 @@ Explicitar además todo lo que no quede incluido (``El presente proyecto no incl
 \section{5. Supuestos del proyecto}
 \label{sec:supuestos}
 
-\begin{consigna}{red}
-``Para el desarrollo del presente proyecto se supone que: ...''
+\begin{consigna}{black}
+Para el desarrollo del presente proyecto se supone que:
 
 \begin{itemize}
-	\item Supuesto 1
-	\item Supuesto 2...
+	\item 1: No habrá inconvenientes con el armado de la huerta por parte del equipo de Felipe Vallese.
+	\item 2: Las condiciones de acceso a la red de electricidad y agua serán correctas.
+	\item 3: La conectividad Wi-Fi será viable en el espacio de la huerta.
+	\item 4: Se podrá contar con el presupuesto acordado para la compra de materiales e insumos.
 \end{itemize}
-
-Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
 \end{consigna}
 
 \section{6. Requerimientos}
