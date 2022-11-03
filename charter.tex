@@ -116,10 +116,30 @@ Se adjunta a esta acta la planificación inicial.
 \label{sec:descripcion}
 
 
-%\begin{consigna}{red} % El bloque "consigna" se usa para poner texto en rojo y dar una pequeña ayuda sobre cómo completar la sección
-\begin{consigna}{black}
+\begin{consigna}{black} % El bloque "consigna" se usa para poner texto en rojo y dar una pequeña ayuda sobre cómo completar la sección
 
 Debido a la incursión de medios Smartphone, dispositivos electrónicos que se conectan a través de internet, es necesario dar una solución más sencilla para el proceso de registro de entrada y salida del personal que labora en el interior de la empresa. ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que desde el dispositivo se hace el registro, este se procesa, valida, asigna de forma interna para luego enviar la notificación respectiva a quien corresponda.
+
+A falta de un registro de entrada y salida con avisos en tiempo real para crear una mejor distribución de tiempos entre los empleados se presenta la propuesta que consta de:
+
+\begin{itemize}
+	\item Supervisor
+	\item Empleados
+	\item Destinatarios para recibir notificación
+	\item Registros
+\end{itemize}
+
+Entre los dispositivos a través los cuales se generan los registros, se conectarán para enviar los datos e intercambiarlos con los diferentes dispositivos. Los requerimientos mínimos se muestran a continuación:
+
+\begin{itemize}
+	\item La aplicación permite la autenticación de los miembros registrados.
+	\item El empleado hará el registro de ingreso.
+	\item El supervisor y personal recibirá la notificación push de ingreso.
+	\item El cambio de estado y el tiempo de estancia empezará.
+	\item El empleado hará el registro de salida.
+	\item El supervisor y personal recibirá la notificación push de salida.
+	\item Las métricas de cada uno de los empleados deben ser visuales a través de grafos.
+\end{itemize}
 
 %\vspace{25px}
 
