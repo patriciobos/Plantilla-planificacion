@@ -17,7 +17,7 @@ codirector, % Uncomment to add a codirector to the title page
 %\posgrado{Maestría en Internet de las cosas}
 
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
-\autor{Siciliano Gustavo Hernan} 
+\autor{Lic. Siciliano Gustavo Hernan} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
 \director{Director a definir}
@@ -69,7 +69,8 @@ codirector, % Uncomment to add a codirector to the title page
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
-%1      & Se completa hasta el punto 4 inclusive                 & dd/mm/aaaa \\ \hline
+1      & Se completa hasta la sección 5 inclusive                 & 2 de Noviembre de 2022 \\ \hline
+2      & Se aplican las correcciones de la primer entrega                 & 6 de Noviembre de 2022 \\ \hline
 %2      & Se completa hasta el punto 7 inclusive
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
@@ -92,7 +93,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Lic. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle''. El cual consistirá esencialmente en la implementación de un prototipo de monitoreo de humedad y riego automático de huertas. Tendrá un presupuesto preliminar estimado de {600} hs de trabajo y {\$100.000 pesos argentinos} para la compra de materiales, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Lic. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', el cual consistirá esencialmente en la implementación de un prototipo de monitoreo de humedad y riego automático de huertas. Tendrá un presupuesto preliminar estimado de {600} hs de trabajo y {\$100.000 pesos argentinos} para la compra de materiales, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -102,7 +103,7 @@ Se adjunta a esta acta la planificación inicial.
 \begin{table}[ht]
 \centering
 \begin{tabular}{ccc}
-\begin{tabular}[c]{@{}c@{}}Ariel Lutenberg \\ Director posgrado FIUBA\end{tabular} & \hspace{2cm} & \begin{tabular}[c]{@{}c@{}}\clientename \\ \empclientename \end{tabular} \vspace{2.5cm} \\ 
+\begin{tabular}[c]{@{}c@{}}Dr. Ing. Ariel Lutenberg \\ Director posgrado FIUBA\end{tabular} & \hspace{2cm} & \begin{tabular}[c]{@{}c@{}}Mg. \clientename \\ \empclientename \end{tabular} \vspace{2.5cm} \\ 
 \multicolumn{3}{c}{\begin{tabular}[c]{@{}c@{}} \supname \\ Director del Trabajo Final\end{tabular}} \vspace{2.5cm} \\
 %\begin{tabular}[c]{@{}c@{}}\jurunoname \\ Jurado del Trabajo Final\end{tabular}     &  & \begin{tabular}[c]{@{}c@{}}\jurdosname\\ Jurado del Trabajo Final\end{tabular}  \vspace{2.5cm}  \\
 %\multicolumn{3}{c}{\begin{tabular}[c]{@{}c@{}} \jurtresname\\ Jurado del Trabajo Final\end{tabular}} \vspace{.5cm}                                                                     
@@ -118,9 +119,9 @@ Se adjunta a esta acta la planificación inicial.
 
 \begin{consigna}{black} % El bloque "consigna" se usa para poner texto en rojo y dar una pequeña ayuda sobre cómo completar la sección
 
-El presente trabajo nace a partir de un proyecto de investigación originado en la UNLa (Universidad Nacional de Lanús). El cual consiste en el desarrollo de un prototipo tecnológico que pueda medir el porcentaje de humedad de un conjunto de plantas en una huerta. Además, se implementará un software de monitoreo y control de las mediciones.
+El presente trabajo nace a partir de un proyecto de investigación originado en la UNLa (Universidad Nacional de Lanús) y consiste en el desarrollo de un prototipo tecnológico que pueda medir el porcentaje de humedad de un conjunto de plantas en una huerta. Además, se implementará un software de seguimiento y control de las mediciones.
 
-La finalidad del proyecto es que, en caso de ser necesario, se active una manguera de agua de forma automática para regar los cultivos.
+La finalidad del proyecto es contar con un sistema de monitoreo de huertas que colabore con mantener condiciones optimas para los cultivos. Esto se logrará tanto con revisiones manuales de las métricas obtenidas, como con el sistema de riego automático. Este último activará una válvula de agua que conseguir un buen cuidado de las plantas.
 En base a esto se proyecta que una huerta va a estar compuesta por varios sectores. En cada uno se van a agrupar plantas con características de cuidado similares. Además, cada sector contará con un prototipo con una placa ESP32 y dos sensores para medir el porcentaje de humedad del suelo y del ambiente. Las placas deberán tener conexión Wi-Fi para enviar las métricas al Backend del servidor vía protocolo HTTP. Ese sistema va a nutrir una plataforma Web. En el Frontend habrá un panel de administración por sector, para que en cada uno se puedan fijar valores mínimos de porcentaje de humedad. En caso de que las mediciones sean inferiores a estos valores de control, el Backend generará un mensaje para los dispositivos. De esta manera se accionará la manguera de riego y se podrá tener un cuidado simple y automático de las plantas.
 
 
@@ -129,7 +130,7 @@ En base a esto se proyecta que una huerta va a estar compuesta por varios sector
 \begin{figure}[htpb]
 \centering 
 \includegraphics[width=.9\textwidth]{./Figuras/diagBloques.png}
-\caption{Diagrama del sistema}
+\caption{Diagrama del sistema.}
 \label{fig:diagBloques}
 \end{figure}
 
@@ -203,8 +204,8 @@ Estudiantes\\ \hline
 	\item Cliente: Alenadra Vranic (que también oficia como Auspiciante) necesita tener un plan de trabajo para Diciembre 2022 y avances trimestrales duramente 2023.
 	\item Impulsor: Laura Loidi en su rol de coordinadora de proyectos de investigación dará asistencia y seguimiento metodológico.	
 	\item Colaborador: Leandro Rios va a dar soporte para la compra, armado e instalación de los dispositivos en la huerta.
-	\item Equipo: Los estudiantes finalizarán sus tareas de investigación entre Diciembre del 2022 y Febrero del 2023. Se tiene que delimitar el alcance y las futuras líneas de desarrollo para este trabajo para fines de Noviembre del 2022.
-	\item Orientador: Aún se definió el director del trabajo. Esto tiene que resolverse antes de la quinta clase de Gestión de Proyectos.
+	\item Equipo: los estudiantes finalizarán sus tareas de investigación entre diciembre del 2022 y febrero del 2023. Se tiene que delimitar el alcance y las futuras líneas de desarrollo para este trabajo para fines de noviembre del 2022.
+	\item Orientador: aún se definió el director del trabajo. Esto tiene que resolverse antes de la quinta clase de Gestión de Proyectos.
 \end{itemize}
 
 \end{consigna}
@@ -244,7 +245,7 @@ En relación al punto 1, se completará el prototipo inicial de la placa ESP32 c
 \begin{figure}[htpb]
 \centering 
 \includegraphics[width=.7\textwidth]{./Figuras/diagDipos.png}
-\caption{Diagrama del prototipo}
+\caption{Diagrama del prototipo.}
 \label{fig:diagDipos}
 \end{figure}
 
@@ -254,7 +255,7 @@ En relación al punto 1, se completará el prototipo inicial de la placa ESP32 c
 
 \begin{consigna}{black}
 
-Con respecto al punto 2, se trabajará en torno primer entregable del sistema de control y monitoreo. Este desarrollo se está llevando adelante con los estudiantes Guido Contento y Luciano Otegui. Dicho equipo tiene como foco finalizar la estructura base del Backend y Frontend con las altas, bajas y modificaciones de las secciones iniciales del sistema. También se realizará la primer propuesta de integración con los dispositivos. El resto de las funcionalidades quedará en el marco de trabajo del proyecto.
+Con respecto al punto 2, se trabajará en torno primer entregable del sistema de control y monitoreo. Este desarrollo se está llevando adelante con los estudiantes Guido Contento y Luciano Otegui. Dicho equipo tiene como foco finalizar la estructura base del Backend y Frontend con las altas, bajas y modificaciones de las secciones iniciales del sistema. También se realizará la primera propuesta de integración con los dispositivos. El resto de las funcionalidades quedará en el marco de trabajo del proyecto.
 
 Finalmente, sobre el punto 3, se quiere montar una huerta en la escuela de oficios Felipe Vallese. La expectativa es que cuente con tres sectores que tengan los dispositivos de medición. Para lograr esto se debe completar un plano de la huerta. En él, se diagramará la distribución de los sectores y la ubicación de los dispositivos. Esto último, más la adquisición de los materiales, forma parte del alcance de la presente documentación.
 
@@ -263,13 +264,13 @@ Finalmente, sobre el punto 3, se quiere montar una huerta en la escuela de ofici
 \begin{figure}[htpb]
 \centering 
 \includegraphics[width=.7\textwidth]{./Figuras/diagHuerta.png}
-\caption{Plano alto nivel la huerta}
+\caption{Plano alto nivel la huerta.}
 \label{fig:diagHuerta}
 \end{figure}
 
 \vspace{25px}
 
-No forma parte del alcance el armado en si de la huerta, ni de su cableado eléctrico y tuberías de agua. Esta parte del trabajo la realizarán los empleados de Felipe Vallese.
+No forma parte del alcance el armado en sí de la huerta, ni de su cableado eléctrico y tuberías de agua. Esta parte del trabajo la realizarán los empleados de Felipe Vallese.
 
 \end{consigna}
 
@@ -281,10 +282,11 @@ No forma parte del alcance el armado en si de la huerta, ni de su cableado eléc
 Para el desarrollo del presente proyecto se supone que:
 
 \begin{itemize}
-	\item 1: No habrá inconvenientes con el armado de la huerta por parte del equipo de Felipe Vallese.
-	\item 2: Las condiciones de acceso a la red de electricidad y agua serán correctas.
-	\item 3: La conectividad Wi-Fi será viable en el espacio de la huerta.
-	\item 4: Se podrá contar con el presupuesto acordado para la compra de materiales e insumos.
+	\item 1: no habrá inconvenientes con el armado de la huerta por parte del equipo de Felipe Vallese.
+	\item 2: las condiciones de acceso a la red de electricidad y agua serán correctas.
+	\item 3: la conectividad Wi-Fi será viable en el espacio de la huerta.
+	\item 4: se podrá contar con el presupuesto acordado para la compra de materiales e insumos.
+	\item 5: este proyecto seguirá formando parte los trabajos de investigación prioritarios para la UNLa, por lo menos hasta fines del año 2023.
 \end{itemize}
 \end{consigna}
 
