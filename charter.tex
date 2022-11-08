@@ -293,41 +293,54 @@ Para el desarrollo del presente proyecto se supone que:
 \section{6. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red}
-Los requerimientos deben numerarse y de ser posible estar agruparlos por afinidad, por ejemplo:
+Los requerimientos del proyecto están agrupados por afinidad:
 
 \begin{enumerate}
-	\item Requerimientos funcionales
+	\item Requerimientos del dispositivo
 		\begin{enumerate}
-			\item El sistema debe...
-			\item Tal componente debe...
-			\item El usuario debe poder...
+			\item Debe tener un código interno para ser identificado unívocamente en el software de control.
+			\item Debe contar con una placa ESP32 más dos sensores de humedad (uno de ambiente y otro de suelo).
+			\item La placa ESP32 debe usar los sensores para medir los porcentajes correspondientes de las plantas de su sector. 
+			\item Debe centralizar las métricas obtenidas y contar con Wi-Fi para trasmitirlas a un servidor. 
+			\item Tiene que poder activar la apertura o cierre de una válvula de agua usando un comando interno.
 		\end{enumerate}
-	\item Requerimientos de documentación
+	
+	\item Requerimientos de integración del backend del software
 		\begin{enumerate}
-			\item Requerimiento 1
-			\item Requerimiento 2 (prioridad menor)
+			\item Debe contar con un endpoint rest API para consultar las mediciones de un dispositivo.
+			\item Debe contar con un endpoint rest API para solicitar a un dispositivo la apertura de la válvula de agua durante 30 segundos.
+			\end{enumerate}
+
+	\item Requerimientos del sistema para los usuarios
+		\begin{enumerate}
+			\item Debe permitir a un usuario loguearse al sistema usando su mail y constraseña.
+			\item Debe permitir a un usuario desloguearse del sistema.
+			\item Debe permitir a un usuario recuperar y cambiar su contraseña.
+			\item Debe tener una sección de visualización y modificación de los datos de perfil del usuario logueado.
+			\item Debe contemplar permisos para cada rol del sistema:
+			\begin{enumerate}
+			\item Administrador: acceso todas las funcionalidades.
+			\item Responsable: acceso a las funcionalidades de administración de sus huertas.
+			\item Visitante: acceso a las funcionalidades de visualización de sus huertas asociadas.
+			\end{enumerate}
+			\item Debe tener una sección para ver, modificar y eliminar huertas del sistema.
+			\item Debe tener una sección para ver, modificar y eliminar usuarios del sistema.
+			\item Debe tener una sección para administrar huertas vinculando el código de un dispositivo por sector.
+			\item Debe tener una sección para administrar los porcentajes de aceptación de humedad por sector.
+			\item Debe tener una sección para visualizar las mediciones de un dispositivo por sector.
+			\item Debe tener una sección para ver, modificar y eliminar usuarios con rol visitante para una huertas.
+			\item Debe tener una sección para ver, modificar y eliminar roles del sistema.
+			\item Debe tener una sección para asociar un rol a un usuario nuevo.
+			\item Debe permitir que un usuario (con rol responsable) solicite su alta en el sistema usando mail y password.
+		\end{enumerate}		
+		
+	\item Requerimientos no funcionales
+		\begin{enumerate}
+			\item Cada dispositivo deberá instalarse en un sector correctamente delimitado de la huerta.
+			\item La huerta va a contar con sectores con platas que tengan características de cuidado similares.
 		\end{enumerate}
-	\item Requerimiento de testing...
-	\item Requerimientos de la interfaz...
-	\item Requerimientos interoperabilidad...
-	\item etc...
+		
 \end{enumerate}
-
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
-
-Indicar claramente cuál es la prioridad entre los distintos requerimientos y si hay requerimientos opcionales. 
-
-No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-	\item Ser breve y conciso (nadie lee cosas largas). 
-	\item Ser específico: no dejar lugar a confusiones.
-	\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
-
-\end{consigna}
 
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
