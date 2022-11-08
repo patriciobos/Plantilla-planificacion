@@ -336,6 +336,7 @@ Los requerimientos del proyecto están agrupados por afinidad:
 		
 	\item Requerimientos no funcionales
 		\begin{enumerate}
+			\item El sistema deberá tener un usuario administrador por defecto.
 			\item Cada dispositivo deberá instalarse en un sector correctamente delimitado de la huerta.
 			\item La huerta va a contar con sectores con platas que tengan características de cuidado similares.
 		\end{enumerate}
@@ -345,37 +346,94 @@ Los requerimientos del proyecto están agrupados por afinidad:
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-\begin{consigna}{red}
-Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
+Ponderación: se utiliza la sucesión de Fibonacci.
+\newline Priorización: se puntúa una prioridad del 1 (alta) al 5 (baja).
 
-El formato propuesto es: "como [rol] quiero [tal cosa] para [tal otra cosa]."
+\begin{itemize}
+	\item Como usuario general del sistema quiero loguearme al sistema usando mail y contraseña.
+	\newline Ponderación: 2
+	\newline Priorización: 2
+	\item Como usuario general del sistema quiero desloguearme del sistema.
+	\newline Ponderación: 1
+	\newline Priorización: 2
+	\item Como usuario general del sistema quiero recuperar y cambiar mi contraseña.
+	\newline Ponderación: 3
+	\newline Priorización: 2
+	\item Como usuario general del sistema quiero ver y editar mi información de perfil.
+	\newline Ponderación: 2
+	\newline Priorización: 3
 
-Se debe indicar explícitamente el criterio para calcular los \textit{story points} de cada historia
-\end{consigna}
+	\item Como administrador del sistema quiero dar de alta usuarios de tipo responsable y visitante.
+	\newline Ponderación: 2
+	\newline Priorización: 2
+	\item Como administrador del sistema quiero modificar o eliminar usuarios de tipo responsable y visitante.
+	\newline Ponderación: 2
+	\newline Priorización: 2
+	\item Como administrador del sistema quiero dar de alta una huerta en el sistema y asociarla a un responsable.
+	\newline Ponderación: 5
+	\newline Priorización: 1
+	\item Como administrador del sistema quiero modificar y eliminar cualquier huerta del sistema.
+	\newline Ponderación: 3
+	\newline Priorización: 2	
+	\item Como administrador del sistema quiero asociar un sector de una huerta a un dispositivo usando su código único.
+	\newline Ponderación: 3
+	\newline Priorización: 1
+	\item Como administrador del sistema quiero administrar los porcentajes de aceptación de humedad por sector en cualquier huerta.
+	\newline Ponderación: 3
+	\newline Priorización: 1
+	\item Como administrador del sistema ver y modificar los datos básicos de los roles del sistema.
+	\newline Ponderación: 2
+	\newline Priorización: 3
+	\item Como administrador del sistema quiero visualizar las mediciones de un sector de cualquier huerta
+	\newline Ponderación: 5
+	\newline Priorización: 2
+	
+	\item Como responsable de una huerta quiero darme de alta en el sistema con mail y password.
+	\newline Ponderación: 2
+	\newline Priorización: 1
+	\item Como responsable de una huerta quiero dar de alta una huerta y que se asocie a mi usuario.
+	\newline Ponderación: 3
+	\newline Priorización: 1
+	\item Como responsable de una huerta quiero ver, modificar y eliminar mis huertas asociadas.
+	\newline Ponderación: 3
+	\newline Priorización: 2
+	\item Como responsable de una huerta quiero asociar un sector de una huerta mía a un dispositivo usando su código único.
+	\newline Ponderación: 1
+	\newline Priorización: 1
+	\item Como responsable de una huerta quiero administrar los porcentajes de aceptación de humedad por sector en mis huertas.
+	\newline Ponderación: 1
+	\newline Priorización: 1
+	\item Como responsable de una huerta quiero visualizar las mediciones de un sector de cualquiera de mis huertas.
+	\newline Ponderación: 1
+	\newline Priorización: 1
+	\item Como responsable de una huerta quiero crear usuarios con rol visitante y asociarlos a cualquiera de mis huertas
+	\newline Ponderación: 2
+	\newline Priorización: 3
+	
+	\item Como usuario visitante de una huerta quiero visualizar las huertas a las que estoy asociado.
+	\newline Ponderación: 1
+	\newline Priorización: 1
+	\item Como usuario visitante de una huerta quiero visualizar las métricas de un sector de cualquiera de las huertas a las que estoy asociado.
+	\newline Ponderación: 1
+	\newline Priorización: 1
+\end{itemize}
+
 
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}
 
-\begin{consigna}{red}
-
-Los entregables del proyecto son (ejemplo):
-
 \begin{itemize}
 	\item Manual de uso
-	\item Diagrama de circuitos esquemáticos
-	\item Código fuente del firmware
-	\item Diagrama de instalación
+	\item Diagrama de los esquemático del sistema global.
+	\item Diagrama de los componentes de un dispositivo.
+	\item Diagrama de clases del software.
+	\item Manual de armado e instalación del dispositivo.
+	\item Repositorio con el código fuente.
 	\item Informe final
-	\item etc...
 \end{itemize}
-
-\end{consigna}
 
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
-
-\begin{consigna}{red}
-El WBS debe tener relación directa o indirecta con los requerimientos.  Son todas las actividades que se harán en el proyecto para dar cumplimiento a los requerimientos. Se recomienda mostrar el WBS mediante una lista indexada:
 
 \begin{enumerate}
 \item Grupo de tareas 1
@@ -401,10 +459,6 @@ El WBS debe tener relación directa o indirecta con los requerimientos.  Son tod
 \end{enumerate}
 
 Cantidad total de horas: (tantas hs)
-
-Se recomienda que no haya ninguna tarea que lleve más de 40 hs. 
-
-\end{consigna}
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
