@@ -293,105 +293,191 @@ Para el desarrollo del presente proyecto se supone que:
 \section{6. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red}
-Los requerimientos deben numerarse y de ser posible estar agruparlos por afinidad, por ejemplo:
+Los requerimientos del proyecto están agrupados por afinidad:
 
 \begin{enumerate}
-	\item Requerimientos funcionales
+	\item Requerimientos del dispositivo
 		\begin{enumerate}
-			\item El sistema debe...
-			\item Tal componente debe...
-			\item El usuario debe poder...
+			\item Debe tener un código interno para ser identificado unívocamente en el software de control.
+			\item Debe contar con una placa ESP32 más dos sensores de humedad (uno de ambiente y otro de suelo).
+			\item La placa ESP32 debe usar los sensores para medir los porcentajes correspondientes de las plantas de su sector. 
+			\item Debe centralizar las métricas obtenidas y contar con Wi-Fi para trasmitirlas a un servidor. 
+			\item Tiene que poder activar la apertura o cierre de una válvula de agua usando un comando interno.
 		\end{enumerate}
-	\item Requerimientos de documentación
+	
+	\item Requerimientos de integración del backend del software
 		\begin{enumerate}
-			\item Requerimiento 1
-			\item Requerimiento 2 (prioridad menor)
+			\item Debe contar con un endpoint rest API para consultar las mediciones de un dispositivo.
+			\item Debe contar con un endpoint rest API para solicitar a un dispositivo la apertura de la válvula de agua durante 30 segundos.
+			\end{enumerate}
+
+	\item Requerimientos del sistema para los usuarios
+		\begin{enumerate}
+			\item Debe permitir a un usuario loguearse al sistema usando su mail y constraseña.
+			\item Debe permitir a un usuario desloguearse del sistema.
+			\item Debe permitir a un usuario recuperar y cambiar su contraseña.
+			\item Debe tener una sección de visualización y modificación de los datos de perfil del usuario logueado.
+			\item Debe contemplar permisos para cada rol del sistema:
+			\begin{enumerate}
+			\item Administrador: acceso todas las funcionalidades.
+			\item Responsable: acceso a las funcionalidades de administración de sus huertas.
+			\item Visitante: acceso a las funcionalidades de visualización de sus huertas asociadas.
+			\end{enumerate}
+			\item Debe tener una sección para ver, modificar y eliminar huertas del sistema.
+			\item Debe tener una sección para ver, modificar y eliminar usuarios del sistema.
+			\item Debe tener una sección para administrar huertas vinculando el código de un dispositivo por sector.
+			\item Debe tener una sección para administrar los porcentajes de aceptación de humedad por sector.
+			\item Debe tener una sección para visualizar las mediciones de un dispositivo por sector.
+			\item Debe tener una sección para ver, modificar y eliminar usuarios con rol visitante para una huertas.
+			\item Debe tener una sección para ver, modificar y eliminar roles del sistema.
+			\item Debe tener una sección para asociar un rol a un usuario nuevo.
+			\item Debe permitir que un usuario (con rol responsable) solicite su alta en el sistema usando mail y password.
+		\end{enumerate}		
+		
+	\item Requerimientos no funcionales
+		\begin{enumerate}
+			\item El sistema deberá tener un usuario administrador por defecto.
+			\item Cada dispositivo deberá instalarse en un sector correctamente delimitado de la huerta.
+			\item La huerta va a contar con sectores con platas que tengan características de cuidado similares.
 		\end{enumerate}
-	\item Requerimiento de testing...
-	\item Requerimientos de la interfaz...
-	\item Requerimientos interoperabilidad...
-	\item etc...
+		
 \end{enumerate}
-
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
-
-Indicar claramente cuál es la prioridad entre los distintos requerimientos y si hay requerimientos opcionales. 
-
-No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-	\item Ser breve y conciso (nadie lee cosas largas). 
-	\item Ser específico: no dejar lugar a confusiones.
-	\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
-
-\end{consigna}
 
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-\begin{consigna}{red}
-Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
+Ponderación: se utiliza la sucesión de Fibonacci.
+\newline Priorización: se puntúa usando una prioridad de 1 (alta) a 5 (baja).
 
-El formato propuesto es: "como [rol] quiero [tal cosa] para [tal otra cosa]."
+\begin{itemize}
+	\item Como usuario general quiero loguearme al sistema web usando mail y contraseña.
+	\newline Ponderación: 1.
+	\newline Priorización: 2.
+	\item Como usuario general quiero desloguearme del sistema web.
+	\newline Ponderación: 1.
+	\newline Priorización: 2.
+	\item Como usuario general del sistema quiero recuperar y cambiar mi contraseña.
+	\newline Ponderación: 3.
+	\newline Priorización: 2.
+	\item Como usuario general del sistema quiero ver y editar mi información de perfil.
+	\newline Ponderación: 2.
+	\newline Priorización: 3.
 
-Se debe indicar explícitamente el criterio para calcular los \textit{story points} de cada historia
-\end{consigna}
+	\item Como administrador quiero dar de alta usuarios de tipo responsable y visitante.
+	\newline Ponderación: 2.
+	\newline Priorización: 2.
+	\item Como administrador quiero modificar o eliminar usuarios de tipo responsable y visitante.
+	\newline Ponderación: 2.
+	\newline Priorización: 2.
+	\item Como administrador quiero dar de alta una huerta y asociarla a un responsable.
+	\newline Ponderación: 5.
+	\newline Priorización: 1.
+	\item Como administrador quiero modificar y eliminar cualquier huerta del sistema.
+	\newline Ponderación: 3.
+	\newline Priorización: 2.	
+	\item Como administrador quiero asociar un sector, de una huerta, a un dispositivo usando su código único.
+	\newline Ponderación: 3.
+	\newline Priorización: 1.
+	\item Como administrador quiero crear y editar los porcentajes de aceptación de humedad por sector en cualquier huerta.
+	\newline Ponderación: 3.
+	\newline Priorización: 1.
+	\item Como administrador quiero ver y modificar los datos básicos de los roles del sistema.
+	\newline Ponderación: 2.
+	\newline Priorización: 3.
+	\item Como administrador quiero visualizar las mediciones de un sector de cualquier huerta.
+	\newline Ponderación: 5.
+	\newline Priorización: 2.
+	
+	\item Como responsable quiero darme de alta en el sistema con mail y password.
+	\newline Ponderación: 2.
+	\newline Priorización: 1.
+	\item Como responsable quiero dar de alta una huerta y que se asocie a mi usuario.
+	\newline Ponderación: 3.
+	\newline Priorización: 1.
+	\item Como responsable quiero ver, modificar y eliminar mis huertas asociadas.
+	\newline Ponderación: 3.
+	\newline Priorización: 2.
+	\item Como responsable quiero asociar un sector, de una mis huertas, a un dispositivo usando su código único.
+	\newline Ponderación: 1.
+	\newline Priorización: 1.
+	\item Como responsable quiero administrar los porcentajes de aceptación de humedad por sector en mis huertas.
+	\newline Ponderación: 1.
+	\newline Priorización: 1.
+	\item Como responsable quiero visualizar las mediciones de un sector de cualquiera de mis huertas.
+	\newline Ponderación: 1.
+	\newline Priorización: 1.
+	\item Como responsable quiero crear usuarios con rol visitante y asociarlos a cualquiera de mis huertas.
+	\newline Ponderación: 2.
+	\newline Priorización: 3.
+	
+	\item Como usuario visitante quiero visualizar las huertas a las que estoy asociado.
+	\newline Ponderación: 1.
+	\newline Priorización: 1.
+	\item Como usuario visitante quiero visualizar las métricas de un sector de cualquiera de las huertas a las que estoy asociado.
+	\newline Ponderación: 1.
+	\newline Priorización: 1.
+\end{itemize}
+
 
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}
 
-\begin{consigna}{red}
-
-Los entregables del proyecto son (ejemplo):
-
 \begin{itemize}
-	\item Manual de uso
-	\item Diagrama de circuitos esquemáticos
-	\item Código fuente del firmware
-	\item Diagrama de instalación
-	\item Informe final
-	\item etc...
+	\item Manual de uso.
+	\item Diagrama de los esquemático del sistema global.
+	\item Diagrama de los componentes de un dispositivo.
+	\item Diagrama de clases del software.
+	\item Manual de armado e instalación del dispositivo.
+	\item Repositorio con el código fuente.
+	\item Informe final.
 \end{itemize}
-
-\end{consigna}
 
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-\begin{consigna}{red}
-El WBS debe tener relación directa o indirecta con los requerimientos.  Son todas las actividades que se harán en el proyecto para dar cumplimiento a los requerimientos. Se recomienda mostrar el WBS mediante una lista indexada:
-
 \begin{enumerate}
-\item Grupo de tareas 1
+\item Planificación del proyecto. (75 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
+	\item Definición de equipos y tareas. (5 hs)
+	\item Definición del comportamiento del dispositivo. (20 hs)
+	\item Definición del comportamiento del software. (40 hs)
+	\item Definición de la integración entre el dispositivo y el software. (10 hs)
 	\end{enumerate}
-\item Grupo de tareas 2
+	
+\item Investigación y armado del prototipo del dispositivo. (140 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
+	\item Investigación de componentes. (10 hs)
+	\item Integración de la placa ESP32 con los sensores de humedad. (10 hs)
+	\item Montado del dispositivo. (20 hs)
+	\item Programación del dispositivo. (60 hs)
+	\item Programación para apertura y cierre de la válvula de agua. (20 hs)
+	\item Pruebas de integración. (20 hs)
 	\end{enumerate}
-\item Grupo de tareas 3
+	
+\item Desarrollo del back-end del software. (215 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
-	\item Tarea 4 (tantas hs)
-	\item Tarea 5 (tantas hs)
+	\item Modelado del diagrama de clases. (20 hs)
+	\item Desarrollo a arquitectura base del back-end. (15 hs)
+	\item Desarrollo de endpoints de gestión de usuarios y roles. (40 hs)
+	\item Desarrollo de endpoints de gestión permisos. (20 hs)
+	\item Desarrollo de endpoints de alta, baja y modificación de huertas. (60 hs)
+	\item Desarrollo de endpoints de administración de una huerta. (20 hs)
+	\item Desarrollo de endpoints de visualización de métricas. (20 hs)
+	\item Desarrollo de endpoints de integración con dispositivos. (40 hs)
+	\end{enumerate}
+	
+\item Desarrollo del front-end del software. (255 hs)
+	\begin{enumerate}
+	\item Maquetado de las vistas generales del sitio web con la definición de estilos y colores. (40 hs)
+	\item Desarrollo de la arquitectura base del front-end. (15 hs)
+	\item Desarrollo de la vista gestión de usuarios y roles. (40 hs)
+	\item Desarrollo de las vistas de alta, baja y modificación de huertas. (60 hs)
+	\item Desarrollo de las vistas de administración de una huerta. (20 hs)
+	\item Desarrollo de la vista para visualización de métricas. (80 hs)
 	\end{enumerate}
 \end{enumerate}
 
-Cantidad total de horas: (tantas hs)
-
-Se recomienda que no haya ninguna tarea que lleve más de 40 hs. 
-
-\end{consigna}
+Cantidad total: 685 hs.
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
