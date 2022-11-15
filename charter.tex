@@ -38,8 +38,8 @@ codirector, % Uncomment to add a codirector to the title page
 \juradoTres{Jurado a definir}
 \pertenenciaJurTres{FIUBA}
  
-\fechaINICIO{20 de Octubre de 2022}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlan{8 de Diciembre de 2022} 	%Fecha de final de cursada de GdP
+\fechaINICIO{20 de octubre de 2022}		%Fecha de inicio de la cursada de GdP \fechaInicioName
+\fechaFINALPlan{8 de diciembre de 2022} 	%Fecha de final de cursada de GdP
 \fechaFINALTrabajo{a definir}	%Fecha de defensa pública del trabajo final
 
 
@@ -72,6 +72,8 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 1      & Se completa hasta la sección 5 inclusive                 & 2 de Noviembre de 2022 \\ \hline
 2      & Se aplican las correcciones de la primer entrega                 & 6 de Noviembre de 2022 \\ \hline
 3      & Se completa hasta la sección 9 inclusive                 & 9 de Noviembre de 2022 \\ \hline
+4      & Se aplican las correcciones de la segunda entrega                 & 14 de Noviembre de 2022 \\ \hline
+
 \end{tabularx}
 \end{table}
 
@@ -88,7 +90,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Lic. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', el cual consistirá esencialmente en la implementación de un prototipo de monitoreo de humedad y riego automático de huertas. Tendrá un presupuesto preliminar estimado de {600} hs de trabajo y {\$100.000 pesos argentinos} para la compra de materiales, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', el cual consistirá esencialmente en la implementación de un prototipo de monitoreo de humedad y riego automático de huertas. Tendrá un presupuesto preliminar estimado de {600} hs de trabajo y {\$100.000 pesos argentinos} para la compra de materiales, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -431,48 +433,62 @@ Ponderación: se utiliza la sucesión de Fibonacci.
 \label{sec:wbs}
 
 \begin{enumerate}
-\item Planificación del proyecto. (75 hs)
+\item Planificación del proyecto. (55 hs)
 	\begin{enumerate}
 	\item Definición de equipos y tareas. (5 hs)
 	\item Definición del comportamiento del dispositivo. (20 hs)
-	\item Definición del comportamiento del software. (40 hs)
+	\item Definición del comportamiento del software. (20 hs)
 	\item Definición de la integración entre el dispositivo y el software. (10 hs)
 	\end{enumerate}
 	
-\item Investigación y armado del prototipo del dispositivo. (140 hs)
+\item Investigación y armado del prototipo del dispositivo. (115 hs)
 	\begin{enumerate}
 	\item Investigación de componentes. (10 hs)
 	\item Integración de la placa ESP32 con los sensores de humedad. (10 hs)
 	\item Montado del dispositivo. (20 hs)
-	\item Programación del dispositivo. (60 hs)
-	\item Programación para apertura y cierre de la válvula de agua. (20 hs)
-	\item Pruebas de integración. (20 hs)
+	\item Programación del dispositivo para autenticarse con el back-end del server. (10 hs)
+	\item Programación del dispositivo para comunicarse con el back-end del sistema. (20 hs)
+	\item Programación del dispositivo para centralizar las métricas obtenidas de los sensores. (15 hs)
+	\item Programación para apertura y cierre de la válvula de agua. (15 hs)
+	\item Pruebas de integración. (15 hs)
 	\end{enumerate}
 	
-\item Desarrollo del back-end del software. (215 hs)
+\item Desarrollo del back-end del software. (180 hs)
 	\begin{enumerate}
 	\item Modelado del diagrama de clases. (20 hs)
 	\item Desarrollo a arquitectura base del back-end. (15 hs)
-	\item Desarrollo de endpoints de gestión de usuarios y roles. (40 hs)
+	\item Desarrollo de endpoints de gestión de usuarios y roles. (20 hs)
 	\item Desarrollo de endpoints de gestión permisos. (20 hs)
-	\item Desarrollo de endpoints de alta, baja y modificación de huertas. (60 hs)
+	\item Desarrollo de endpoints de alta y baja de huertas. (25 hs)
+	\item Desarrollo del endpoint de modificación de huertas. (15 hs)
 	\item Desarrollo de endpoints de administración de una huerta. (20 hs)
 	\item Desarrollo de endpoints de visualización de métricas. (20 hs)
-	\item Desarrollo de endpoints de integración con dispositivos. (40 hs)
+	\item Desarrollo de endpoints de integración con dispositivos. (25 hs)
 	\end{enumerate}
 	
-\item Desarrollo del front-end del software. (255 hs)
+\item Desarrollo del front-end del software. (180 hs)
 	\begin{enumerate}
-	\item Maquetado de las vistas generales del sitio web con la definición de estilos y colores. (40 hs)
+	\item Maquetado de las vistas generales del sitio web con la definición de estilos y colores. (25 hs)
 	\item Desarrollo de la arquitectura base del front-end. (15 hs)
-	\item Desarrollo de la vista gestión de usuarios y roles. (40 hs)
-	\item Desarrollo de las vistas de alta, baja y modificación de huertas. (60 hs)
+	\item Desarrollo de la vista gestión de usuarios y roles. (30 hs)
+	\item Desarrollo de las vistas de alta y baja de huertas. (20 hs)
+	\item Desarrollo de la vista de modificación de huertas. (20 hs)
 	\item Desarrollo de las vistas de administración de una huerta. (20 hs)
-	\item Desarrollo de la vista para visualización de métricas. (80 hs)
+	\item Desarrollo de la vista para visualización de métricas de la semana completa. (25 hs)
+	\item Desarrollo de la vista para visualización de métricas en tiempo real. (25 hs)
 	\end{enumerate}
+
+\item Documentación del proyecto. (70 hs)
+	\begin{enumerate}
+	\item Armando del informe de avance. (10 hs)
+	\item Armando de la memoria del proyecto. (30 hs)
+	\item Correcciones de documentos en base a las revisiones. (10 hs)
+	\item Elaboración de la presentación final. (20 hs)
+	\end{enumerate}	
+	
 \end{enumerate}
 
-Cantidad total: 685 hs.
+Cantidad total: 600 hs.
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
