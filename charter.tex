@@ -501,7 +501,7 @@ Cantidad total: 600 hs.
 \end{figure}
 
 
-Código de Colores por grupo de tareas:
+Código de colores por grupo de tareas:
 \begin{itemize}
 	\item Celeste: proceso de inicio o fin.
 	\item Verde: planificación del proyecto.
@@ -517,57 +517,67 @@ En cada tarea la letra 't' representa el tiempo total de trabajo estimado en hor
 \section{11. Diagrama de Gantt}
 \label{sec:gantt}
 
-\begin{consigna}{red}
+Para desarrollar el Gantt se utilizó la herramienta Trello con el plugin BigPicture. La herramienta no tiene una opción para exportar, por lo que se agregan capturas del diagrama.
 
-Existen muchos programas y recursos \textit{online} para hacer diagramas de gantt, entre los cuales destacamos:
+Para la asignación se usó solo al autor del documento, ya que el resto del equipo finaliza sus aportes este 2022.
 
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
-
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
-
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
-
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
-
-\begin{figure}[htbp]
-\begin{center}
-\begin{ganttchart}{1}{12}
-  \gantttitle{2020}{12} \\
-  \gantttitlelist{1,...,12}{1} \\
-  \ganttgroup{Group 1}{1}{7} \\
-  \ganttbar{Task 1}{1}{2} \\
-  \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-  \ganttmilestone{Milestone o hito}{7} \ganttnewline
-  \ganttbar{Final Task}{8}{12}
-  \ganttlink{elem2}{elem3}
-  \ganttlink{elem3}{elem4}
-\end{ganttchart}
-\end{center}
-\caption{Diagrama de gantt de ejemplo}
-\label{fig:gantt}
-\end{figure}
-
-
-\begin{landscape}
 \begin{figure}[htpb]
 \centering 
-\includegraphics[height=.85\textheight]{./Figuras/Gantt-2.png}
-\caption{Ejemplo de diagrama de Gantt rotado}
-\label{fig:diagGantt}
+\includegraphics[width=.999\textwidth]{./Figuras/Gantt-1.png}
+\caption{Diagrama de \textit{Gantt parte 1/8}}
+\label{fig:Gantt1}
 \end{figure}
 
-\end{landscape}
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=.999\textwidth]{./Figuras/Gantt-2.png}
+\caption{Diagrama de \textit{Gantt parte 2/8}}
+\label{fig:Gantt2}
+\end{figure}
 
-\end{consigna}
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=.999\textwidth]{./Figuras/Gantt-3.png}
+\caption{Diagrama de \textit{Gantt parte 3/8}}
+\label{fig:Gantt3}
+\end{figure}
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=.999\textwidth]{./Figuras/Gantt-4.png}
+\caption{Diagrama de \textit{Gantt parte 4/8}}
+\label{fig:Gantt4}
+\end{figure}
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=.999\textwidth]{./Figuras/Gantt-5.png}
+\caption{Diagrama de \textit{Gantt parte 5/8}}
+\label{fig:Gantt5}
+\end{figure}
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=.999\textwidth]{./Figuras/Gantt-6.png}
+\caption{Diagrama de \textit{Gantt parte 6/8}}
+\label{fig:Gantt6}
+\end{figure}
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=.999\textwidth]{./Figuras/Gantt-7.png}
+\caption{Diagrama de \textit{Gantt parte 7/8}}
+\label{fig:Gantt7}
+\end{figure}
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=.999\textwidth]{./Figuras/Gantt-8.png}
+\caption{Diagrama de \textit{Gantt parte 8/8}}
+\label{fig:Gantt8}
+\end{figure}
+
+
 
 
 \section{12. Presupuesto detallado del proyecto}
