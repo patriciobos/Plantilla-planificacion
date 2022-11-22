@@ -75,6 +75,8 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 4      & Se aplican las correcciones de la segunda entrega                 & 14 de noviembre de 2022 \\ \hline
 5      & Se agrega la información del director del trabajo                & 15 de noviembre de 2022 \\ \hline
 6      & Se completa hasta la sección 12 inclusive                 & 16 de noviembre de 2022 \\ \hline
+7      & Se aplican las correcciones de la tercer entrega
+& 22 de noviembre de 2022 \\ \hline
 
 \end{tabularx}
 \end{table}
@@ -92,7 +94,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', el cual consistirá esencialmente en la implementación de un prototipo de monitoreo de humedad y riego automático de huertas. Tendrá un presupuesto preliminar estimado de {600} hs de trabajo y {\$100.000 pesos argentinos} para la compra de materiales, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', el cual consistirá esencialmente en la implementación de un prototipo de monitoreo de humedad y riego automático de huertas. Tendrá un presupuesto preliminar estimado de {600} horas de trabajo y {\$80.388,1 pesos argentinos} para la compra de materiales, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -435,62 +437,62 @@ Ponderación: se utiliza la sucesión de Fibonacci.
 \label{sec:wbs}
 
 \begin{enumerate}
-\item Planificación del proyecto. (55 hs)
+\item Planificación del proyecto. (55 h)
 	\begin{enumerate}
-	\item Definición de equipos y tareas. (5 hs)
-	\item Definición del comportamiento del dispositivo. (20 hs)
-	\item Definición del comportamiento del software. (20 hs)
-	\item Definición de la integración entre el dispositivo y el software. (10 hs)
+	\item Definición de equipos y tareas. (5 h)
+	\item Definición del comportamiento del dispositivo. (20 h)
+	\item Definición del comportamiento del software. (20 h)
+	\item Definición de la integración entre el dispositivo y el software. (10 h)
 	\end{enumerate}
 	
-\item Investigación y armado del prototipo del dispositivo. (115 hs)
+\item Investigación y armado del prototipo del dispositivo. (115 h)
 	\begin{enumerate}
-	\item Investigación de componentes. (10 hs)
-	\item Integración de la placa ESP32 con los sensores de humedad. (10 hs)
-	\item Montado del dispositivo. (20 hs)
-	\item Programación del dispositivo para autenticarse con el back-end del server. (10 hs)
-	\item Programación del dispositivo para comunicarse con el back-end del sistema. (20 hs)
-	\item Programación del dispositivo para centralizar las métricas obtenidas de los sensores. (15 hs)
-	\item Programación para apertura y cierre de la válvula de agua. (15 hs)
-	\item Pruebas de integración. (15 hs)
+	\item Investigación de componentes. (10 h)
+	\item Integración de la placa ESP32 con los sensores de humedad. (10 h)
+	\item Montado del dispositivo. (20 h)
+	\item Programación del dispositivo para autenticarse con el back-end del server. (10 h)
+	\item Programación del dispositivo para comunicarse con el back-end del sistema. (20 h)
+	\item Programación del dispositivo para centralizar las métricas obtenidas de los sensores. (15 h)
+	\item Programación para apertura y cierre de la válvula de agua. (15 h)
+	\item Pruebas de integración. (15 h)
 	\end{enumerate}
 	
-\item Desarrollo del back-end del software. (180 hs)
+\item Desarrollo del back-end del software. (180 h)
 	\begin{enumerate}
-	\item Modelado del diagrama de clases. (20 hs)
-	\item Desarrollo a arquitectura base del back-end. (15 hs)
-	\item Desarrollo de endpoints de gestión de usuarios y roles. (20 hs)
-	\item Desarrollo de endpoints de gestión permisos. (20 hs)
-	\item Desarrollo de endpoints de alta y baja de huertas. (25 hs)
-	\item Desarrollo del endpoint de modificación de huertas. (15 hs)
-	\item Desarrollo de endpoints de administración de una huerta. (20 hs)
-	\item Desarrollo de endpoints de visualización de métricas. (20 hs)
-	\item Desarrollo de endpoints de integración con dispositivos. (25 hs)
+	\item Modelado del diagrama de clases. (20 h)
+	\item Desarrollo a arquitectura base del back-end. (15 h)
+	\item Desarrollo de endpoints de gestión de usuarios y roles. (20 h)
+	\item Desarrollo de endpoints de gestión permisos. (20 h)
+	\item Desarrollo de endpoints de alta y baja de huertas. (25 h)
+	\item Desarrollo del endpoint de modificación de huertas. (15 h)
+	\item Desarrollo de endpoints de administración de una huerta. (20 h)
+	\item Desarrollo de endpoints de visualización de métricas. (20 h)
+	\item Desarrollo de endpoints de integración con dispositivos. (25 h)
 	\end{enumerate}
 	
-\item Desarrollo del front-end del software. (180 hs)
+\item Desarrollo del front-end del software. (180 h)
 	\begin{enumerate}
-	\item Maquetado de las vistas generales del sitio web con la definición de estilos y colores. (25 hs)
-	\item Desarrollo de la arquitectura base del front-end. (15 hs)
-	\item Desarrollo de la vista gestión de usuarios y roles. (30 hs)
-	\item Desarrollo de las vistas de alta y baja de huertas. (20 hs)
-	\item Desarrollo de la vista de modificación de huertas. (20 hs)
-	\item Desarrollo de las vistas de administración de una huerta. (20 hs)
-	\item Desarrollo de la vista para visualización de métricas de la semana completa. (25 hs)
-	\item Desarrollo de la vista para visualización de métricas en tiempo real. (25 hs)
+	\item Maquetado de las vistas generales del sitio web con la definición de estilos y colores. (25 h)
+	\item Desarrollo de la arquitectura base del front-end. (15 h)
+	\item Desarrollo de la vista gestión de usuarios y roles. (30 h)
+	\item Desarrollo de las vistas de alta y baja de huertas. (20 h)
+	\item Desarrollo de la vista de modificación de huertas. (20 h)
+	\item Desarrollo de las vistas de administración de una huerta. (20 h)
+	\item Desarrollo de la vista para visualización de métricas de la semana completa. (25 h)
+	\item Desarrollo de la vista para visualización de métricas en tiempo real. (25 h)
 	\end{enumerate}
 
-\item Documentación del proyecto. (70 hs)
+\item Documentación del proyecto. (70 h)
 	\begin{enumerate}
-	\item Armando del informe de avance. (10 hs)
-	\item Armando de la memoria del proyecto. (30 hs)
-	\item Correcciones de documentos en base a las revisiones. (10 hs)
-	\item Elaboración de la presentación final. (20 hs)
+	\item Armando del informe de avance. (10 h)
+	\item Armando de la memoria del proyecto. (30 h)
+	\item Correcciones de documentos en base a las revisiones. (10 h)
+	\item Elaboración de la presentación final. (20 h)
 	\end{enumerate}	
 	
 \end{enumerate}
 
-Cantidad total: 600 hs.
+Cantidad total: 600 horas.
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
@@ -498,7 +500,7 @@ Cantidad total: 600 hs.
 \begin{figure}[htpb]
 \centering 
 \includegraphics[width=.9\textwidth]{./Figuras/AoN.png}
-\caption{Diagrama en \textit{Activity on Node}}
+\caption{Diagrama en \textit{Activity on Node}.}
 \label{fig:AoN}
 \end{figure}
 
@@ -526,49 +528,49 @@ Para la asignación se usó solo al autor del documento, ya que el resto del equ
 \begin{figure}[htpb]
 \centering 
 \includegraphics[width=.999\textwidth]{./Figuras/Gantt-1.png}
-\caption{Diagrama de \textit{Gantt parte 1/7}}
+\caption{Diagrama de \textit{Gantt parte 1/7}.}
 \label{fig:Gantt1}
 \end{figure}
 
 \begin{figure}[htpb]
 \centering 
 \includegraphics[width=.999\textwidth]{./Figuras/Gantt-2.png}
-\caption{Diagrama de \textit{Gantt parte 2/7}}
+\caption{Diagrama de \textit{Gantt parte 2/7}.}
 \label{fig:Gantt2}
 \end{figure}
 
 \begin{figure}[htpb]
 \centering 
 \includegraphics[width=.999\textwidth]{./Figuras/Gantt-3.png}
-\caption{Diagrama de \textit{Gantt parte 3/7}}
+\caption{Diagrama de \textit{Gantt parte 3/7}.}
 \label{fig:Gantt3}
 \end{figure}
 
 \begin{figure}[htpb]
 \centering 
 \includegraphics[width=.999\textwidth]{./Figuras/Gantt-4.png}
-\caption{Diagrama de \textit{Gantt parte 4/7}}
+\caption{Diagrama de \textit{Gantt parte 4/7}.}
 \label{fig:Gantt4}
 \end{figure}
 
 \begin{figure}[htpb]
 \centering 
 \includegraphics[width=.999\textwidth]{./Figuras/Gantt-5.png}
-\caption{Diagrama de \textit{Gantt parte 5/7}}
+\caption{Diagrama de \textit{Gantt parte 5/7}.}
 \label{fig:Gantt5}
 \end{figure}
 
 \begin{figure}[htpb]
 \centering 
 \includegraphics[width=.999\textwidth]{./Figuras/Gantt-6.png}
-\caption{Diagrama de \textit{Gantt parte 6/7}}
+\caption{Diagrama de \textit{Gantt parte 6/7}.}
 \label{fig:Gantt6}
 \end{figure}
 
 \begin{figure}[htpb]
 \centering 
 \includegraphics[width=.999\textwidth]{./Figuras/Gantt-7.png}
-\caption{Diagrama de \textit{Gantt parte 7/7}}
+\caption{Diagrama de \textit{Gantt parte 7/7}.}
 \label{fig:Gantt7}
 \end{figure}
 
@@ -592,12 +594,12 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
   
- Nodemcu Esp32&
+ NodeMCU ESP32&
   \multicolumn{1}{c|}{4} &
   \multicolumn{1}{c|}{\$3.000} &
   \multicolumn{1}{c|}{\$12.000} \\ \hline
 
- Sensor de temperatura y humedad relativa Dht11&
+ Sensor de temperatura y humedad relativa DHT11&
   \multicolumn{1}{c|}{1} &
   \multicolumn{1}{c|}{\$500} &
   \multicolumn{1}{c|}{\$500} \\ \hline
@@ -627,7 +629,7 @@ Descripción &
   \multicolumn{1}{c|}{\$400} &
   \multicolumn{1}{c|}{\$1.600} \\ \hline
 
- Resistencias 1K 1/4 w&
+ Resistencias 1 k 1/4 w&
   \multicolumn{1}{c|}{16} &
   \multicolumn{1}{c|}{\$12} &
   \multicolumn{1}{c|}{\$192} \\ \hline
@@ -657,7 +659,7 @@ Descripción &
   \multicolumn{1}{c|}{\$54} &
   \multicolumn{1}{c|}{\$216} \\ \hline
 
- Capacitor 100nf&
+ Capacitor 100 nf&
   \multicolumn{1}{c|}{4} &
   \multicolumn{1}{c|}{\$37} &
   \multicolumn{1}{c|}{\$148} \\ \hline
@@ -677,27 +679,27 @@ Descripción &
   \multicolumn{1}{c|}{\$256} &
   \multicolumn{1}{c|}{\$1.024} \\ \hline
 
-Válvula solenoide 220V de lavarropas&
+Válvula solenoide 220 V de lavarropas&
   \multicolumn{1}{c|}{4} &
   \multicolumn{1}{c|}{\$1.050} &
   \multicolumn{1}{c|}{\$4.200} \\ \hline
 
- Relay 5v 10a&
+ Relay 5 V 10 A&
   \multicolumn{1}{c|}{4} &
   \multicolumn{1}{c|}{\$610} &
   \multicolumn{1}{c|}{\$2.440} \\ \hline
   
- Cable subterráneo 2x2,5mm x 25 mts&
+ Cable subterráneo 2x2,5 mm x 25 m&
   \multicolumn{1}{c|}{20} &
   \multicolumn{1}{c|}{\$260} &
   \multicolumn{1}{c|}{\$5.200} \\ \hline
   
-  Cable UTP5 por 50 mts&
+  Cable UTP5 por 50 m&
   \multicolumn{1}{c|}{10} &
   \multicolumn{1}{c|}{\$54} &
   \multicolumn{1}{c|}{\$540} \\ \hline
   
-  Manguera microperforada por 15 mts &
+  Manguera microperforada por 15 m &
   \multicolumn{1}{c|}{9} &
   \multicolumn{1}{c|}{\$267} &
   \multicolumn{1}{c|}{\$2.403} \\ \hline
@@ -707,7 +709,7 @@ Válvula solenoide 220V de lavarropas&
   \multicolumn{1}{c|}{\$629} &
   \multicolumn{1}{c|}{\$6290} \\ \hline
   
-  Caño PVC 40x1, 8 mm x 4mts reforzado &
+  Caño PVC 40x1, 8 mm x 4 m reforzado &
   \multicolumn{1}{c|}{4} &
   \multicolumn{1}{c|}{\$1.109} &
   \multicolumn{1}{c|}{\$4436} \\ \hline 
