@@ -1,6 +1,6 @@
 \documentclass[
 11pt, % The default document font size, options: 10pt, 11pt, 12pt
-codirector, % Uncomment to add a codirector to the title page
+%codirector, % Uncomment to add a codirector to the title page
 ]{charter} 
 
 
@@ -20,10 +20,10 @@ codirector, % Uncomment to add a codirector to the title page
 \autor{Ing. 	Fabián Alejandro Banderas Benítez} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Director a definir}
+\director{Mg. Ing. Yoel Yamil López}
 \pertenenciaDirector{FIUBA} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
-\codirector{Codirector a definir} % para que aparezca en la portada se debe descomentar la opción codirector en el documentclass
+%\codirector{Codirector a definir} % para que aparezca en la portada se debe descomentar la opción codirector en el documentclass
 \pertenenciaCoDirector{FIUBA}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
@@ -39,8 +39,11 @@ codirector, % Uncomment to add a codirector to the title page
 \pertenenciaJurTres{FIUBA (3)}
  
 \fechaINICIO{21 de octubre de 2022}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlan{9 de diciembre de 2023} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{16 de diciembre de 2023}	%Fecha de defensa pública del trabajo final
+\fechaFINALPlan{8 de diciembre de 2022} 	%Fecha de final de cursada de GdP
+\fechaFINALTrabajo{8 de diciembre de 2022}	%Fecha de defensa pública del trabajo final
+
+
+
 
 
 \begin{document}
@@ -69,8 +72,10 @@ codirector, % Uncomment to add a codirector to the title page
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
-1      & Se completa hasta el punto 5 inclusive                 & 03/11/2022 \\ \hline
-2      & Se completa hasta el punto 8 inclusive                 & 10/11/2022 \\ \hline
+1      & Se completa hasta el punto 5 inclusive                 & 3 de noviembre de 2022 \\ \hline
+2      & Se completa hasta el punto 8 inclusive                 & 10 de noviembre de 2022 \\ \hline
+3      & Se completa hasta el punto 12 inclusive                 & 20 de noviembre de 2022 \\ \hline
+4      & Se completa hasta el punto 17 inclusive                 & 23 de noviembre de 2022 \\ \hline
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & dd/mm/aaaa \\ \hline
@@ -88,11 +93,12 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 
 \begin{flushright}
 Guayaquil, \fechaInicioName
+
 \end{flushright}
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en {la implementación de un prototipo de un sistema de control de empleados}, y tendrá un presupuesto preliminar estimado de {600} hs de trabajo y \textcolor{red}{\$Presupuesto por definir}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en {la implementación de un prototipo de un sistema de control de empleados}, y tendrá un presupuesto preliminar estimado de {600} hs de trabajo y {\$3764}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -118,7 +124,7 @@ Se adjunta a esta acta la planificación inicial.
 
 \begin{consigna}{black} % El bloque "consigna" se usa para poner texto en rojo y dar una pequeña ayuda sobre cómo completar la sección
 
-Debido a la incursión de medios Smartphone, dispositivos electrónicos que se conectan a través de internet, es necesario dar una solución más sencilla para el proceso de registro de entrada y salida del personal que labora en el interior de la empresa. ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que desde el dispositivo se hace el registro, este se procesa, valida, asigna de forma interna para luego enviar la notificación respectiva a quien corresponda.
+Debido a la incursión de medios Smartphone, dispositivos electrónicos que se conectan a través de internet, es necesario dar una solución más sencilla para reportes de registro de entrada y salida del personal que labora en el interior de la empresa. ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que desde el dispositivo biométrico se hace el registro, este se procesa, valida, asigna de forma interna para luego extraer  enviar la notificación respectiva a quien corresponda.
 
 A falta de un registro de entrada y salida con notificaciones para crear una mejor distribución de tiempos entre empleados se presenta la propuesta que consta de:
 
@@ -145,7 +151,7 @@ Los dispositivos a través los cuales se generan los registros, se conectarán p
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=1\textwidth]{./Figuras/diagBloques.png}
+\includegraphics[width=0.85\textwidth]{./Figuras/diagBloques.png}
 \caption{Diagrama en bloques del sistema.}
 \label{fig:diagBloques}
 \end{figure}
@@ -169,14 +175,18 @@ Los dispositivos a través los cuales se generan los registros, se conectarán p
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
 Auspiciante   & Ing. \clientename      &\empclientename	& Gerente  	\\ \hline
 Cliente       & Ing. \clientename      &\empclientename	& Gerente  	\\ \hline
-Impulsor      & Ing. Juan Carlos       &\empclientename	& Supervisor\\ \hline
+Impulsor      & Ing. Flavio Bolívar Vinueza Barzola \newline
+Ing. Dennys Alejandro Montero Huilca &\empclientename	& Supervisor\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores & Ing. Alejandro Montero &\empclientename 	& Producción\\ \hline
+Colaboradores & Sr. Maike Rafael Alvarado Melendez \newline
+Sr. Denny Alberto Cuzme Morales &\empclientename 	& Producción\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director Trabajo final \\ \hline
-Equipo        & Ing. Juan Carlos \newline 
-				Ing. Alejandro Montero & \empclientename	& Empleados \\ \hline
-Opositores    &        -          &       -      	&    -   	\\ \hline
-Usuario final &        -          &       -      	&    -   	\\ \hline
+Equipo        & Ing. Flavio Bolívar Vinueza Barzola \newline
+				Ing. Dennys Alejandro Montero Huilca \newline 
+				Sr. Maike Rafael Alvarado Melendez \newline
+				Sr. Denny Alberto Cuzme Morales & \empclientename	& Empleados \\ \hline
+Opositores    & Sra. Grace Ivonne Maridueña Carlier & Serintu S.A. & Gerente General \\ \hline
+Usuario final & Ing. Gabriela Salvador & \empclientename	&    RRHH   	\\ \hline
 \end{tabularx}
 \end{table}
 
@@ -197,45 +207,36 @@ Usuario final &        -          &       -      	&    -   	\\ \hline
 
 
 
-\begin{consigna}{black}
+
 El presente proyecto contempla la notificación de los registros, entrada,
-tiempo, duración y salida de un empleado en la empresa \empclientename, con el uso de la metodología SCRUM.
+tiempo, duración y salida del mes de cada empleado en la empresa \empclientename, con el uso de una herramienta digital. Para el desarrollo del proyecto se hace uso de la metodología SCRUM.
 
 El presente proyecto no incluye el mantenimiento de la infraestructura digital y física del
 aplicativo.
 
-\end{consigna}
+
 
 
 \section{5. Supuestos del proyecto}
 \label{sec:supuestos}
 
-\begin{consigna}{red}
-``Para el desarrollo del presente proyecto se supone que: ...''
+
+
+Para el desarrollo del presente proyecto se supone que: 
 
 \begin{itemize}
-	\item Supuesto 1
-	\item Supuesto 2...
-\end{itemize}
-
-Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
-\end{consigna}
-
-\begin{consigna}{black}
-``Para el desarrollo del presente proyecto se supone que: ''
-
-\begin{itemize}
-	\item La disponibilidad del cliente Ing. \clientename, las personas encargadas para la guía en el avance del proyecto. 
+	\item La disponibilidad del cliente Ing. \clientename, impulsores o colaboradores encargados para la guía en el avance del proyecto. 
 	\item Los recursos actuales pueden ser modernizados por necesidad propia de la empresa.
 	\item Cambios o implementación de leyes para regulación nacional para el uso de los equipos.
 	\item Cambios del personal de la empresa.
 	\item Cambios en directrices de la empresa.
 	\item Prioridades de la empresa por eventos inesperados.
 	\item Fenómenos naturales.
+	\item Daño del lector biométrico LX50 ZK.
+	\item Corte de energía.
 \end{itemize}
 
-Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
-\end{consigna}
+
 
 \section{6. Requerimientos}
 \label{sec:requerimientos}
@@ -244,15 +245,15 @@ Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y
 \begin{enumerate}
 	\item Requerimientos funcionales
 		\begin{enumerate}
-			\item El sistema debe autenticar solo a los usuarios registrados.
+			\item El sistema debe autenticar solo a los empleados de planta de la empresa registrados.
 			\item El empleado se registra en el sistema.
 			\item El supervisor y empleado reciben una notificación push de ingreso al sistema.
-			\item El supervisor y usuario pueden ver el tiempo de estancia en la empresa.
-			\item El usuario puede darse de alta en la salida de la empresa.
-			\item El supervisor y empleado reciben una notificación push de ingreso a la empresa.
-			\item El supervisor y usuario reciben una notificación push de salida de la empresa.
+			\item El supervisor y usuario pueden ver el tiempo de estancia que tuvo un empleado en la empresa en un determinado tiempo.
+			\item El supervisor y empleado reciben una notificación push del reporte ingresos a la empresa.
+			\item El supervisor y usuario reciben una notificación push del reporte de salida de la empresa.
+			\item El supervisor tiene acceso al reporte de tiempo promedio promedio del empleado en la empresa en un rango de fechas. 
 			\item Cada empleado tiene un registro de entradas, salidas con tiempos de estancia que se pueden ver a través de grafos.
-			\item El empleado puede el tiempo de estancia total a través durante el tiempo que empezó el registro en el sistema.
+			\item El empleado puede ver el tiempo de estancia total  que tuvo en un rango de fechas desde realizó el registro de usuario en el sistema.
 		\end{enumerate}
 	\item Requerimientos de documentación
 		\begin{enumerate}
@@ -286,20 +287,23 @@ Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y
 
 Para realizar la estimación del proyecto se emplea la técnica de T-shirt, que se describe en la siguiente tabla.
 
-
-\begin{table}[ht]
-%\caption{Identificación de los interesados}
-%\label{tab:interesados}
-\begin{tabularx}{\linewidth}{@{}|l|X|X|l|@{}}
+\begin{table}[h!]
+%\caption{T-shirt}
+%\label{tab:puntos estimados - horas de trabajo}
+\centering
+ \begin{tabular}{|c c c|} 
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Medida & Puntos estimados & Horas de trabajo	\\ \hline
-S      & 10               & 10  	  \\ \hline
-M      & 20               & 20    \\ \hline
-L      & 40               & 40    \\ \hline
-XL     & 60               & 60      \\ \hline
-\end{tabularx}
+XS     & 1               & 10  	  \\ \hline
+S      & 2               & 10  	  \\ \hline
+M      & 3               & 20    \\ \hline
+L      & 5               & 40    \\ \hline
+XL     & 8               & 60      \\ \hline
+%\end{tabularx}
+\end{tabular}
 \end{table}
+
 
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}
@@ -312,7 +316,7 @@ Los entregables del proyecto son:
 	\item Finalizar lista de materiales.
 	\item Crear cronograma de proyecto.
 	\item Enviar invitaciones de calendario a los integrantes del grupo.
-	\item Diseñar web assets.
+	\item Diseño de web \textit{assets}.
 	\item Necesidades de contenido.
 	\item Necesidades de animación de enlace.
 	\item Manual de uso.
