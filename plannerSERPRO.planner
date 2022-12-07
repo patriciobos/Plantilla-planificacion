@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<project name="" company="" manager="" phase="" project-start="20221021T000000Z" mrproject-version="2" calendar="1">
+  <properties/>
+  <phases/>
+  <calendars>
+    <day-types>
+      <day-type id="0" name="Working" description="A default working day"/>
+      <day-type id="1" name="Nonworking" description="A default non working day"/>
+      <day-type id="2" name="Use base" description="Use day from base calendar"/>
+    </day-types>
+    <calendar id="1" name="Default">
+      <default-week mon="0" tue="0" wed="0" thu="0" fri="0" sat="1" sun="1"/>
+      <overridden-day-types>
+        <overridden-day-type id="0">
+          <interval start="0800" end="1200"/>
+          <interval start="1300" end="1700"/>
+        </overridden-day-type>
+      </overridden-day-types>
+      <days/>
+    </calendar>
+  </calendars>
+  <tasks>
+    <task id="1" name="Planificaci&#xF3;n del proyecto" note="mi&#xE9; 07 dic 2022, 02:12&#10;" work="216000" start="20221021T000000Z" end="20221101T120000Z" work-start="20221021T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="2" name="Reuniones con cliente" note="" work="18000" start="20221021T000000Z" end="20221021T140000Z" work-start="20221021T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="3" name="An&#xE1;lisis de requerimientos del cliente" note="" work="72000" start="20221021T140000Z" end="20221026T090000Z" work-start="20221021T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="2" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="4" name="Elaborar documentaci&#xF3;n" note="" work="126000" start="20221026T090000Z" end="20221101T120000Z" work-start="20221026T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="3" type="FS"/>
+        </predecessors>
+      </task>
+    </task>
+    <task id="5" name="Estudio preliminar" note="" work="360000" start="20221101T120000Z" end="20221117T170000Z" work-start="20221101T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="1" type="FS"/>
+      </predecessors>
+      <task id="6" name="Investigaci&#xF3;n de lector biom&#xE9;trico LX50 ZK" note="" work="72000" start="20221101T120000Z" end="20221103T170000Z" work-start="20221101T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="7" name="Investigaci&#xF3;n de protocolo de comunicaci&#xF3;n" note="" work="36000" start="20221103T170000Z" end="20221107T100000Z" work-start="20221104T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="6" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="8" name="Preparaci&#xF3;n de &#xE1;rea de trabajo" note="" work="36000" start="20221107T100000Z" end="20221108T120000Z" work-start="20221107T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="7" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="9" name="Preparaci&#xF3;n de equipos " note="" work="36000" start="20221108T120000Z" end="20221109T150000Z" work-start="20221108T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="8" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="10" name="Instalaci&#xF3;n de software de desarrollo" note="" work="36000" start="20221109T150000Z" end="20221110T170000Z" work-start="20221109T150000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="9" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="11" name="Estudio de desarrollo cloud" note="" work="72000" start="20221110T170000Z" end="20221115T120000Z" work-start="20221111T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="10" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="12" name="Estudio progresive web app" note="" work="72000" start="20221115T120000Z" end="20221117T170000Z" work-start="20221115T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="11" type="FS"/>
+        </predecessors>
+      </task>
+    </task>
+    <task id="13" name="Adquisici&#xF3;n de componentes" note="" work="90000" start="20221117T170000Z" end="20221123T090000Z" work-start="20221118T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="5" type="FS"/>
+      </predecessors>
+      <task id="14" name="Cotizar costos de lectores biom&#xE9;tricos con proveedores" note="" work="36000" start="20221117T170000Z" end="20221121T100000Z" work-start="20221118T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="15" name="Realizar compra" note="" work="18000" start="20221121T100000Z" end="20221121T160000Z" work-start="20221121T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="14" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="16" name="Informe adquisici&#xF3;n de productos" note="" work="36000" start="20221121T160000Z" end="20221123T090000Z" work-start="20221121T160000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="15" type="FS"/>
+        </predecessors>
+      </task>
+    </task>
+    <task id="17" name="Planificaci&#xF3;n y desarrollo del aplicativo empleados SER&amp;PRO" note="" work="1008000" start="20221123T090000Z" end="20230111T090000Z" work-start="20221123T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="13" type="FS"/>
+      </predecessors>
+      <task id="18" name="Estudio del funcionamiento de las bibliotecas para conexi&#xF3;n LX50 ZK" note="" work="36000" start="20221123T090000Z" end="20221124T110000Z" work-start="20221123T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="19" name="Estudio, elaboraci&#xF3;n de certificados, repositorio y credenciales privadas" note="" work="54000" start="20221124T110000Z" end="20221128T100000Z" work-start="20221124T110000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="18" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="20" name="Desarrollo de funcionalidades haciendo referencia Norma ISO/IEC 25010" note="" work="216000" start="20221128T100000Z" end="20221207T150000Z" work-start="20221128T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="19" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="21" name="Pruebas y depuraci&#xF3;n de errores en la conexi&#xF3;n y transporte del dato al servidor central" note="" work="126000" start="20221207T150000Z" end="20221214T090000Z" work-start="20221207T150000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="20" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="22" name="Desarrollo de las funciones de procesamiento de la variable medida tiempo" note="" work="72000" start="20221214T090000Z" end="20221216T140000Z" work-start="20221214T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="21" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="23" name="Desarrollo de la pagina web de configuraci&#xF3;n" note="" work="216000" start="20221216T140000Z" end="20221228T090000Z" work-start="20221216T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="22" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="24" name="Pruebas del aplicativo" note="" work="144000" start="20221228T090000Z" end="20230104T090000Z" work-start="20221228T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="23" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="25" name="Depuraci&#xF3;n del c&#xF3;digo" note="" work="144000" start="20230104T090000Z" end="20230111T090000Z" work-start="20230104T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="24" type="FS"/>
+        </predecessors>
+      </task>
+    </task>
+    <task id="26" name="Implementacion de la base de datos cloud" note="" work="126000" start="20230111T090000Z" end="20230117T120000Z" work-start="20230111T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="17" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="27" name="Administrar notificaciones" note="" work="331200" start="20230117T120000Z" end="20230201T170000Z" work-start="20230117T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="26" type="FS"/>
+      </predecessors>
+      <task id="28" name="Creaci&#xF3;n de canales en Google" note="" work="18000" start="20230117T120000Z" end="20230118T090000Z" work-start="20230117T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="29" name="Creaci&#xF3;n de correos y usuarios de prueba" note="" work="7200" start="20230118T090000Z" end="20230118T110000Z" work-start="20230118T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="28" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="30" name="Gesti&#xF3;n de reglas para env&#xED;o de notificaciones" note="" work="72000" start="20230118T110000Z" end="20230120T160000Z" work-start="20230118T110000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="29" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="31" name="Gesti&#xF3;n de reglas dashboard para mostrar estado de empleado" note="" work="90000" start="20230120T160000Z" end="20230125T170000Z" work-start="20230120T160000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="30" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="32" name="Verificaci&#xF3;n de notificaciones ingreso empleado" note="" work="36000" start="20230125T170000Z" end="20230127T100000Z" work-start="20230126T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="31" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="33" name="Verificaci&#xF3;n de notificaciones salida empleado" note="" work="36000" start="20230127T100000Z" end="20230130T120000Z" work-start="20230127T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="32" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="34" name="Pruebas online y offline de los dispositivos" note="" work="72000" start="20230130T120000Z" end="20230201T170000Z" work-start="20230130T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="33" type="FS"/>
+        </predecessors>
+      </task>
+    </task>
+    <task id="35" name="Verificaci&#xF3;n de funcionalidades y cumplimiento de requisitos" note="" work="108000" start="20230201T170000Z" end="20230207T150000Z" work-start="20230202T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="27" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="36" name="Documentaci&#xF3;n" note="" work="54000" start="20230207T150000Z" end="20230209T140000Z" work-start="20230207T150000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="35" type="FS"/>
+      </predecessors>
+      <task id="37" name="Elaboraci&#xF3;n manual de usuario" note="" work="54000" start="20230207T150000Z" end="20230209T140000Z" work-start="20230207T150000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    </task>
+  </tasks>
+  <resource-groups/>
+  <resources/>
+  <allocations/>
+</project>

@@ -27,7 +27,7 @@
 \pertenenciaCoDirector{FIUBA}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
-\cliente{Ligia Geomar Delli Valladares}
+\cliente{Ing. Ligia Geomar Delli Valladares}
 \empresaCliente{SER\&PRO Services \& Products S.A.}
 
 % Nombre y pertenencia de los jurados, se pueden usar el cualquier lugar del documento con el comando \jurunoname, \jurdosname y \jurtresname y \perteunoname, \pertedosname y \pertetresname.
@@ -173,8 +173,8 @@ Los dispositivos a través los cuales se generan los registros, se conectarán p
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   & Ing. \clientename      &\empclientename	& Gerente  	\\ \hline
-Cliente       & Ing. \clientename      &\empclientename	& Gerente  	\\ \hline
+Auspiciante   & \clientename      &\empclientename	& Gerente  	\\ \hline
+Cliente       & \clientename      &\empclientename	& Gerente  	\\ \hline
 Impulsor      & Ing. Flavio Bolívar Vinueza Barzola \newline
 Ing. Dennys Alejandro Montero Huilca &\empclientename	& Supervisor\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
@@ -245,8 +245,8 @@ Para el desarrollo del presente proyecto se supone que:
 \begin{enumerate}
 	\item Requerimientos funcionales
 		\begin{enumerate}
-			\item El sistema debe autenticar solo a los empleados de planta de la empresa registrados.
 			\item El empleado se registra en el sistema.
+			\item El sistema debe autenticar solo a los empleados de planta de la empresa registrados.
 			\item El supervisor y empleado reciben una notificación push de ingreso al sistema.
 			\item El supervisor y usuario pueden ver el tiempo de estancia que tuvo un empleado en la empresa en un determinado tiempo.
 			\item El supervisor y empleado reciben una notificación push del reporte ingresos a la empresa.
@@ -285,21 +285,209 @@ Para el desarrollo del presente proyecto se supone que:
 \label{sec:backlog}
 
 
-Para realizar la estimación del proyecto se emplea la técnica de T-shirt, que se describe en la siguiente tabla.
+Para realizar la estimación de puntos estimados del proyecto se emplea la famosa serie Fibonacci, que se describe en la siguiente tabla.
 
-\begin{table}[h!]
-%\caption{T-shirt}
+\begin{table}[H]
 %\label{tab:puntos estimados - horas de trabajo}
 \centering
- \begin{tabular}{|c c c|} 
+ \begin{tabular}{|c|p{14cm}|} 
 \hline
 \rowcolor[HTML]{C0C0C0} 
-Medida & Puntos estimados & Horas de trabajo	\\ \hline
-XS     & 1               & 10  	  \\ \hline
-S      & 2               & 10  	  \\ \hline
-M      & 3               & 20    \\ \hline
-L      & 5               & 40    \\ \hline
-XL     & 8               & 60      \\ \hline
+\multicolumn {2}{|c|}{\textbf{Fibonacci Práctico}}  	\\ \hline
+0  & No se requiere esfuerzo, o se requiere algo de esfuerzo, pero no se entrega ningún valor comercial, por lo que no se acumulan Puntos por hacer el trabajo. Un ejemplo es un cambio de comportamiento deseado derivado de la Retrospectiva de Scrum.¨ \\ \hline
+1  & Extra Pequeño. Los desarrolladores sienten que entienden la mayoría de los requisitos y lo consideran relativamente fácil, probablemente el elemento más pequeño del Sprint y probablemente completado en un día. \\ \hline
+2  & Pequeña. Se requiere un poco de pensamiento, esfuerzo o resolución de problemas, pero los desarrolladores han hecho esto mucho, por lo que confían en los requisitos. O bien, suena muy pequeño, pero quieren cubrir su apuesta un poco.  \\ \hline
+3  & Promedio. Los desarrolladores han hecho esto mucho; ellos saben lo que hay que hacer. Puede haber algunos pasos adicionales, pero eso es todo. Es dudoso que necesiten investigar algo. \\ \hline
+5  & Largo. Este es un trabajo complejo, o los desarrolladores no lo hacen muy a menudo. La mayoría de los desarrolladores necesitarán la ayuda de otra persona del equipo. Este es probablemente uno de los elementos más grandes que se pueden completar dentro de un Sprint. \\ \hline
+8  & Extra grande. Esto llevará algo de tiempo e investigación y probablemente más de un desarrollador lo complete en dos semanas. Además, los desarrolladores deben hacer varias suposiciones que aumentan el riesgo y podrían afectar su realización. \\ \hline
+13  & ¡Advertencia!  Este es un trabajo complejo con muchas incógnitas y requiere múltiples suposiciones para dimensionar. Es demasiado para completar en un Sprint. En su lugar, divida esto en varios elementos que se pueden completar de forma independiente. \\ \hline
+21  & ¡Peligro!  Un ''21''o''34'' refleja demasiada complejidad para realizar dentro de un Sprint. Habrá que afinar más. El tamaño grande también indica más riesgos, suposiciones y dependencias involucradas para completar este elemento.\\ \hline
+?   & ¡Peligro! Como desarrollador, no queremos hacer este trabajo de la forma en que está escrito actualmente. Es muy complejo y no se puede completar en el tiempo de una iteración o Sprint. Quizás los requisitos son tan confusos que está plagado de peligros.\\ \hline
+%\end{tabularx}
+\end{tabular}
+\end{table}
+
+%Historia de usuario Requerimientos funcionales
+% 1	\item El empleado se registra en el sistema.
+% 2	\item El sistema debe autenticar solo a los empleados de planta de la empresa registrados.
+% 3	\item El supervisor y empleado reciben una notificación push de ingreso al sistema.
+% 4 \item El supervisor y usuario pueden ver el tiempo de estancia que tuvo un empleado en la empresa en un determinado tiempo.
+% 5	\item El supervisor y empleado reciben una notificación push del reporte ingresos a la empresa.
+% 6	\item El supervisor y usuario reciben una notificación push del reporte de salida de la empresa.
+% 7	\item El supervisor tiene acceso al reporte de tiempo promedio promedio del empleado en la empresa en un rango de fechas. 
+% 8	\item Cada empleado tiene un registro de entradas, salidas con tiempos de estancia que se pueden ver a través de grafos.
+% 9	\item El empleado puede ver el tiempo de estancia total  que tuvo en un rango de fechas desde realizó el registro de usuario en el sistema.
+
+
+%\label{Historia de usuario 1}
+\begin{table}[H]
+ \begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\multicolumn {2}{|r|}{\textbf{Historia de Usuario}}  	\\ \hline
+\textbf{Número:} 1 & \textbf{Usuario:} \clientename \\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Nombre historia:} El empleado se registra en el sistema.}\\ \hline
+\textbf{Prioridad del negocio:} ALTA & \textbf{Riesgo en desarrollo:} BAJA \\ \hline
+\textbf{Puntos estimados:} 8 & \textbf{Iteración asignada:} 1 \\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Programador Responsable:} \authorname}\\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Descripción:} \newline
+Como cliente quiero que cada empleado se registre en el sistema con los datos de empresa que tiene asignado.}\\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Validación:} \newline
+Solo si el código de empleado de planta coincide con el código de la base de datos de empleados de planta permite registrarse en el aplicativo.}\\ \hline
+%\end{tabularx}
+\end{tabular}
+\end{table}
+
+%\label{Historia de usuario 2}
+\begin{table}[H]
+ \begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\multicolumn {2}{|r|}{\textbf{Historia de Usuario}}  	\\ \hline
+\textbf{Número:} 2 & \textbf{Usuario:} \clientename \\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Nombre historia:} El sistema debe autenticar solo a los empleados de planta de la empresa registrados.}\\ \hline
+\textbf{Prioridad del negocio:} ALTA & \textbf{Riesgo en desarrollo:} BAJA \\ \hline
+\textbf{Puntos estimados:} 8 & \textbf{Iteración asignada:} 1 \\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Programador Responsable:} \authorname}\\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Descripción:} \newline
+Como cliente quiero que solo se autentifiquen los empleados de planta la empresa para no tener otras personas.}\\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Validación:} \newline
+Solo la credencial válida de empleado de planta permite autenticarse en el aplicativo.}\\ \hline
+%\end{tabularx}
+\end{tabular}
+\end{table}
+
+%\label{Historia de usuario 3}
+\begin{table}[H]
+ \begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\multicolumn {2}{|r|}{\textbf{Historia de Usuario}}  	\\ \hline
+\textbf{Número:} 3 & \textbf{Usuario:} \clientename \\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Nombre historia:} El supervisor y empleado reciben una notificación push de ingreso al sistema.}\\ \hline
+\textbf{Prioridad del negocio:} MEDIA & \textbf{Riesgo en desarrollo:} BAJA \\ \hline
+\textbf{Puntos estimados:} 5 & \textbf{Iteración asignada:} 2 \\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Programador Responsable:} \authorname}\\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Descripción:} \newline
+Como cliente quiero que cuando ingrese el usuario en el aplicativo reciba un mensaje inmediato a través de correo electrónico de aviso.}\\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Validación:} \newline
+Después de autentificarse el empleado en el sistema, de forma automática debe recibir una notificación de aviso en bandeja de correo electrónico.}\\ \hline
+%\end{tabularx}
+\end{tabular}
+\end{table}
+
+%\label{Historia de usuario 4}
+\begin{table}[H]
+ \begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\multicolumn {2}{|r|}{\textbf{Historia de Usuario}}  	\\ \hline
+\textbf{Número:} 4 & \textbf{Usuario:} \clientename \\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Nombre historia:} El supervisor y usuario pueden ver el tiempo de estancia que tuvo un empleado en la empresa en un determinado tiempo.}\\ \hline
+\textbf{Prioridad del negocio:} MEDIA & \textbf{Riesgo en desarrollo:} BAJA \\ \hline
+\textbf{Puntos estimados:} 8 & \textbf{Iteración asignada:} 3 \\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Programador Responsable:} \authorname}\\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Descripción:} \newline
+Como cliente quiero que cada empleado pueda ver el tiempo que estuvo o está en la empresa en una fecha específica para que vea la estancia que tuvo en una fecha determinada.}\\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Validación:} \newline
+Cuando el empleado este en su perfil seleccione una fecha determinada y se muestre un gráfico con el tiempo que está o ha pasado en una fecha determinada.}\\ \hline
+%\end{tabularx}
+\end{tabular}
+\end{table}
+
+%\label{Historia de usuario 5}
+\begin{table}[H]
+ \begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\multicolumn {2}{|r|}{\textbf{Historia de Usuario}}  	\\ \hline
+\textbf{Número:} 5 & \textbf{Usuario:} \clientename \\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Nombre historia:} El supervisor y empleado reciben una notificación push del reporte ingresos a la empresa.}\\ \hline
+\textbf{Prioridad del negocio:} MEDIA & \textbf{Riesgo en desarrollo:} BAJA \\ \hline
+\textbf{Puntos estimados:} 8 & \textbf{Iteración asignada:} 3 \\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Programador Responsable:} \authorname}\\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Descripción:} \newline
+Como cliente quiero que cada empleado pueda ver el tiempo que estuvo o está en la empresa en una fecha específica para que vea la estancia que tuvo en una fecha determinada.}\\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Validación:} \newline
+Cuando el empleado este en su perfil seleccione una fecha determinada y se muestre un gráfico con el tiempo que está o ha pasado en una fecha determinada.}\\ \hline
+%\end{tabularx}
+\end{tabular}
+\end{table}
+
+%\label{Historia de usuario 6}
+\begin{table}[H]
+ \begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\multicolumn {2}{|r|}{\textbf{Historia de Usuario}}  	\\ \hline
+\textbf{Número:} 6 & \textbf{Usuario:} \clientename \\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Nombre historia:} El supervisor y usuario reciben una notificación push del reporte de salida de la empresa.}\\ \hline
+\textbf{Prioridad del negocio:} MEDIA & \textbf{Riesgo en desarrollo:} BAJA \\ \hline
+\textbf{Puntos estimados:} 8 & \textbf{Iteración asignada:} 4 \\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Programador Responsable:} \authorname}\\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Descripción:} \newline
+Como cliente quiero que cada empleado pueda ver la hora a la que sale de la empresa en una fecha específica para que vea la estancia de salida y recibe una notificación push de aviso.}\\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Validación:} \newline
+Cuando el empleado registre su salida de la empresa se tendrá el valor de salida con el cual se construye el gráfico de estancia por día.}\\ \hline
+%\end{tabularx}
+\end{tabular}
+\end{table}
+
+
+%\label{Historia de usuario 7}
+\begin{table}[H]
+ \begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\multicolumn {2}{|r|}{\textbf{Historia de Usuario}}  	\\ \hline
+\textbf{Número:} 7 & \textbf{Usuario:} \clientename \\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Nombre historia:} El supervisor tiene acceso al reporte de tiempo promedio promedio del empleado en la empresa en un rango de fechas.}\\ \hline
+\textbf{Prioridad del negocio:} ALTA & \textbf{Riesgo en desarrollo:} BAJA \\ \hline
+\textbf{Puntos estimados:} 8 & \textbf{Iteración asignada:} 5 \\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Programador Responsable:} \authorname}\\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Descripción:} \newline
+Como cliente quiero que el supervisor pueda visualizar el reporte de tiempo promedio de un rango de fechas para obtener métricas de cada uno de los empleados de la empresa.}\\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Validación:} \newline
+Cuando el supervisor seleccione la fecha de inicio y la fecha de fin de rango debe visualizar a traves de grafos el reporte.}\\ \hline
+%\end{tabularx}
+\end{tabular}
+\end{table}
+
+%\label{Historia de usuario 8}
+\begin{table}[H]
+ \begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\multicolumn {2}{|r|}{\textbf{Historia de Usuario}}  	\\ \hline
+\textbf{Número:} 8 & \textbf{Usuario:} \clientename \\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Nombre historia:} Cada empleado tiene un registro de entradas, salidas con tiempos de estancia que se pueden ver a través de grafos.}\\ \hline
+\textbf{Prioridad del negocio:} ALTA & \textbf{Riesgo en desarrollo:} BAJA \\ \hline
+\textbf{Puntos estimados:} 8 & \textbf{Iteración asignada:} 5 \\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Programador Responsable:} \authorname}\\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Descripción:} \newline
+Como cliente quiero que el supervisor pueda visualizar el reporte de tiempo promedio del empleado un rango de fechas y de los empleados en promedio para obtener métricas generales de los empleados de la empresa.}\\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Validación:} \newline
+Cuando el supervisor seleccione la fecha de inicio y la fecha de fin de rango debe visualizar a traves de grafos el reporte general de los empleados.}\\ \hline
+%\end{tabularx}
+\end{tabular}
+\end{table}
+
+
+%\label{Historia de usuario 9}
+\begin{table}[H]
+ \begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\multicolumn {2}{|r|}{\textbf{Historia de Usuario}}  	\\ \hline
+\textbf{Número:} 9 & \textbf{Usuario:} \clientename \\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Nombre historia:} El empleado puede ver el tiempo de estancia total  que tuvo en un rango de fechas desde realizó el registro de usuario en el sistema.}\\ \hline
+\textbf{Prioridad del negocio:} ALTA & \textbf{Riesgo en desarrollo:} BAJA \\ \hline
+\textbf{Puntos estimados:} 8 & \textbf{Iteración asignada:} 5 \\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Programador Responsable:} \authorname}\\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Descripción:} \newline
+Como cliente quiero que cada empleado pueda ver su reporte de estancia en la empresa en un rango de fechas y de los empleados para que visualice el comportamiento personal con respecto al tiempo empleado en la empresa.}\\ \hline
+\multicolumn {2}{|p{14cm}|}{ \textbf{Validación:} \newline
+Cuando el empleado seleccione la fecha de inicio y la fecha de fin de rango debe visualizar el a traves de gráfico de barras el reporte de tiempo por cada día en el rango de fecha seleccionada.}\\ \hline
 %\end{tabularx}
 \end{tabular}
 \end{table}
@@ -313,14 +501,15 @@ XL     & 8               & 60      \\ \hline
 Los entregables del proyecto son:
 
 \begin{itemize}
-	\item Finalizar lista de materiales.
-	\item Crear cronograma de proyecto.
-	\item Enviar invitaciones de calendario a los integrantes del grupo.
+	\item Diagrama de estructura de la organización registrada.
+	\item Diagrama de los valores utilizados en el lector biométrico LX50 ZK.
+	\item Código fuente del aplicativo.
+	\item Diagramas de uso. 
 	\item Diseño de web \textit{assets}.
-	\item Necesidades de contenido.
-	\item Necesidades de animación de enlace.
-	\item Manual de uso.
-	\item Enviar encuesta de usabilidad a los empleados.
+	\item Entrega de aplicativo.
+	\item Test de evaluación del aplicativo.
+	\item Manual de usuario.
+	\item Informe final.
 \end{itemize}
 
 
@@ -328,49 +517,80 @@ Los entregables del proyecto son:
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-\begin{consigna}{red}
-El WBS debe tener relación directa o indirecta con los requerimientos.  Son todas las actividades que se harán en el proyecto para dar cumplimiento a los requerimientos. Se recomienda mostrar el WBS mediante una lista indexada:
 
 \begin{enumerate}
-\item Grupo de tareas 1
+\item Planificación del proyecto (60 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
+	\item Reuniones con cliente. (5 hs)
+	\item Análisis de requerimientos del cliente. (20 hs)
+	\item Elaborar documentación. (35 hs)
 	\end{enumerate}
-\item Grupo de tareas 2
+\item Estudio preliminar (100 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
+	\item Investigación de lector biométrico LX50 ZK (20 hs)
+	\item Investigación de protocolo de comunicación (10 hs)
+	\item Preparación de área de trabajo (10 hs)
+	\item Preparación de equipos (10 hs)
+	\item Instalación de software de desarrollo (10 hs)
+	\item Estudio de desarrollo cloud (20 hs)
+	\item Estudio progresive web app (20 hs)
 	\end{enumerate}
-\item Grupo de tareas 3
+\item Adquisición de componentes. (20 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
-	\item Tarea 4 (tantas hs)
-	\item Tarea 5 (tantas hs)
+	\item Cotizar costos de lectores biométricos con proveedores. (10 hs)
+	\item Realizar compra. (5 hs)
+	\item Informe adquisición de productos. (10 hs)
+	\end{enumerate}
+\item Planificación y desarrollo del aplicativo empleados SER\&PRO (280 hs)
+	\begin{enumerate}
+	\item Estudio del funcionamiento de las bibliotecas para conexión LX50 ZK. (10 hs)
+	\item Estudio, elaboración de certificados, repositorio y credenciales privadas. (15 hs)
+	\item Desarrollo de funcionalidades haciendo referencia Norma ISO/IEC 25010. (60 hs)
+	\item Pruebas y depuración de errores en la conexión y transporte del dato al servidor
+central. (35 hs)
+	
+	\item Desarrollo de las funciones de procesamiento de la variable medida tiempo. (20 hs)
+	\item Desarrollo de la pagina web de configuración. (60 hs)
+	\item Pruebas del aplicativo. (40 hs)
+	\item Depuración del código. (40 hs)
+	\end{enumerate}
+\item Implementacion de la base de datos cloud. (25 hs)
+\item Administrar notificaciones. (92 hs)
+	\begin{enumerate}
+	\item Creación de canales en Google. (5 hs)
+	\item Creación de correos y usuarios de prueba. (2 hs)
+	\item Gestión de reglas para envío de notificaciones. (20 hs)
+	\item Gestión de reglas dashboard para mostrar estado de empleado. (25 hs)
+	\item Verificación de notificaciones ingreso empleado. (10 hs)
+	\item Verificación de notificaciones salida empleado. (10 hs)
+	\item Pruebas online y offline de los dispositivos. (20 hs)
+	\end{enumerate}
+\item Verificación de funcionalidades y cumplimiento de requisitos. (30 hs)
+\item Documentación (15 hs)
+	\begin{enumerate}
+	\item Elaboración manual de usuario. (15 hs)
 	\end{enumerate}
 \end{enumerate}
+Cantidad total de horas: (622 hs)
 
-Cantidad total de horas: (tantas hs)
-
-Se recomienda que no haya ninguna tarea que lleve más de 40 hs. 
-
-\end{consigna}
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-\begin{consigna}{red}
-Armar el AoN a partir del WBS definido en la etapa anterior. 
+La unidad de tiempo del diagrama AoN que se muestra en la Figura 2 está expresada en horas.
 
-%La figura \ref{fig:AoN} fue elaborada con el paquete latex tikz y pueden consultar la siguiente referencia \textit{online}:
+%\label{Historia de usuario 1}
+\begin{table}[H]
+ \begin{tabular}{|l|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\textbf{Descripción} & \textbf{Secuencia de tareas} & \textbf{Tiempo (horas)} \\ \hline
+Camino & 1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 & 622	\\ \hline
 
-%\url{https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ:_A_Tutorial_for_Beginners_(Part_3)\%E2\%80\%94Creating_Flowcharts}
+%\end{tabularx}
+\end{tabular}
+\end{table}
 
-\end{consigna}
 
 \begin{figure}[htpb]
 \centering 
@@ -379,81 +599,39 @@ Armar el AoN a partir del WBS definido en la etapa anterior.
 \label{fig:AoN}
 \end{figure}
 
-Indicar claramente en qué unidades están expresados los tiempos.
-De ser necesario indicar los caminos semicríticos y analizar sus tiempos mediante un cuadro.
-Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color, como se muestra en el siguiente ejemplo:
 
 
 
 \section{11. Diagrama de Gantt}
 \label{sec:gantt}
 
-\begin{consigna}{red}
 
-Existen muchos programas y recursos \textit{online} para hacer diagramas de gantt, entre los cuales destacamos:
-
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
-
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
-
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
-
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
-
-\begin{figure}[htbp]
-\begin{center}
-\begin{ganttchart}{1}{12}
-  \gantttitle{2020}{12} \\
-  \gantttitlelist{1,...,12}{1} \\
-  \ganttgroup{Group 1}{1}{7} \\
-  \ganttbar{Task 1}{1}{2} \\
-  \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-  \ganttmilestone{Milestone o hito}{7} \ganttnewline
-  \ganttbar{Final Task}{8}{12}
-  \ganttlink{elem2}{elem3}
-  \ganttlink{elem3}{elem4}
-\end{ganttchart}
-\end{center}
-\caption{Diagrama de gantt de ejemplo}
-\label{fig:gantt}
-\end{figure}
-
-
-\begin{landscape}
 \begin{figure}[htpb]
 \centering 
-\includegraphics[height=.85\textheight]{./Figuras/Gantt-2.png}
-\caption{Ejemplo de diagrama de Gantt rotado}
-\label{fig:diagGantt}
+\includegraphics[width=1\textwidth]{./Figuras/GantTasks1.png}
+\includegraphics[width=1\textwidth]{./Figuras/GantTasks2.png}
+\caption{Tabla de actividades}
+\label{fig:AoN}
 \end{figure}
 
-\end{landscape}
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=1\textwidth]{./Figuras/ganntParte1.png}
+\caption{Diagrama gannt 1/2}
+\label{fig:AoN}
+\end{figure}
 
-\end{consigna}
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=1\textwidth]{./Figuras/ganntParte2.png}
+\caption{Diagrama gannt 2/2}
+\label{fig:AoN}
+\end{figure}
 
 
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-	\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-	\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
-
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
-
-\end{consigna}
 
 \begin{table}[htpb]
 \centering
@@ -515,32 +693,6 @@ Descripción &
 \section{13. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
- 
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos de forma negativa)
-\begin{itemize}
-	\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de (O). 
-\end{itemize}   
-
-Riesgo 2:
-\begin{itemize}
-	\item Severidad (S): 
-	\item Ocurrencia (O):
-\end{itemize}
-
-Riesgo 3:
-\begin{itemize}
-	\item Severidad (S): 
-	\item Ocurrencia (O):
-\end{itemize}
-
-
-b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
-
 \begin{table}[htpb]
 \centering
 \begin{tabularx}{\linewidth}{@{}|X|c|c|c|c|c|c|@{}}
@@ -555,62 +707,31 @@ Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
 \end{tabularx}%
 \end{table}
 
-Criterio adoptado: 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a...
 
-Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
-
-c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
- 
-Riesgo 1: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
-  - Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-  - Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
-
-Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
- 
-Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-
-\end{consigna}
 
 
 \section{14. Gestión de la calidad}
 \label{sec:calidad}
 
-\begin{consigna}{red}
-Para cada uno de los requerimientos del proyecto indique:
-\begin{itemize} 
-\item Req \#1: copiar acá el requerimiento.
 
-\begin{itemize}
-	\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar 
-	\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar  
-\end{itemize}
-
-\end{itemize}
-
-Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.  Las acciones de verificación suelen considerar al entregable como ``caja blanca'', es decir se conoce en profundidad su funcionamiento interno.  En cambio, las acciones de validación suelen considerar al entregable como ``caja negra'', es decir, que no se conocen los detalles de su funcionamiento interno.
-
-\end{consigna}
 
 \section{15. Procesos de cierre}    
 \label{sec:cierre}
 
-\begin{consigna}{red}
-Establecer las pautas de trabajo para realizar una reunión final de evaluación del proyecto, tal que contemple las siguientes actividades:
+Las actividades de los procesos de cierre estarán a cargo del responsable del proyecto, Ing. Flavio Bolívar Vinueza Barzola.
 
-\begin{itemize}
-	\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento a aplicar. 
-	\item Identificación de las técnicas y procedimientos útiles e inútiles que se emplearon, y los problemas que surgieron y cómo se solucionaron:
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento para dejar registro.
-	\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:
-	  - Indicar esto y quién financiará los gastos correspondientes.
-\end{itemize}
+Se analizará el grado de cumplimiento de la planificación en contraste con su ejecución. Se
+detectarán aquellas tareas que no se cumplieron en tiempo y se hará su correspondiente
+evaluación a fin de tener esta información en cuenta para otros proyectos. La documentación está en el repositorio Git del proyecto.
 
-\end{consigna}
+Se observará si fue necesario cambiar algún requerimiento durante la ejecución, en tal
+caso, se analizarán sus causas y se documentará esta información.
 
+El responsable del proyecto realizará una lista de las técnicas y procedimientos que le
+resultaron útiles para cumplir con los objetivos preestablecidos, y las que le hayan generado
+retrasos, indicando las posibles causas.
+
+El responsable del proyecto se encargará de agradecer a todas las personas involucradas en el
+proyecto. Los gastos del proyecto corren por cuenta del cliente \clientename.
 
 \end{document}
