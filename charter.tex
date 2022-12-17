@@ -75,7 +75,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 1      & Se completa hasta el punto 5 inclusive                 & 3 de noviembre de 2022 \\ \hline
 2      & Se completa hasta el punto 8 inclusive                 & 10 de noviembre de 2022 \\ \hline
 3      & Se completa hasta el punto 12 inclusive                 & 20 de noviembre de 2022 \\ \hline
-4      & Se completa hasta el punto 17 inclusive                 & 23 de noviembre de 2022 \\ \hline
+4      & Se completa hasta el punto 15 inclusive                 & 23 de noviembre de 2022 \\ \hline
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & dd/mm/aaaa \\ \hline
@@ -98,7 +98,7 @@ Guayaquil, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en {la implementación de un prototipo de un sistema de control de empleados}, y tendrá un presupuesto preliminar estimado de {600} hs de trabajo y {\$3764}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en {la implementación de un prototipo de un sistema de control de empleados}, y tendrá un presupuesto preliminar estimado de {692} horas de trabajo y {\$4094,60} dólares americanos, con fecha de inicio \fechaInicioName\hspace{1px}.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -108,7 +108,7 @@ Se adjunta a esta acta la planificación inicial.
 \begin{table}[ht]
 \centering
 \begin{tabular}{ccc}
-\begin{tabular}[c]{@{}c@{}}Dr. Ing. Ariel Lutenberg \\ Director posgrado FIUBA\end{tabular} & \hspace{2cm} & \begin{tabular}[c]{@{}c@{}}Ing. \clientename \\ \empclientename \end{tabular} \vspace{2.5cm} \\ 
+\begin{tabular}[c]{@{}c@{}}Dr. Ing. Ariel Lutenberg \\ Director posgrado FIUBA\end{tabular} & \hspace{2cm} & \begin{tabular}[c]{@{}c@{}}\clientename \\ \empclientename \end{tabular} \vspace{2.5cm} \\ 
 \multicolumn{3}{c}{\begin{tabular}[c]{@{}c@{}} \supname \\ Director del Trabajo Final\end{tabular}} \vspace{2.5cm} \\
 %\begin{tabular}[c]{@{}c@{}}\jurunoname \\ Jurado del Trabajo Final\end{tabular}     &  & \begin{tabular}[c]{@{}c@{}}\jurdosname\\ Jurado del Trabajo Final\end{tabular}  \vspace{2.5cm}  \\
 %\multicolumn{3}{c}{\begin{tabular}[c]{@{}c@{}} \jurtresname\\ Jurado del Trabajo Final\end{tabular}} \vspace{.5cm}                                                                     
@@ -124,7 +124,7 @@ Se adjunta a esta acta la planificación inicial.
 
 \begin{consigna}{black} % El bloque "consigna" se usa para poner texto en rojo y dar una pequeña ayuda sobre cómo completar la sección
 
-Debido a la incursión de medios Smartphone, dispositivos electrónicos que se conectan a través de internet, es necesario dar una solución más sencilla para reportes de registro de entrada y salida del personal que labora en el interior de la empresa. ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que desde el dispositivo biométrico se hace el registro, este se procesa, valida, asigna de forma interna para luego extraer  enviar la notificación respectiva a quien corresponda.
+Debido a la incursión de medios Smartphone, dispositivos electrónicos que se conectan a través de internet, es necesario dar una solución más sencilla para mostrar reportes de registro de entrada y salida del personal que labora en el interior de la empresa. ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que desde el dispositivo se hace el registro, este se procesa, valida, asigna de forma interna para luego enviar la notificación respectiva a quien corresponda.
 
 A falta de un registro de entrada y salida con notificaciones para crear una mejor distribución de tiempos entre empleados se presenta la propuesta que consta de:
 
@@ -176,7 +176,7 @@ Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
 Auspiciante   & \clientename      &\empclientename	& Gerente  	\\ \hline
 Cliente       & \clientename      &\empclientename	& Gerente  	\\ \hline
 Impulsor      & Ing. Flavio Bolívar Vinueza Barzola \newline
-Ing. Dennys Alejandro Montero Huilca &\empclientename	& Supervisor\\ \hline
+	 &\empclientename	& Supervisor\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
 Colaboradores & Sr. Maike Rafael Alvarado Melendez \newline
 Sr. Denny Alberto Cuzme Morales &\empclientename 	& Producción\\ \hline
@@ -225,15 +225,15 @@ aplicativo.
 Para el desarrollo del presente proyecto se supone que: 
 
 \begin{itemize}
-	\item La disponibilidad del cliente Ing. \clientename, impulsores o colaboradores encargados para la guía en el avance del proyecto. 
+	\item La disponibilidad del cliente \clientename, colaboradores y encargados para la guía en el avance del proyecto. 
 	\item Los recursos actuales pueden ser modernizados por necesidad propia de la empresa.
 	\item Cambios o implementación de leyes para regulación nacional para el uso de los equipos.
 	\item Cambios del personal de la empresa.
 	\item Cambios en directrices de la empresa.
 	\item Prioridades de la empresa por eventos inesperados.
 	\item Fenómenos naturales.
-	\item Daño del lector biométrico LX50 ZK.
-	\item Corte de energía.
+	\item Daño en el lector biométrico LX50 ZK.
+	\item Corte de energía en la empresa.
 \end{itemize}
 
 
@@ -253,7 +253,7 @@ Para el desarrollo del presente proyecto se supone que:
 			\item El supervisor y usuario reciben una notificación push del reporte de salida de la empresa.
 			\item El supervisor tiene acceso al reporte de tiempo promedio promedio del empleado en la empresa en un rango de fechas. 
 			\item Cada empleado tiene un registro de entradas, salidas con tiempos de estancia que se pueden ver a través de grafos.
-			\item El empleado puede ver el tiempo de estancia total  que tuvo en un rango de fechas desde realizó el registro de usuario en el sistema.
+			\item El empleado puede ver el tiempo de estancia total  que tuvo en un rango de fechas cuando realizó el registro de usuario en el sistema.
 		\end{enumerate}
 	\item Requerimientos de documentación
 		\begin{enumerate}
@@ -390,7 +390,7 @@ Después de autentificarse el empleado en el sistema, de forma automática debe 
 \multicolumn {2}{|p{14cm}|}{ \textbf{Descripción:} \newline
 Como cliente quiero que cada empleado pueda ver el tiempo que estuvo o está en la empresa en una fecha específica para que vea la estancia que tuvo en una fecha determinada.}\\ \hline
 \multicolumn {2}{|p{14cm}|}{ \textbf{Validación:} \newline
-Cuando el empleado este en su perfil seleccione una fecha determinada y se muestre un gráfico con el tiempo que está o ha pasado en una fecha determinada.}\\ \hline
+Cuando el empleado ingrese en el aplicativo en su perfil seleccione una fecha determinada y se muestra un gráfico con el tiempo que está o ha pasado en una fecha determinada.}\\ \hline
 %\end{tabularx}
 \end{tabular}
 \end{table}
@@ -566,12 +566,15 @@ central. (35 hs)
 	\item Pruebas online y offline de los dispositivos. (20 hs)
 	\end{enumerate}
 \item Verificación de funcionalidades y cumplimiento de requisitos. (30 hs)
-\item Documentación (15 hs)
+\item Documentación (85 hs)
 	\begin{enumerate}
 	\item Elaboración manual de usuario. (15 hs)
+	\item Informe de avance. (30 hs)
+	\item Memoria final. (30)
+	\item Presentación final. (10 hs)
 	\end{enumerate}
 \end{enumerate}
-Cantidad total de horas: (622 hs)
+Cantidad total de horas: (692 hs)
 
 
 \section{10. Diagrama de Activity On Node}
@@ -585,7 +588,7 @@ La unidad de tiempo del diagrama AoN que se muestra en la Figura 2 está expresa
 \hline
 \rowcolor[HTML]{C0C0C0} 
 \textbf{Descripción} & \textbf{Secuencia de tareas} & \textbf{Tiempo (horas)} \\ \hline
-Camino & 1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 & 622	\\ \hline
+Camino & 1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 & 692	\\ \hline
 
 %\end{tabularx}
 \end{tabular}
@@ -595,7 +598,7 @@ Camino & 1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 & 622	\\ \hline
 \begin{figure}[htpb]
 \centering 
 \includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
-\caption{Diagrama en \textit{Activity on Node}}
+\caption{Diagrama \textit{Activity on Node}}
 \label{fig:AoN}
 \end{figure}
 
@@ -606,13 +609,13 @@ Camino & 1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 & 622	\\ \hline
 \label{sec:gantt}
 
 
-\begin{figure}[htpb]
-\centering 
-\includegraphics[width=1\textwidth]{./Figuras/GantTasks1.png}
-\includegraphics[width=1\textwidth]{./Figuras/GantTasks2.png}
-\caption{Tabla de actividades}
-\label{fig:AoN}
-\end{figure}
+%\begin{figure}[htpb]
+%\centering 
+%\includegraphics[width=1\textwidth]{./Figuras/GantTasks1.png}
+%\includegraphics[width=1\textwidth]{./Figuras/GantTasks2.png}
+%\caption{Tabla de actividades}
+%\label{fig:AoN}
+%\end{figure}
 
 \begin{figure}[htpb]
 \centering 
@@ -644,24 +647,33 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
+ Horas de ingeniería &
+  \multicolumn{1}{c|}{692} &
+  \multicolumn{1}{c|}{$\$$ 3,54} &
+  \multicolumn{1}{c|}{$\$$ 2449,68} \\ \hline
+ Lector biométrico LX50 ZK &
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{$\$$ 420} &
+  \multicolumn{1}{c|}{$\$$ 420} \\ \hline
+\multicolumn{1}{|l|}{Pack cables y conectores} &
+	1
+   & \multicolumn{1}{c|}{$\$$ 70}
+   & \multicolumn{1}{c|}{$\$$ 70}
    \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
+\multicolumn{1}{|l|}{Ponchadora profesional} & 1
+   & \multicolumn{1}{c|}{$\$$ 138}
+   & \multicolumn{1}{c|}{$\$$ 138}
    \\ \hline
-\multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+\multicolumn{1}{|l|}{Componentes plásticos} & 1
+   & \multicolumn{1}{c|}{$\$$ 98}
+   & \multicolumn{1}{c|}{$\$$ 98}
+   \\ \hline
+\multicolumn{1}{|l|}{Caja metálica para protección} & 1
+   & \multicolumn{1}{c|}{$\$$ 100}
+   & \multicolumn{1}{c|}{$\$$ 100}
+   \\ \hline
+\multicolumn{3}{|c|}{SUBTOTAL} & 
+  \multicolumn{1}{c|}{$\$$ 3275,68} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
@@ -669,22 +681,14 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
+\multicolumn{1}{|l|}{25 \% de los costos directos} & 1
+   & \multicolumn{1}{c|}{$\$$ 818,92}
+   & \multicolumn{1}{c|}{$\$$ 818,92}
    \\ \hline
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{$\$$ 818,92} \\ \hline
 \rowcolor[HTML]{C0C0C0}
-\multicolumn{3}{|c|}{TOTAL} &
+\multicolumn{3}{|c|}{TOTAL} & \multicolumn{1}{c|}{$\$$ 4094.6}
    \\ \hline
 \end{tabularx}%
 \end{table}
@@ -693,19 +697,76 @@ Descripción &
 \section{13. Gestión de riesgos}
 \label{sec:riesgos}
 
+Se describen los riesgos para el desarrollo del proyecto junto al plan de mitigación.
+
+\textbf{a) Identificación de los riesgos y estimación de sus consecuencias:}
+
+Riesgo 1: No cubre con las necesidades básicas el panel solicitado por el cliente. Si el sistema de visualización, no posee la capacidad de generar roles para distintos usuarios, se deberá optar por otra solución, lo que atrasará de manera grave el proyecto.
+\begin{itemize}
+\item Severidad (S): 8. El riesgo es alto, ya que se debe modificar otras tareas para cumplir con los requerimientos del cliente.
+\item Ocurrencia (O): 3. Si se verifican los requerimientos del cliente, la ocurrencia de este riesgo será baja. Para ello se debe invertir un tiempo razonable en el estudio de las soluciones disponibles.
+\end{itemize}
+
+Riesgo 2: Error en el diseño del aplicativo.
+\begin{itemize}
+\item Severidad (S): 10. Muy severo, produciría un mal funcionamiento.
+\item Ocurrencia (O): 4. Se asigna esta ocurrencia ya que se harán las pruebas necesarias para depurar los errores.
+\end{itemize}
+
+Riesgo 3: Daño o pérdida de laptop de desarrollo.
+\begin{itemize}
+\item Severidad (S): 9. Implica la pérdida de parte del código realizado en ese día de trabajo y documentación del proyecto, aumento de los costos de desarrollo e incumplir la fecha de finalización estipulada.
+\item Ocurrencia (O): 7. La laptop utilizada en el desarrollo es empleada en viajes
+laborales y entornos industriales de riesgo para su integridad.
+\end{itemize}
+
+Riesgo 4: Roturas del lector biométrico LX50 ZK.
+\begin{itemize}
+\item Severidad (S): 4. Puede retrasar varias de las tareas principales.
+\item Ocurrencia (O): 2. Puede romperse debido a uso o accidentes.
+\end{itemize}
+
+Riesgo 5: No disponer del tiempo suficiente para terminar el proyecto.
+\begin{itemize}
+\item Severidad (S): 2. Provocaría que el proyecto no esté terminado antes de la fecha establecida.
+\item Ocurrencia (M): 3. El responsable es el único encargado de desarrollar la mayoría de tareas. Además, posee una jornada laboral y una cursada que hacen que el tiempo se divida.
+\end{itemize}
+
+
+\textbf{b) Tabla de gestión de riesgos:}
+
 \begin{table}[htpb]
 \centering
 \begin{tabularx}{\linewidth}{@{}|X|c|c|c|c|c|c|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
+Riesgo 1. No cubre con las necesidades básicas el panel solicitado por el cliente. & 8  & 3  & \cellcolor[HTML]{39ff14}24   & - & - & - \\ \hline
+Riesgo 2: Error en el diseño del aplicativo. & 10  & 4  & \cellcolor[HTML]{F1948A}40 & 10 & 1 & \cellcolor[HTML]{39ff14}9 \\ \hline
+Riesgo 3: Daño o pérdida de laptop de desarrollo. & 9  & 7  & \cellcolor[HTML]{F1948A}63  &  3  &  7  &  \cellcolor[HTML]{39ff14}21 \\ \hline
+Riesgo 4: Roturas del lector biométrico LX50 ZK. &  4 & 2  &  \cellcolor[HTML]{39ff14}8  & - & - & -  \\ \hline
+Riesgo 5: No disponer del tiempo suficiente para terminar el proyecto. & 2  & 3  & \cellcolor[HTML]{39ff14}6 & - & -   & -  \\ \hline
 \end{tabularx}%
 \end{table}
+
+Para RPN mayores a 35 se toman medidas de mitigación.
+
+\textbf{c) Mitigación de los riesgos:}
+
+Mitigación para el riesgo 2 y 3.
+
+Riesgo 2: Error en el diseño del aplicativo.
+\begin{itemize}
+\item Severidad (S): 10. Muy severo, sin modificación.
+\item Ocurrencia (O): 4. Se puede esperar que todo lo planificado se cumpla a tiempo.
+\end{itemize}
+
+Riesgo 3: Daño o pérdida de laptop de desarrollo.
+\begin{itemize}
+\item Severidad (S): 3. Limitada pérdida de datos realizados en la jornada de trabajo.
+\item Ocurrencia (O): 7. No se modifica.
+\end{itemize}
+
 
 
 
@@ -713,12 +774,181 @@ Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
 \section{14. Gestión de la calidad}
 \label{sec:calidad}
 
-
+\begin{enumerate}
+	\item Requerimientos funcionales
+		\begin{enumerate}
+		% 1.1			
+			\item El empleado se registra en el sistema.
+			\newline
+			\textbf{Verificación:}
+			Se comprueba que el empleado puede registrarse en el sistema con su código único.
+			\newline
+		    \textbf{Validación:}
+		    Se podrá registrar en el aplicativo solo con sus credenciales únicas personales y no con otras.
+		% 1.2
+			\item El sistema debe autenticar solo a los empleados de planta de la empresa registrados.
+			\newline
+			\textbf{Verificación:}
+			El empleado ya registrado puede autenticarse en el aplicativo para ver su perfil personal.
+			\newline
+		    \textbf{Validación:}
+		    El empleado solo puede autenticarse si antes ya se registro en el aplicativo, si no está registrado no podrá.
+		% 1.3			
+			\item El supervisor y empleado reciben una notificación push de ingreso al sistema.
+			\newline
+			\textbf{Verificación:}
+			Cuando el supervisor o el empleado realizan un ingreso al aplicativo reciben una notificación de aviso.
+			\newline
+		    \textbf{Validación:}
+		    La notificación de aviso solo llegará después de ingresar al aplicativo.
+		% 1.4			
+			\item El supervisor y usuario pueden ver el tiempo de estancia que tuvo un empleado en la empresa en un determinado tiempo.
+			\newline
+			\textbf{Verificación:}
+			El supervisor y usuario pueden ver el tiempo de estancia en la empresa para ver sus métricas de forma individual.
+			\newline
+		    \textbf{Validación:}
+		    El supervisor puede ver las métricas de todos los empleados mientras que el usuario solo puede visualizar la personal.
+		% 1.5			
+			\item El supervisor y empleado reciben una notificación push del reporte ingresos a la empresa.
+			\newline
+			\textbf{Verificación:}
+			El supervisor y empleado reciben una notificación push mensual de acuerdo a lo establecido por el supervisor.
+			\newline
+		    \textbf{Validación:}
+		    Cuando se cumpla el mes en curso cada empleado recibe una notificación de aviso para notificar el reporte mensual del empleado.
+		% 1.6			
+			\item El supervisor y usuario reciben una notificación push del reporte de salida de la empresa.
+			\newline
+			\textbf{Verificación:}
+			\newline
+			Cuando el usuario o supervisor registren la salida de la empresa recibirán una notificación push de aviso.
+			\newline
+		    \textbf{Validación:}
+		    La notificación de aviso de salida solo llegará cuando se den de alta del aplicativo.
+		% 1.7			
+			\item El supervisor tiene acceso al reporte de tiempo promedio promedio del empleado en la empresa en un rango de fechas. 
+			\newline
+			\textbf{Verificación:}
+			El supervisor puede ver el tiempo promedio de cada uno de los empleados de la empresa para tomar decisiones sobre esos datos.
+			\newline
+		    \textbf{Validación:}
+		    Solo el supervisor debe tener acceso a todos los datos de tiempo promedio de empleados en un rango de fechas.
+		% 1.8			
+			\item Cada empleado tiene un registro de entradas, salidas con tiempos de estancia que se pueden ver a través de grafos.
+			\newline
+			\textbf{Verificación:}
+			Las métricas de los empleados pueden ser visualizados a traves de gráficos para que sea más interactiva la interpretación.
+			\newline
+		    \textbf{Validación:}
+		    Cada uno de los empleados debe ver cada métrica con su respectivo grafo.
+		% 1.9			
+			\item El empleado puede ver el tiempo de estancia total  que tuvo en un rango de fechas desde realizó el registro de usuario en el sistema.
+			\newline
+			\textbf{Verificación:}
+			El empleado a parte de ver el tiempo de estancia por día, también lo puede ver dentro de un rango de fechas.
+			\newline
+		    \textbf{Validación:}
+		    Dentro de un rango de fechas seleccionadas el empleado puede ver su tiempo de estancia total en la empresa con un gráfico de barras.
+		\end{enumerate}
+	\item Requerimientos de documentación
+		\begin{enumerate}
+		% 2.1		
+			\item Manual de usuario.
+			\newline
+			\textbf{Verificación:}
+			El manual debe contener todas las posibles interacciones con el aplicativo y con la guía respectiva en caso de duda para no depender de una guía física externa.
+			\newline
+		    \textbf{Validación:}
+		    El manual debe ser visible claro y debe contener toda la interacción detallada de acuerdo al proceso a realizar.
+		% 2.2			
+			\item Planilla de casos de uso.
+			\newline
+			\textbf{Verificación:}
+			Muestran a detalle las a través de documento las formas en las que se puede interactuar en el aplicativo para no saltar ningún paso.
+			\newline
+		    \textbf{Validación:}
+		    Debe detallar a la perfección los distintos procesos posibles a realizar de cada acción.
+		\end{enumerate}
+	\item Requerimiento de testing
+		\begin{enumerate}
+		% 3.1			
+			\item Validación de datos para el registro del sistema.
+			\newline
+			\textbf{Verificación:}
+			Existe una base de datos de empleados que tienen sus datos únicos para evitar la repetición de algún registro.
+			\newline
+		    \textbf{Validación:}
+		    Se acepta solo los datos de la base de datos de empleado con los datos únicos para garantizar que nadie externo a la empresa pueda registrarse.
+		% 3.2			
+			\item Notificación push para el empleado.
+			\newline
+			\textbf{Verificación:}
+			Cuando exista alguna novedad será enviada una notificación de aviso al empleado para que esté informado del suceso.
+			\newline
+		    \textbf{Validación:}
+		    Solo el supervisor puede realizar las modificaciones para luego enviar la notificación.
+		% 3.3			
+			\item Notificación push para el supervisor.
+			\newline
+			\textbf{Verificación:}
+			Cuando el supervisor cumpla con la tarea de asignación o modificación recibirá una notificación como constancia de la labor realizada.
+			\newline
+		    \textbf{Validación:}
+		    Solo al supervisor le llegará esta notificación porque es el único autorizado a realizarla.
+		\end{enumerate}
+	\item Requerimientos de la interfaz.
+			\begin{enumerate}
+		% 4.1			
+			\item Debe contar con los distintivos de la empresa y colores de marca.
+			\newline
+			\textbf{Verificación:}
+			La imagen de la empresa no se puede modificar para mantener la imagen corporativa.
+			\newline
+		    \textbf{Validación:}
+		    No puede existir logotipos, colores o distintivos no autorizados por el cliente en el aplicativo todos deben ser aprobados por el equipo de trabajo. 
+		% 4.2			
+			\item Usar técnica de ingeniería de software para el diseño de la interfaz de usuario.
+			\newline
+			\textbf{Verificación:}
+			Debe crearse una estructura para que exista armonía en el aplicativo.
+			\newline
+		    \textbf{Validación:}
+		    Una vez creada la interfaz con su estructura debe ser aprobada por el equipo de trabajo para seguir con el siguiente proceso.
+		\end{enumerate}
+	\item Requerimientos interoperabilidad.
+			\begin{enumerate}
+		% 5.1			
+			\item El usuario puede ingresar a su perfil de empleado con credenciales únicas.
+			\newline
+			\textbf{Verificación:}
+			El usuario solo podrá ver su perfil cuando ingrese con las credenciales asignadas para ver su perfil.
+			\newline
+		    \textbf{Validación:}
+		    Solo con las credenciales asignadas puede ingresar el empleado a ver todas las funciones disponibles.
+		% 5.2			
+			\item El supervisor puede visualizar métricas de todos los empleados.
+			\newline
+			\textbf{Verificación:}
+			El supervisor puede ver las diferentes métricas de los empleados para asignar o sugerir cambios directos o en conjunto.
+			\newline
+		    \textbf{Validación:}
+		    El único que puede realizar todas las funciones de asignación, observar métricas de empleados es el supervisor.
+		% 5.3			
+			\item Realizar la evaluación de usabilidad de la aplicación mediante el uso de la Norma ISO/IEC 25010.
+			\newline
+			\textbf{Verificación:}
+			Cada uno de los empleados junto con el cliente realizarán un test de usabilidad después de utilizar el aplicativo para verificar con resultados que el software cumple con todos los requerimientos para satisfacer lo solicitado.
+			\newline
+		    \textbf{Validación:}
+		    Los resultados arrojados por el test indicarán si aporta valor el nuevo producto software producido.
+		\end{enumerate}
+\end{enumerate}
 
 \section{15. Procesos de cierre}    
 \label{sec:cierre}
 
-Las actividades de los procesos de cierre estarán a cargo del responsable del proyecto, Ing. Flavio Bolívar Vinueza Barzola.
+Las actividades de los procesos de cierre estarán a cargo del responsable \authorname y el colaborador del proyecto, Ing. Flavio Bolívar Vinueza Barzola.
 
 Se analizará el grado de cumplimiento de la planificación en contraste con su ejecución. Se
 detectarán aquellas tareas que no se cumplieron en tiempo y se hará su correspondiente
