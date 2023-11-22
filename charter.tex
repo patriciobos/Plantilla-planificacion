@@ -389,24 +389,59 @@ Configurar el software para que en la parte de la tabla muestre los códigos del
 Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
 Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
 
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de Gantt realizado con el paquete de \textit{pgfgantt}. En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
+En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. 
+En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
 
-\begin{figure}[htbp]
-\begin{center}
-\begin{ganttchart}{1}{12}
-  \gantttitle{2020}{12} \\
-  \gantttitlelist{1,...,12}{1} \\
-  \ganttgroup{Group 1}{1}{7} \\
-  \ganttbar{Task 1}{1}{2} \\
-  \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-  \ganttmilestone{Milestone o hito}{7} \ganttnewline
-  \ganttbar{Final Task}{8}{12}
-  \ganttlink{elem2}{elem3}
-  \ganttlink{elem3}{elem4}
-\end{ganttchart}
-\end{center}
-\caption{Diagrama de Gantt de ejemplo}
-\label{fig:gantt}
+Las fechas pueden ser calculadas utilizando alguna de las herramientas antes citadas. Sin embargo, el siguiente ejemplo
+fue elaborado utilizando 
+\href{https://docs.google.com/spreadsheets/d/1fBz8NhSpc4tkkhz3KjJCbh1nR_ltDkfEcZi4tZXduqs}{esta hoja de cálculo}.
+
+Es importante destacar que el ancho del diagrama estará dado por la longitud del texto utilizado para las tareas 
+(Ejemplo: tarea 1, tarea 2, etcétera) y el valor \textit{x unit}. Para mejorar la apariencia del diagrama, es necesario
+ajustar este valor y, quizás, acortar los nombres de las tareas.
+
+\begin{figure}[htpb]
+  \begin{center}
+    \begin{ganttchart}[
+      time slot unit=day,
+      time slot format=isodate,
+      x unit=0.038cm,
+      y unit title=0.7cm,
+      y unit chart=0.6cm,
+      milestone/.append style={xscale=4}
+      ]{2021-03-05}{2021-12-16}
+      \gantttitlecalendar*{2021-03-05}{2021-12-16}{year} \\
+      \gantttitlecalendar*{2021-03-05}{2021-12-16}{month} \\
+      \ganttgroup{Duración Total}{2021-03-05}{2021-12-16} \\
+      %%%%%%%%%%%%%%%%%Organización
+      \ganttgroup{Organización}{2021-03-05}{2021-04-16} \\
+      \ganttbar{Planificación del proyecto}{2021-03-05}{2021-04-15} \\
+      %%%%%%%%%%%%%%%%%Ejecución
+      \ganttgroup{Ejecución}{2021-04-16}{2021-10-21} \\
+      \ganttbar{Tarea 1}{2021-04-16}{2021-04-29} \\
+      \ganttbar{Tarea 2}{2021-04-30}{2021-05-13} \\
+      \ganttbar{Tarea 3}{2021-05-14}{2021-05-27} \\
+      \ganttbar{Tarea 4}{2021-05-28}{2021-07-12} \\
+      \ganttbar{Tarea 5}{2021-07-13}{2021-08-09} \\
+      \ganttbar{Tarea 6}{2021-08-10}{2021-09-23} \\
+      \ganttbar{Tarea 7}{2021-09-24}{2021-09-30} \\
+      \ganttbar{Tarea 8}{2021-10-01}{2021-10-14} \\
+      \ganttbar{Tarea 9}{2021-10-15}{2021-10-21} \\
+      % %%%%%%%%%%%%%%%%%Finalización
+      \ganttgroup{Finalización}{2021-10-22}{2021-12-16} \\
+      \ganttbar{Memoria v1}{2021-10-22}{2021-11-04} \\
+      \ganttbar{Memoria v2}{2021-11-05}{2021-11-18} \\
+      \ganttbar{Memoria final}{2021-11-19}{2021-12-02} \\
+      % La fecha del siguiente milestone es la fecha en que terminamos la memoria
+      \ganttmilestone{Enviar memoria al director}{2021-12-02} \\
+      \ganttbar{Elaborar la presentación}{2021-12-03}{2021-12-16} \\
+      \ganttmilestone{Ensayo de la presentación}{2021-12-16} \\
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \end{ganttchart}
+  \end{center}
+  \caption{Diagrama de gantt de ejemplo}
+  \label{fig:gantt}
+
 \end{figure}
 
 
