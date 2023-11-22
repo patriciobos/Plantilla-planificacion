@@ -57,7 +57,7 @@
 
 
 
-\def\@title{Plan de proyecto de Trabajo Final} %TODO ver si se puede agregar el campo con el nombre del autor acá
+\def\@title{Plan de proyecto del Trabajo Final} %TODO ver si se puede agregar el campo con el nombre del autor acá
 
 \AtBeginDocument{
   \hypersetup{
@@ -131,7 +131,7 @@
 
 \lhead{\includegraphics[width=3.5cm]{./Figuras/logoFIUBA.pdf}}
 \chead{}
-\rhead{\normalsize \textrm{Plan de proyecto de Trabajo final \\\degreename\\ \authorname}}
+\rhead{\normalsize \textrm{Plan de proyecto del Trabajo Final \\\degreename\\ \authorname}}
 \lfoot{ }
 \cfoot{\normalsize Página \thepage \hspace{1px} de \pageref{LastPage}}
 \rfoot{}
